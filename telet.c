@@ -13,6 +13,9 @@ int main(int argc, char **argv)
 {
   unsigned char hex[25][40];
   SDL_Simplewin sw;
+  fntrow font[FNTCHARS][FNTHEIGHT];
+  char* hello;
+  hello = "WHERE IS YOUR GOD NOW?";
 
   printf("STARTING TEST: \n" );
       if ( (argc != 2) )  {
@@ -22,8 +25,10 @@ int main(int argc, char **argv)
 printf("XXXXXXXXXX BREAK XXXXXXXXXX\n");
 
 
-
+Neill_SDL_ReadFont(font, "m7fixed.fnt");
+printf("Font Loaded\n");
 Neill_SDL_Init(&sw);
+Neill_SDL_DrawString(&sw, font, hello, 10, 10);
 
 
 do{
