@@ -62,9 +62,7 @@ void readCodesFromFile(char *filename, unsigned char hex[25][40])
   unsigned char temphex[25][40];
   i = 1; w = 0; h = 0; bytes = 0;
 
-
   printf("file open\n");
-
   while (( bytes = fread ( &temphex, sizeof(unsigned char) ,1000, fp)) > 0) {
     for (h = 0; h < 25; h++) {
       for (w = 0; w < 40; w++) {
@@ -79,26 +77,16 @@ void readCodesFromFile(char *filename, unsigned char hex[25][40])
   }}
 
 
-
-
   void printCodes(SDL_Simplewin *sw, unsigned char hex[25][40], fntrow (*fontdata)[18])
   {
     int  w, h;
     unsigned char code[10];
     w = 0; h = 0;
-
-
       for (h = 0; h < 25; h++) {
         for (w = 0; w < 40; w++) {
           sprintf(( char*)code, "%02x", hex[h][w]);
           Neill_SDL_DrawString(sw, fontdata, code, w*30, h*20);
           printf("%s ",(char*)code );
-          /*
-          printf("%02x ",hex[h][w] );
-          Neill_SDL_DrawChar(sw, fontdata,  &code, (w*20), (h*20));
-          */
-
-
         }
         printf("\n");
     }
