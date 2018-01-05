@@ -1,11 +1,17 @@
 #include "telet.h"
 #include "stdio.h"
 
+void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
+void setDrawColor(SDL_Simplewin *sw, color c);
+void setFlags(unsigned char code, flags *current);
+
+
 int main(int argc, char **argv)
 {
   cell hex[HT][WT];
   SDL_Simplewin sw;
-  fntrow font[FNTCHARS][FNTHEIGHT];
+  fntrow font[FNTCHARS][FNTHEIGHT];\
+  flags current;
 
   printf("STARTING TEST: \n" );
       if ( (argc != 2) )  {
@@ -15,7 +21,7 @@ int main(int argc, char **argv)
 importCodes(argv[1], hex);
 Neill_SDL_ReadFont(font, "m7fixed.fnt");
 Neill_SDL_Init(&sw);
-printCodes(&sw, hex, font);
+printCodes(&sw, hex, &current, font);
 
 printf("print s\n" );
 
@@ -61,28 +67,111 @@ void importCodes(char *filename, cell hex[25][40])
 
 void changeFlags(flags *flag)
   {
-    flag->frontcolor = white;
-    flag->backcolor = black;
+    flag->frontcolor = w;
+    flag->backcolor = z;
   }
 
   void setCellFlags(cell *c, flags *flag)
   {
+    printf("Previous Flag Color after Conversion: %d\n",flag->frontcolor );
     c->flag.frontcolor = flag->frontcolor;
     c->flag.backcolor = flag->backcolor;
+    printf("Current Flag Color after Conversion: %d\n",flag->frontcolor );
   }
 
 
-void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], fntrow (*fontdata)[18])
+void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*fontdata)[18])
   {
     int  w, h;
     w = 0; h = 0;
 
     printf("Command: Print Codes:\n" );
       for (h = 0; h < HT; h++) {
-
+        /*
+        changeFlags(current);
+          */
         for (w = 0; w < WT; w++) {
-          Neill_SDL_DrawChar(sw, fontdata, hex[h][w].code, w*WT/2, h*HT);
+          setCellFlags(&hex[h][w], current);
+          printf("FC:%d \n",hex[h][w].flag.frontcolor);
+          setFlags(hex[h][w].code, current);
+          SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*WT/2, h*HT);
         }
         printf("\n");
   }
 }
+
+void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
+{
+   unsigned x, y;
+   for(y = 0; y < FNTHEIGHT; y++){
+      for(x = 0; x < FNTWIDTH; x++){
+         if(fontdata[chr-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
+           /*
+           printf("Draw color set\n" );
+           */
+          setDrawColor(sw, hex->flag.frontcolor);
+          printf("DC %d\n",hex->flag.frontcolor );
+         }
+         else{
+          Neill_SDL_SetDrawColour(sw, 0, 0, 0);
+         }
+         SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy);
+      }
+   }
+}
+
+void setDrawColor(SDL_Simplewin *sw, color c){
+
+     /*
+     printf("Grade is = %d\n", c );
+*/
+     switch(c) {
+       /*yellow*/
+        case 3 :
+           Neill_SDL_SetDrawColour(sw, 255, 255, 0 );
+           printf("set draw YELLOW\n");
+           break;
+        case 4 :
+           Neill_SDL_SetDrawColour(sw, 0, 255, 255);
+           printf("set draw BLUE\n");
+           break;
+        case 2 :
+           Neill_SDL_SetDrawColour(sw, 0, 0, 255);
+           printf("set draw RED\n");
+           break;
+        default :
+           Neill_SDL_SetDrawColour(sw, 255, 255, 255);
+
+     }
+}
+
+void setFlags(unsigned char code, flags *current)
+{
+
+  /*printf("%d ",code);*/
+  switch ((colorCode) code) {
+
+    /* Alphanumeric colour codes. */
+    case redalpha:
+      current->frontcolor = 2;
+      printf("RED" );
+      printf("current font color  %d\n",current->frontcolor );
+      break;
+
+case yellowalpha:
+    current->frontcolor = 3;
+    printf("YELLOW" );
+    printf("current font color  %d\n",current->frontcolor );
+  break;
+case bluealpha:
+    current->frontcolor = 4;
+    printf("BLUE" );
+    printf("current font color  %d\n",current->frontcolor );
+  break;
+
+case whitealpha:
+    current->frontcolor = w;
+    printf("WHITE" );
+    printf("current font color  %d\n",current->frontcolor );
+  break;
+    }}
