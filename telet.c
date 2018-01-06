@@ -60,8 +60,8 @@ void importCodes(char *filename, cell hex[25][40])
 
 void changeFlags(flags *flag)
   {
-    flag->frontcolor = w;
-    flag->backcolor = z;
+    flag->frontcolor = 9;
+    flag->backcolor = 8;
   }
 
   void setCellFlags(cell *c, flags *flag)
@@ -112,8 +112,8 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
          }
          else{
           Neill_SDL_SetDrawColour(sw, 0, 0, 0);
-         }
-         SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy);
+             }
+          SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
       }
    }
 }
@@ -175,24 +175,7 @@ void setFlags(unsigned char code, flags *current)
   */
   switch ((colorCode) code) {
 
-    /* Alphanumeric colour codes. */
-  case redf:
-      current->frontcolor = 3;
-      /*
-      printf("RED" );
-      printf("current font color  %d\n",current->frontcolor );
-      */
-      break;
-
-      case greenf:
-      current->frontcolor = 7;
-      /*
-      printf("RED" );
-      printf("current font color  %d\n",current->frontcolor );
-      */
-      break;
-
-case yellowf:
+    case yellowf:
     current->frontcolor = 1;
     /*
     printf("YELLOW" );
@@ -204,6 +187,14 @@ case bluef:
     current->frontcolor = 2;
     /*
     printf("BLUE" );
+    printf("current font color  %d\n",current->frontcolor );
+    */
+    break;
+
+    case redf:
+    current->frontcolor = 3;
+    /*
+    printf("RED" );
     printf("current font color  %d\n",current->frontcolor );
     */
     break;
@@ -228,6 +219,13 @@ case whitef:
     current->frontcolor = 6;
     /*
     printf("WHITE" );
+    printf("current font color  %d\n",current->frontcolor );
+    */
+    break;
+    case greenf:
+    current->frontcolor = 7;
+    /*
+    printf("RED" );
     printf("current font color  %d\n",current->frontcolor );
     */
     break;

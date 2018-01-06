@@ -17,6 +17,7 @@ typedef enum color {
 struct flags {
   color     frontcolor;
   color     backcolor;
+  
 } state;
 
 typedef struct flags flags;
@@ -28,13 +29,13 @@ typedef struct cell {
 
 
 typedef enum colorCode {
-  redf        = 0x81,
-  greenf      = 0x82,
-  yellowf     = 0x83,
-  bluef       = 0x84,
-  magentaf    = 0x85,
-  cyanf       = 0x86,
-  whitef      = 0x87
+  redf       = 0x81,
+  greenf     = 0x82,
+  yellowf    = 0x83,
+  bluef      = 0x84,
+  magentaf   = 0x85,
+  cyanf      = 0x86,
+  whitef     = 0x87
 
 } colorCode;
 
