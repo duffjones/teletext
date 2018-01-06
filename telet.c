@@ -35,28 +35,22 @@ do{
       return 0;
 }
 
-
-FILE *openFile(char *filename, char *mode)
-{
-  FILE *file = fopen(filename, mode);
-    if (file == NULL) {
-    printf("ERROR: unable to open file:\nCheck filename and path.\n");
-  }
-  return file;
-}
-
 void importCodes(char *filename, cell hex[25][40])
 {
-  FILE *fp = openFile(filename, "rb");
+  FILE *fp = fopen(filename, "rb");
   int i, w, h;
   unsigned char temphex[HT][WT];
  w = 0; h = 0; i = 0;
+
+ if (fp== NULL) {
+ printf("ERROR: unable to open file:\nCheck filename and path.\n");
+}
 
   printf("file open\n");
   while (( i = fread ( &temphex, sizeof(unsigned char) ,1000, fp)) > 0) {
         for (h = 0; h < HT; h++) {
           for (w = 0; w < WT; w++) {
-            hex[h][w].code = (temphex[h][w]-128);
+            hex[h][w].code = (temphex[h][w]);
             printf("%x", temphex[h][w]);
       }
   }
@@ -107,7 +101,7 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
    unsigned x, y;
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
-         if(fontdata[chr-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
+         if(fontdata[(chr-128)-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
            /*
            printf("Draw color set\n" );
            */
@@ -161,6 +155,12 @@ void setDrawColor(SDL_Simplewin *sw, color c){
           printf("set draw CYAN\n");
           */
           break;
+          case 7 :
+            Neill_SDL_SetDrawColour(sw, 0, 255, 0);
+            /*
+            printf("set draw GREEN\n");
+            */
+            break;
         default :
            Neill_SDL_SetDrawColour(sw, 255, 255, 255);
 
@@ -178,6 +178,14 @@ void setFlags(unsigned char code, flags *current)
     /* Alphanumeric colour codes. */
   case redf:
       current->frontcolor = 3;
+      /*
+      printf("RED" );
+      printf("current font color  %d\n",current->frontcolor );
+      */
+      break;
+
+      case greenf:
+      current->frontcolor = 7;
       /*
       printf("RED" );
       printf("current font color  %d\n",current->frontcolor );

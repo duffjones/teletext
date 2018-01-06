@@ -11,7 +11,7 @@
 #define ON_ERROR(STR) fprintf(stderr, STR ); exit(EXIT_FAILURE)
 
 typedef enum color {
-  w, z, r, y, b
+  w, z, r, y, b, c, m, g
 } color;
 
 struct flags {
@@ -34,7 +34,7 @@ typedef enum colorCode {
   bluef       = 0x84,
   magentaf    = 0x85,
   cyanf       = 0x86,
-  whitef      = 0x87,
+  whitef      = 0x87
 
 } colorCode;
 
@@ -43,5 +43,4 @@ typedef enum colorCode {
 void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*fontdata)[18]);
 void importCodes(char *filename, cell hex[25][40]);
 void changeFlags(flags *flag);
-FILE *openFile(char *filename, char *mode);
 cell* cell_init(unsigned char data);
