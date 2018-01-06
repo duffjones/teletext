@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 {
   cell hex[HT][WT];
   SDL_Simplewin sw;
-  fntrow font[FNTCHARS][FNTHEIGHT];\
+  fntrow font[FNTCHARS][FNTHEIGHT];
   flags current;
 
   printf("STARTING TEST: \n" );
@@ -48,17 +48,16 @@ FILE *openFile(char *filename, char *mode)
 void importCodes(char *filename, cell hex[25][40])
 {
   FILE *fp = openFile(filename, "rb");
-  int bytes, w, h;
+  int i, w, h;
   unsigned char temphex[HT][WT];
- w = 0; h = 0; bytes = 0;
+ w = 0; h = 0; i = 0;
 
   printf("file open\n");
-  while (( bytes = fread ( &temphex, sizeof(unsigned char) ,1000, fp)) > 0) {
-
+  while (( i = fread ( &temphex, sizeof(unsigned char) ,1000, fp)) > 0) {
         for (h = 0; h < HT; h++) {
           for (w = 0; w < WT; w++) {
             hex[h][w].code = (temphex[h][w]-128);
-
+            printf("%x", temphex[h][w]);
       }
   }
   fclose ( fp);
@@ -73,10 +72,13 @@ void changeFlags(flags *flag)
 
   void setCellFlags(cell *c, flags *flag)
   {
-    printf("Previous Flag Color after Conversion: %d\n",flag->frontcolor );
     c->flag.frontcolor = flag->frontcolor;
-    c->flag.backcolor = flag->backcolor;
+    /*
+    printf("Previous Flag Color after Conversion: %d\n",flag->frontcolor );
     printf("Current Flag Color after Conversion: %d\n",flag->frontcolor );
+
+    */
+    c->flag.backcolor = flag->backcolor;
   }
 
 
@@ -87,9 +89,9 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
 
     printf("Command: Print Codes:\n" );
       for (h = 0; h < HT; h++) {
-        /*
+
         changeFlags(current);
-          */
+
         for (w = 0; w < WT; w++) {
           setCellFlags(&hex[h][w], current);
           printf("FC:%d \n",hex[h][w].flag.frontcolor);
@@ -110,7 +112,9 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
            printf("Draw color set\n" );
            */
           setDrawColor(sw, hex->flag.frontcolor);
+          /*
           printf("DC %d\n",hex->flag.frontcolor );
+          */
          }
          else{
           Neill_SDL_SetDrawColour(sw, 0, 0, 0);
@@ -127,18 +131,36 @@ void setDrawColor(SDL_Simplewin *sw, color c){
 */
      switch(c) {
        /*yellow*/
-        case 3 :
+        case 1 :
            Neill_SDL_SetDrawColour(sw, 255, 255, 0 );
+           /*
            printf("set draw YELLOW\n");
-           break;
-        case 4 :
-           Neill_SDL_SetDrawColour(sw, 0, 255, 255);
-           printf("set draw BLUE\n");
+           */
            break;
         case 2 :
            Neill_SDL_SetDrawColour(sw, 0, 0, 255);
-           printf("set draw RED\n");
+           /*
+           printf("set draw BLUE\n");
+           */
            break;
+        case 3 :
+           Neill_SDL_SetDrawColour(sw, 255, 0, 0);
+           /*
+           printf("set draw RED\n");
+           */
+           break;
+        case 4 :
+           Neill_SDL_SetDrawColour(sw, 255, 0, 125);
+           /*
+           printf("set draw MAGENTA\n");
+          */
+           break;
+        case 5 :
+          Neill_SDL_SetDrawColour(sw, 0, 255, 255);
+          /*
+          printf("set draw CYAN\n");
+          */
+          break;
         default :
            Neill_SDL_SetDrawColour(sw, 255, 255, 255);
 
@@ -148,30 +170,57 @@ void setDrawColor(SDL_Simplewin *sw, color c){
 void setFlags(unsigned char code, flags *current)
 {
 
-  /*printf("%d ",code);*/
+  printf("Printing Codes %d ",code);
+  /*
+  */
   switch ((colorCode) code) {
 
     /* Alphanumeric colour codes. */
-    case redalpha:
-      current->frontcolor = 2;
+  case redf:
+      current->frontcolor = 3;
+      /*
       printf("RED" );
       printf("current font color  %d\n",current->frontcolor );
+      */
       break;
 
-case yellowalpha:
-    current->frontcolor = 3;
+case yellowf:
+    current->frontcolor = 1;
+    /*
     printf("YELLOW" );
     printf("current font color  %d\n",current->frontcolor );
-  break;
-case bluealpha:
-    current->frontcolor = 4;
+    */
+    break;
+
+case bluef:
+    current->frontcolor = 2;
+    /*
     printf("BLUE" );
     printf("current font color  %d\n",current->frontcolor );
-  break;
+    */
+    break;
 
-case whitealpha:
-    current->frontcolor = w;
+case magentaf:
+    current->frontcolor = 4;
+    /*
+    printf("MAGENTA" );
+    printf("current font color  %d\n",current->frontcolor );
+    */
+    break;
+
+case cyanf:
+    current->frontcolor = 5;
+    /*
+    printf("CYAN" );
+    printf("current font color  %d\n",current->frontcolor );
+    */
+    break;
+
+case whitef:
+    current->frontcolor = 6;
+    /*
     printf("WHITE" );
     printf("current font color  %d\n",current->frontcolor );
-  break;
+    */
+    break;
     }}
