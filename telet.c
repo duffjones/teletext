@@ -110,8 +110,40 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
             If statement based on condition. 3 seperate DrawChar functions?
           */
           if(hex[h][w].flag.mode == contiguous){
-            printf("CONTIGUOUS DAWG\n" );
+            printf("Hex Code Contiguous: %d\n", hex[h][w].code );
+
+            /*
             SDL_DrawSixel(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
+            makeSixels(sw, &hex[h][w],  sixel,  w*CELLWT, h*CELLHT, h, w);
+            */
+            sixels sixel;
+            setSixels(hex[h][w].code,  &sixel);
+            if(sixel.uleft == true){
+              drawSmallSixel(sw, &hex[h][w], 0, 0, w*CELLWT, h*CELLHT);
+
+            }
+
+            if(sixel.uright == true){
+              drawSmallSixel(sw, &hex[h][w], 8, 0, w*CELLWT, h*CELLHT);
+
+            }
+            if(sixel.mleft == true){
+              drawSmallSixel(sw, &hex[h][w], 0, 6, w*CELLWT, h*CELLHT);
+
+            }
+            if(sixel.mright == true){
+              drawSmallSixel(sw, &hex[h][w], 8, 6, w*CELLWT, h*CELLHT);
+
+
+            }
+            if(sixel.bleft == true){
+              drawSmallSixel(sw, &hex[h][w], 0, 12, w*CELLWT, h*CELLHT);
+
+            }
+            if(sixel.bright == true){
+              drawSmallSixel(sw, &hex[h][w], 8, 12, w*CELLWT, h*CELLHT);
+
+            }
           }
 
           else if (hex[h-1][w].flag.fontsize == 2){
@@ -163,21 +195,18 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
 void SDL_DrawSixel(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
-   unsigned char letter;
-   letter = 'x' + 7;
+   SDL_Rect rectangle;
 
-   for(y = 0; y < FNTHEIGHT; y++){
-      for(x = 0; x < FNTWIDTH; x++){
-        /*cutting y in half makes just top bit*/
-         if(fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
+
+   for(y = 0; y < 10; y++){
+      for(x = 0; x < 5; x++){
           setDrawColor(sw, hex->flag.frontcolor);
-
-         }
-         else{
-          setDrawColor(sw, hex->flag.backcolor);
-             }
-             /*messing with this changes font height and stuff */
-          SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
+             rectangle.w = 1;
+             rectangle.h = 1;
+             rectangle.x = x+ox;
+             rectangle.y = y+oy;
+            SDL_RenderFillRect(sw->renderer, &rectangle);
+            SDL_RenderDrawRect(sw->renderer, &rectangle);
       }
    }
 }

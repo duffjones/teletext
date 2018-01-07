@@ -1,7 +1,7 @@
 CFLAGS = `sdl2-config --cflags` -O2 -Wall -Wextra -pedantic -ansi -Wfloat-equal
-INCS = neillsdl2.h telet.h
+INCS = neillsdl2.h telet.h sixel.h
 TARGET = telet
-SOURCES =  $(TARGET).c neillsdl2.c
+SOURCES =  $(TARGET).c neillsdl2.c sixel.c
 LIBS =  `sdl2-config --libs` -lm
 CC = gcc
 

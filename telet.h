@@ -3,12 +3,32 @@
 #include <string.h>
 #include <stdbool.h>
 #include "neillsdl2.h"
+#include "sixel.h"
 
 
 #define MILLISECONDDELAY 20
 #define BLANK 0xA0
 
 #define ON_ERROR(STR) fprintf(stderr, STR ); exit(EXIT_FAILURE)
+
+
+typedef enum boolean {
+  f   = 0,
+  t   = 1
+
+}boolean;
+
+typedef struct sixels {
+  boolean uleft;
+  boolean uright;
+  boolean mleft;
+  boolean mright;
+  boolean bleft;
+  boolean bright;
+} sixels;
+
+
+
 
 typedef enum color {
   w = 6, z = 9, r = 3, y = 1, b =2, c = 5, m = 4, g = 7
@@ -68,6 +88,76 @@ typedef enum colorCode {
 
 } colorCode;
 
+typedef enum sixelCode {
+  a0       = 0xA0,
+  a1       = 0xA1,
+  a2       = 0xA2,
+  a3       = 0xA3,
+  a4       = 0xA4,
+  a5       = 0xA5,
+  a6       = 0xA6,
+  a7       = 0xA7,
+  a8       = 0xA8,
+  a9       = 0xA9,
+  aa       = 0xAA,
+  ab       = 0xAB,
+  ac       = 0xAC,
+  ad       = 0xAD,
+  ae       = 0xAE,
+  af       = 0xAF,
+
+  b0       = 0xB0,
+  b1       = 0xB1,
+  b2       = 0xB2,
+  b3       = 0xB3,
+  b4       = 0xB4,
+  b5       = 0xB5,
+  b6       = 0xB6,
+  b7       = 0xB7,
+  b8       = 0xB8,
+  b9       = 0xB9,
+  ba       = 0xBA,
+  bb       = 0xBB,
+  bc       = 0xBC,
+  bd       = 0xBD,
+  be       = 0xBE,
+  bf       = 0xBF,
+
+  e0       = 0xE0,
+  e1       = 0xE1,
+  e2       = 0xE2,
+  e3       = 0xE3,
+  e4       = 0xE4,
+  e5       = 0xE5,
+  e6       = 0xE6,
+  e7       = 0xE7,
+  e8       = 0xE8,
+  e9       = 0xE9,
+  ea       = 0xEA,
+  eb       = 0xEB,
+  ec       = 0xEC,
+  ed       = 0xED,
+  ee       = 0xEE,
+  ef       = 0xEF,
+
+  f0       = 0xF0,
+  f1       = 0xF1,
+  f2       = 0xF2,
+  f3       = 0xF3,
+  f4       = 0xF4,
+  f5       = 0xF5,
+  f6       = 0xF6,
+  f7       = 0xF7,
+  f8       = 0xF8,
+  f9       = 0xF9,
+  fa       = 0xFA,
+  fb       = 0xFB,
+  fc       = 0xFC,
+  fd       = 0xFD,
+  fe       = 0xFE,
+  ff       = 0xFF,
+
+} sixelCode;
 
 
 
@@ -78,4 +168,7 @@ typedef enum colorCode {
 void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*fontdata)[18]);
 void importCodes(char *filename, cell hex[25][40]);
 void changeFlags(flags *flag);
+void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy);
+void makeSixels(SDL_Simplewin *sw, cell *hex, sixels sixel, int ox, int oy, int w, int h);
+void setSixels(unsigned char code, sixels *sixel);
 cell* cell_init(unsigned char data);
