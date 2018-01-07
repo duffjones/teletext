@@ -6,6 +6,7 @@
 
 
 #define MILLISECONDDELAY 20
+#define BLANK 0xA0
 
 #define ON_ERROR(STR) fprintf(stderr, STR ); exit(EXIT_FAILURE)
 

@@ -104,6 +104,8 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
           printf("Fontsz: %d \n",current->fontsize);
             If statement based on condition. 3 seperate DrawChar functions?
           */
+
+
           if (hex[h-1][w].flag.fontsize == 2){
             current->fontsize = bottomfont;
             SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
@@ -118,6 +120,7 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
             SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
         }
+
         printf("\n");
   }
 }
@@ -125,10 +128,19 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
+   unsigned char letter;
+
+   if(chr > BLANK){
+     letter = chr - 128;
+   }
+   else {
+     letter = BLANK - 128;
+   }
+
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
         /*cutting y in half makes just top bit*/
-         if(fontdata[(chr-128)-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
+         if(fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
            /*
            printf("Draw color set\n" );
            */
@@ -150,10 +162,19 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
 void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
+   unsigned char letter;
+
+   if(chr > BLANK){
+     letter = chr - 128;
+   }
+   else {
+     letter = BLANK - 128;
+   }
+
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
         /*cutting y in half makes just top bit*/
-         if(fontdata[(chr-128)-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
+         if(chr - 128 > 0 && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
            /*
            printf("Draw color set\n" );
            */
@@ -174,10 +195,19 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
+   unsigned char letter;
+
+   if(chr > BLANK){
+     letter = chr - 128;
+   }
+   else {
+     letter = BLANK - 128;
+   }
+
    for(y = FNTHEIGHT/2; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
         /*cutting y in half makes just top bit*/
-         if(fontdata[(chr-128)-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
+         if(chr - 128 > 0 && fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
            /*
            printf("Draw color set\n" );
            */
