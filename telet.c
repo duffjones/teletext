@@ -2,6 +2,8 @@
 #include "stdio.h"
 
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
+void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
+void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
 void setDrawColor(SDL_Simplewin *sw, color c);
 void setFlags(unsigned char code, flags *current);
 
@@ -100,16 +102,16 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
           */
           if (hex[h-1][w].flag.fontsize == 2){
             current->fontsize = bottomfont;
-            SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*20, h*25);
+            SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
 
           else if (current->fontsize == topfont) {
             hex[h][w].flag.fontsize = topfont;
             printf("CONVERSION COMPLETE fontsize = %d\n", hex[h][w].flag.fontsize);
-            SDL_DrawTopChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*20, h*25);
+            SDL_DrawTopChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
           else {
-            SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*20, h*25);
+            SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
         }
         printf("\n");
@@ -160,7 +162,7 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
           Neill_SDL_SetDrawColour(sw, 0, 0, 0);
              }
              /*messing with this changes font height and stuff */
-          SDL_RenderDrawPoint(sw->renderer, x + ox, (y*2)+oy);
+          SDL_RenderDrawPoint(sw->renderer, x + ox, (y-FNTHEIGHT/2)+oy);
       }
    }
 }
@@ -184,7 +186,7 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
           Neill_SDL_SetDrawColour(sw, 0, 0, 0);
              }
              /*messing with this changes font height and stuff */
-          SDL_RenderDrawPoint(sw->renderer, x + ox, (y*2-FNTHEIGHT/2)+oy);
+          SDL_RenderDrawPoint(sw->renderer, x + ox, ((y*2)-FNTHEIGHT)+oy - 9);
       }
    }
 }

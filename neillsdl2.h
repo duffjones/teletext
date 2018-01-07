@@ -1,8 +1,14 @@
 #include <SDL.h>
 #include <math.h>
 
-#define WWIDTH 800
-#define WHEIGHT 600
+
+#define WWIDTH (CELLWT * WT)
+#define WHEIGHT (CELLHT * HT)
+
+#define HT 25
+#define WT 40
+#define CELLHT 18
+#define CELLWT 16
 
 /* Font stuff */
 typedef unsigned short fntrow;

@@ -4,10 +4,9 @@
 #include <stdbool.h>
 #include "neillsdl2.h"
 
-#define RECTSIZE 20
+
 #define MILLISECONDDELAY 20
-#define HT 25
-#define WT 40
+
 #define ON_ERROR(STR) fprintf(stderr, STR ); exit(EXIT_FAILURE)
 
 typedef enum color {
