@@ -41,6 +41,7 @@ void importCodes(char *filename, cell hex[25][40])
 {
   FILE *fp = fopen(filename, "rb");
   int i, w, h;
+
   unsigned char temphex[HT][WT];
  w = 0; h = 0; i = 0;
 
@@ -52,8 +53,11 @@ void importCodes(char *filename, cell hex[25][40])
   while (( i = fread ( &temphex, sizeof(unsigned char) ,1000, fp)) > 0) {
         for (h = 0; h < HT; h++) {
           for (w = 0; w < WT; w++) {
-            hex[h][w].code = (temphex[h][w]);
-            printf("%x", temphex[h][w]);
+
+
+              hex[h][w].code = (temphex[h][w]);
+              printf("%x", temphex[h][w]);
+
       }
   }
   fclose ( fp);
@@ -63,7 +67,7 @@ void importCodes(char *filename, cell hex[25][40])
 void changeFlags(flags *flag)
   {
     flag->frontcolor = 6;
-    flag->backcolor = 8;
+    flag->backcolor = 9;
     flag->fontsize = 1;
     /*
     */
@@ -93,11 +97,11 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
 
         for (w = 0; w < WT; w++) {
           setCellFlags(&hex[h][w], current);
-          printf("FC:%d \n",hex[h][w].flag.frontcolor);
-          printf("Fontsz:                            %d \n",current->fontsize);
           setFlags(hex[h][w].code, current);
 
           /*
+          printf("FC:%d \n",hex[h][w].flag.frontcolor);
+          printf("Fontsz: %d \n",current->fontsize);
             If statement based on condition. 3 seperate DrawChar functions?
           */
           if (hex[h-1][w].flag.fontsize == 2){
@@ -134,7 +138,7 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
           */
          }
          else{
-          Neill_SDL_SetDrawColour(sw, 0, 0, 0);
+          setDrawColor(sw, hex->flag.backcolor);
              }
              /*messing with this changes font height and stuff */
           SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
@@ -159,7 +163,7 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
           */
          }
          else{
-          Neill_SDL_SetDrawColour(sw, 0, 0, 0);
+          setDrawColor(sw, hex->flag.backcolor);
              }
              /*messing with this changes font height and stuff */
           SDL_RenderDrawPoint(sw->renderer, x + ox, (y-FNTHEIGHT/2)+oy);
@@ -183,7 +187,7 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
           */
          }
          else{
-          Neill_SDL_SetDrawColour(sw, 0, 0, 0);
+          setDrawColor(sw, hex->flag.backcolor);
              }
              /*messing with this changes font height and stuff */
           SDL_RenderDrawPoint(sw->renderer, x + ox, ((y*2)-FNTHEIGHT)+oy - 9);
@@ -194,27 +198,8 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void setDrawColor(SDL_Simplewin *sw, color c){
-
-     /*
+/*
      printf("Grade is = %d\n", c );
 */
      switch(c) {
@@ -255,6 +240,12 @@ void setDrawColor(SDL_Simplewin *sw, color c){
             printf("set draw GREEN\n");
             */
             break;
+            case 9 :
+              Neill_SDL_SetDrawColour(sw, 0, 0, 0);
+
+              break;
+
+
         default :
            Neill_SDL_SetDrawColour(sw, 255, 255, 255);
 
@@ -324,6 +315,8 @@ case whitef:
     */
     break;
 
+
+
     case singleheight:
       current->fontsize = 1;
       printf("SINGLEHEIGHT ACTIVATED\n" );
@@ -332,5 +325,13 @@ case whitef:
       current->fontsize = 2;
       printf("DOUBLEHEIGHT ACTIVATED\n" );
       break;
+
+  case bgblack:
+  current->backcolor = 9;
+  break;
+case bgnew:
+  current->backcolor = current->frontcolor;
+  break;
+
 
     }}

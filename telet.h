@@ -41,8 +41,10 @@ typedef enum colorCode {
   cyanf      = 0x86,
   whitef     = 0x87,
 
-  singleheight      = 0x8c,
-  doubleheight     = 0x8d
+  singleheight  = 0x8c,
+  doubleheight  = 0x8d,
+  bgblack       = 0x9c,
+  bgnew         = 0x9d,
 
 } colorCode;
 
