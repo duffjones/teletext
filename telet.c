@@ -60,8 +60,11 @@ void importCodes(char *filename, cell hex[25][40])
 
 void changeFlags(flags *flag)
   {
-    flag->frontcolor = 9;
+    flag->frontcolor = 6;
     flag->backcolor = 8;
+    /*
+    flag->fontsize = 1;
+    */
   }
 
   void setCellFlags(cell *c, flags *flag)
@@ -89,8 +92,25 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
         for (w = 0; w < WT; w++) {
           setCellFlags(&hex[h][w], current);
           printf("FC:%d \n",hex[h][w].flag.frontcolor);
+          printf("Fontsz:                            %d \n",current->fontsize);
           setFlags(hex[h][w].code, current);
-          SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*WT/2, h*HT);
+
+          /*
+            If statement based on condition. 3 seperate DrawChar functions?
+          */
+
+          if (current->fontsize == topfont) {
+            hex[h][w].flag.fontsize = topfont;
+            printf("CONVERSION COMPLETE fontsize = %d\n", hex[h][w].flag.fontsize);
+            SDL_DrawTopChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*WT/2, h*HT);
+          }
+          else if (hex[h-1][w].flag.fontsize == 2){
+            current->fontsize = bottomfont; 
+            SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*WT/2, h*HT);
+          }
+          else {
+            SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*WT/2, h*HT);
+          }
         }
         printf("\n");
   }
@@ -101,6 +121,7 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
    unsigned x, y;
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
+        /*cutting y in half makes just top bit*/
          if(fontdata[(chr-128)-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
            /*
            printf("Draw color set\n" );
@@ -113,10 +134,81 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
          else{
           Neill_SDL_SetDrawColour(sw, 0, 0, 0);
              }
+             /*messing with this changes font height and stuff */
           SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
       }
    }
 }
+
+
+void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
+{
+   unsigned x, y;
+   for(y = 0; y < FNTHEIGHT; y++){
+      for(x = 0; x < FNTWIDTH; x++){
+        /*cutting y in half makes just top bit*/
+         if(fontdata[(chr-128)-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
+           /*
+           printf("Draw color set\n" );
+           */
+          setDrawColor(sw, hex->flag.frontcolor);
+          /*
+          printf("DC %d\n",hex->flag.frontcolor );
+          */
+         }
+         else{
+          Neill_SDL_SetDrawColour(sw, 0, 0, 0);
+             }
+             /*messing with this changes font height and stuff */
+          SDL_RenderDrawPoint(sw->renderer, x + ox, (y*2)+oy);
+      }
+   }
+}
+
+void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
+{
+   unsigned x, y;
+   for(y = 8; y < FNTHEIGHT; y++){
+      for(x = 0; x < FNTWIDTH; x++){
+        /*cutting y in half makes just top bit*/
+         if(fontdata[(chr-128)-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
+           /*
+           printf("Draw color set\n" );
+           */
+          setDrawColor(sw, hex->flag.frontcolor);
+          /*
+          printf("DC %d\n",hex->flag.frontcolor );
+          */
+         }
+         else{
+          Neill_SDL_SetDrawColour(sw, 0, 0, 0);
+             }
+             /*messing with this changes font height and stuff */
+          SDL_RenderDrawPoint(sw->renderer, x + ox, (y*2)+oy);
+      }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void setDrawColor(SDL_Simplewin *sw, color c){
 
@@ -229,4 +321,14 @@ case whitef:
     printf("current font color  %d\n",current->frontcolor );
     */
     break;
+
+    case singleheight:
+      current->fontsize = 1;
+      printf("SINGLEHEIGHT ACTIVATED\n" );
+      break;
+    case doubleheight:
+      current->fontsize = 2;
+      printf("DOUBLEHEIGHT ACTIVATED\n" );
+      break;
+
     }}

@@ -11,16 +11,21 @@
 #define ON_ERROR(STR) fprintf(stderr, STR ); exit(EXIT_FAILURE)
 
 typedef enum color {
-  w, z, r, y, b, c, m, g
+  w = 6, z = 9, r = 3, y = 1, b =2, c = 5, m = 4, g = 7
 } color;
 
-struct flags {
+typedef enum fontsz {
+  normalfont = 1, topfont = 2, bottomfont = 3
+} fontsz;
+
+typedef struct flags {
   color     frontcolor;
   color     backcolor;
-  
-} state;
+  fontsz    fontsize;
 
-typedef struct flags flags;
+
+} flags;
+
 
 typedef struct cell {
   flags flag;
@@ -35,9 +40,17 @@ typedef enum colorCode {
   bluef      = 0x84,
   magentaf   = 0x85,
   cyanf      = 0x86,
-  whitef     = 0x87
+  whitef     = 0x87,
+
+  singleheight      = 0x8c,
+  doubleheight     = 0x8d
 
 } colorCode;
+
+
+
+
+
 
 
 
