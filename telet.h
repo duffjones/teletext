@@ -18,10 +18,16 @@ typedef enum fontsz {
   normalfont = 1, topfont = 2, bottomfont = 3
 } fontsz;
 
+typedef enum graphicsMode {
+  alphanumeric, contiguous, separate
+} graphicsMode;
+
+
 typedef struct flags {
   color     frontcolor;
   color     backcolor;
   fontsz    fontsize;
+  graphicsMode mode;
 
 
 } flags;
@@ -44,8 +50,21 @@ typedef enum colorCode {
 
   singleheight  = 0x8c,
   doubleheight  = 0x8d,
+
+  redg     = 0x91,
+  greeng   = 0x92,
+  yellowg  = 0x93,
+  blueg    = 0x94,
+  magentag = 0x95,
+  cyang    = 0x96,
+  whiteg   = 0x97,
+
+  contg    = 0x99,
+  sepg     = 0x9a,
+
+
   bgblack       = 0x9c,
-  bgnew         = 0x9d,
+  bgnew         = 0x9d
 
 } colorCode;
 

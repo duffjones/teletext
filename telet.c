@@ -4,6 +4,7 @@
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
 void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
+void SDL_DrawSixel(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
 void setDrawColor(SDL_Simplewin *sw, color c);
 void setFlags(unsigned char code, flags *current);
 
@@ -56,9 +57,10 @@ void importCodes(char *filename, cell hex[25][40])
 
 
               hex[h][w].code = (temphex[h][w]);
-              printf("%x", temphex[h][w]);
+              printf("%x ", temphex[h][w]);
 
       }
+      printf("\n" );
   }
   fclose ( fp);
   }}
@@ -66,9 +68,10 @@ void importCodes(char *filename, cell hex[25][40])
 
 void changeFlags(flags *flag)
   {
-    flag->frontcolor = 6;
-    flag->backcolor = 9;
+    flag->frontcolor = w;
+    flag->backcolor = z;
     flag->fontsize = 1;
+    flag->mode = alphanumeric;
     /*
     */
   }
@@ -82,6 +85,8 @@ void changeFlags(flags *flag)
 
     */
     c->flag.backcolor = flag->backcolor;
+    c->flag.mode = flag->mode;
+
   }
 
 
@@ -104,16 +109,18 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
           printf("Fontsz: %d \n",current->fontsize);
             If statement based on condition. 3 seperate DrawChar functions?
           */
+          if(hex[h][w].flag.mode == contiguous){
+            printf("CONTIGUOUS DAWG\n" );
+            SDL_DrawSixel(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
+          }
 
-
-          if (hex[h-1][w].flag.fontsize == 2){
+          else if (hex[h-1][w].flag.fontsize == 2){
             current->fontsize = bottomfont;
             SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
 
           else if (current->fontsize == topfont) {
             hex[h][w].flag.fontsize = topfont;
-            printf("CONVERSION COMPLETE fontsize = %d\n", hex[h][w].flag.fontsize);
             SDL_DrawTopChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
           else {
@@ -141,13 +148,8 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
       for(x = 0; x < FNTWIDTH; x++){
         /*cutting y in half makes just top bit*/
          if(fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
-           /*
-           printf("Draw color set\n" );
-           */
           setDrawColor(sw, hex->flag.frontcolor);
-          /*
-          printf("DC %d\n",hex->flag.frontcolor );
-          */
+
          }
          else{
           setDrawColor(sw, hex->flag.backcolor);
@@ -157,6 +159,36 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
       }
    }
 }
+
+void SDL_DrawSixel(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
+{
+   unsigned x, y;
+   unsigned char letter;
+
+
+     letter = BLANK;
+
+
+   for(y = 0; y < FNTHEIGHT; y++){
+      for(x = 0; x < FNTWIDTH; x++){
+        /*cutting y in half makes just top bit*/
+         if(fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
+          setDrawColor(sw, hex->flag.frontcolor);
+
+         }
+         else{
+          setDrawColor(sw, hex->flag.backcolor);
+             }
+             /*messing with this changes font height and stuff */
+          SDL_RenderDrawPoint(sw->renderer, x + ox, (y*2)+oy);
+      }
+   }
+}
+
+
+
+
+
 
 
 void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
@@ -285,13 +317,14 @@ void setDrawColor(SDL_Simplewin *sw, color c){
 void setFlags(unsigned char code, flags *current)
 {
 
-  printf("Printing Codes %d ",code);
   /*
+  printf("Printing Codes %d ",code);
   */
   switch ((colorCode) code) {
 
     case yellowf:
     current->frontcolor = 1;
+    current->mode = alphanumeric;
     /*
     printf("YELLOW" );
     printf("current font color  %d\n",current->frontcolor );
@@ -300,6 +333,7 @@ void setFlags(unsigned char code, flags *current)
 
 case bluef:
     current->frontcolor = 2;
+    current->mode = alphanumeric;
     /*
     printf("BLUE" );
     printf("current font color  %d\n",current->frontcolor );
@@ -308,6 +342,7 @@ case bluef:
 
     case redf:
     current->frontcolor = 3;
+    current->mode = alphanumeric;
     /*
     printf("RED" );
     printf("current font color  %d\n",current->frontcolor );
@@ -316,6 +351,7 @@ case bluef:
 
 case magentaf:
     current->frontcolor = 4;
+    current->mode = alphanumeric;
     /*
     printf("MAGENTA" );
     printf("current font color  %d\n",current->frontcolor );
@@ -324,6 +360,7 @@ case magentaf:
 
 case cyanf:
     current->frontcolor = 5;
+    current->mode = alphanumeric;
     /*
     printf("CYAN" );
     printf("current font color  %d\n",current->frontcolor );
@@ -332,6 +369,7 @@ case cyanf:
 
 case whitef:
     current->frontcolor = 6;
+    current->mode = alphanumeric;
     /*
     printf("WHITE" );
     printf("current font color  %d\n",current->frontcolor );
@@ -339,6 +377,7 @@ case whitef:
     break;
     case greenf:
     current->frontcolor = 7;
+      current->mode = alphanumeric;
     /*
     printf("RED" );
     printf("current font color  %d\n",current->frontcolor );
@@ -349,19 +388,54 @@ case whitef:
 
     case singleheight:
       current->fontsize = 1;
-      printf("SINGLEHEIGHT ACTIVATED\n" );
       break;
     case doubleheight:
       current->fontsize = 2;
-      printf("DOUBLEHEIGHT ACTIVATED\n" );
       break;
 
   case bgblack:
-  current->backcolor = 9;
-  break;
-case bgnew:
-  current->backcolor = current->frontcolor;
-  break;
+    current->backcolor = 9;
+    break;
+    case bgnew:
+    current->backcolor = current->frontcolor;
+    break;
+
+    case redg:
+      current->mode = contiguous;
+      current->frontcolor = r;
+      break;
+    case greeng:
+      current->mode = contiguous;
+      current->frontcolor = g;
+      break;
+    case yellowg:
+      current->mode = contiguous;
+      current->frontcolor = y;
+      break;
+    case blueg:
+      current->mode = contiguous;
+      current->frontcolor = b;
+      break;
+    case magentag:
+      current->mode = contiguous;
+      current->frontcolor = m;
+      break;
+    case cyang:
+      current->mode = contiguous;
+      current->frontcolor = c;
+      break;
+    case whiteg:
+      current->mode = contiguous;
+      current->frontcolor = w;
+      break;
+
+    /* Contiguous and separate graphics. */
+    case contg:
+      current->mode = contiguous;
+      break;
+    case sepg:
+      current->mode  = separate;
+      break;
 
 
     }}
