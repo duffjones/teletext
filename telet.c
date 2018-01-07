@@ -164,10 +164,7 @@ void SDL_DrawSixel(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHE
 {
    unsigned x, y;
    unsigned char letter;
-
-
-     letter = BLANK;
-
+   letter = 'x' + 7;
 
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
@@ -180,7 +177,7 @@ void SDL_DrawSixel(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHE
           setDrawColor(sw, hex->flag.backcolor);
              }
              /*messing with this changes font height and stuff */
-          SDL_RenderDrawPoint(sw->renderer, x + ox, (y*2)+oy);
+          SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
       }
    }
 }
@@ -258,8 +255,6 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
 }
 
 
-
-
 void setDrawColor(SDL_Simplewin *sw, color c){
 /*
      printf("Grade is = %d\n", c );
@@ -268,45 +263,31 @@ void setDrawColor(SDL_Simplewin *sw, color c){
        /*yellow*/
         case 1 :
            Neill_SDL_SetDrawColour(sw, 255, 255, 0 );
-           /*
-           printf("set draw YELLOW\n");
-           */
            break;
+
         case 2 :
            Neill_SDL_SetDrawColour(sw, 0, 0, 255);
-           /*
-           printf("set draw BLUE\n");
-           */
            break;
+
         case 3 :
            Neill_SDL_SetDrawColour(sw, 255, 0, 0);
-           /*
-           printf("set draw RED\n");
-           */
            break;
+
         case 4 :
            Neill_SDL_SetDrawColour(sw, 255, 0, 125);
-           /*
-           printf("set draw MAGENTA\n");
-          */
            break;
+
         case 5 :
           Neill_SDL_SetDrawColour(sw, 0, 255, 255);
-          /*
-          printf("set draw CYAN\n");
-          */
           break;
-          case 7 :
-            Neill_SDL_SetDrawColour(sw, 0, 255, 0);
-            /*
-            printf("set draw GREEN\n");
-            */
-            break;
-            case 9 :
-              Neill_SDL_SetDrawColour(sw, 0, 0, 0);
 
-              break;
+        case 7 :
+          Neill_SDL_SetDrawColour(sw, 0, 255, 0);
+          break;
 
+        case 9 :
+          Neill_SDL_SetDrawColour(sw, 0, 0, 0);
+          break;
 
         default :
            Neill_SDL_SetDrawColour(sw, 255, 255, 255);
@@ -325,117 +306,94 @@ void setFlags(unsigned char code, flags *current)
     case yellowf:
     current->frontcolor = 1;
     current->mode = alphanumeric;
-    /*
-    printf("YELLOW" );
-    printf("current font color  %d\n",current->frontcolor );
-    */
     break;
 
 case bluef:
     current->frontcolor = 2;
     current->mode = alphanumeric;
-    /*
-    printf("BLUE" );
-    printf("current font color  %d\n",current->frontcolor );
-    */
     break;
 
     case redf:
     current->frontcolor = 3;
     current->mode = alphanumeric;
-    /*
-    printf("RED" );
-    printf("current font color  %d\n",current->frontcolor );
-    */
     break;
 
 case magentaf:
     current->frontcolor = 4;
     current->mode = alphanumeric;
-    /*
-    printf("MAGENTA" );
-    printf("current font color  %d\n",current->frontcolor );
-    */
     break;
 
 case cyanf:
     current->frontcolor = 5;
     current->mode = alphanumeric;
-    /*
-    printf("CYAN" );
-    printf("current font color  %d\n",current->frontcolor );
-    */
     break;
 
 case whitef:
     current->frontcolor = 6;
     current->mode = alphanumeric;
-    /*
-    printf("WHITE" );
-    printf("current font color  %d\n",current->frontcolor );
-    */
     break;
-    case greenf:
+
+case greenf:
     current->frontcolor = 7;
-      current->mode = alphanumeric;
-    /*
-    printf("RED" );
-    printf("current font color  %d\n",current->frontcolor );
-    */
+    current->mode = alphanumeric;
     break;
 
+case singleheight:
+    current->fontsize = 1;
+    break;
 
-
-    case singleheight:
-      current->fontsize = 1;
-      break;
-    case doubleheight:
-      current->fontsize = 2;
-      break;
-
-  case bgblack:
+case doubleheight:
+    current->fontsize = 2;
+    break;
+case bgblack:
     current->backcolor = 9;
     break;
-    case bgnew:
+
+case bgnew:
     current->backcolor = current->frontcolor;
     break;
 
-    case redg:
-      current->mode = contiguous;
-      current->frontcolor = r;
-      break;
-    case greeng:
-      current->mode = contiguous;
-      current->frontcolor = g;
-      break;
-    case yellowg:
+case redg:
+    current->mode = contiguous;
+    current->frontcolor = r;
+    break;
+
+case greeng:
+    current->mode = contiguous;
+    current->frontcolor = g;
+    break;
+
+case yellowg:
       current->mode = contiguous;
       current->frontcolor = y;
       break;
-    case blueg:
+
+case blueg:
       current->mode = contiguous;
       current->frontcolor = b;
       break;
-    case magentag:
+
+case magentag:
       current->mode = contiguous;
       current->frontcolor = m;
       break;
-    case cyang:
+
+case cyang:
       current->mode = contiguous;
       current->frontcolor = c;
       break;
-    case whiteg:
+
+case whiteg:
       current->mode = contiguous;
       current->frontcolor = w;
       break;
 
-    /* Contiguous and separate graphics. */
-    case contg:
+
+case contg:
       current->mode = contiguous;
       break;
-    case sepg:
+
+case sepg:
       current->mode  = separate;
       break;
-
-
     }}
