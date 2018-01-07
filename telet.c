@@ -62,8 +62,8 @@ void changeFlags(flags *flag)
   {
     flag->frontcolor = 6;
     flag->backcolor = 8;
-    /*
     flag->fontsize = 1;
+    /*
     */
   }
 
@@ -98,18 +98,18 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
           /*
             If statement based on condition. 3 seperate DrawChar functions?
           */
+          if (hex[h-1][w].flag.fontsize == 2){
+            current->fontsize = bottomfont;
+            SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*20, h*25);
+          }
 
-          if (current->fontsize == topfont) {
+          else if (current->fontsize == topfont) {
             hex[h][w].flag.fontsize = topfont;
             printf("CONVERSION COMPLETE fontsize = %d\n", hex[h][w].flag.fontsize);
-            SDL_DrawTopChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*WT/2, h*HT);
-          }
-          else if (hex[h-1][w].flag.fontsize == 2){
-            current->fontsize = bottomfont; 
-            SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*WT/2, h*HT);
+            SDL_DrawTopChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*20, h*25);
           }
           else {
-            SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*WT/2, h*HT);
+            SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*20, h*25);
           }
         }
         printf("\n");
@@ -168,7 +168,7 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
-   for(y = 8; y < FNTHEIGHT; y++){
+   for(y = FNTHEIGHT/2; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
         /*cutting y in half makes just top bit*/
          if(fontdata[(chr-128)-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
@@ -184,7 +184,7 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
           Neill_SDL_SetDrawColour(sw, 0, 0, 0);
              }
              /*messing with this changes font height and stuff */
-          SDL_RenderDrawPoint(sw->renderer, x + ox, (y*2)+oy);
+          SDL_RenderDrawPoint(sw->renderer, x + ox, (y*2-FNTHEIGHT/2)+oy);
       }
    }
 }
