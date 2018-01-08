@@ -204,13 +204,6 @@ void resetSixels(sixels *sixel)
       sixel->bleft= false;
     }
 
-
-
-
-
-
-
-
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
@@ -257,12 +250,6 @@ void SDL_DrawSixel(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHE
       }
    }
 }
-
-
-
-
-
-
 
 void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
@@ -370,6 +357,11 @@ void setDrawColor(SDL_Simplewin *sw, color c){
 
      }
 }
+
+
+
+
+
 
 void setFlags(unsigned char code, flags *current)
 {
