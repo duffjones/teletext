@@ -12,6 +12,17 @@
 #define ON_ERROR(STR) fprintf(stderr, STR ); exit(EXIT_FAILURE)
 
 
+#define  TL sixel->uleft=true ;
+#define  TR sixel->uright = true;
+#define  ML sixel->mleft= true ;
+#define  MR sixel->mright= true;
+#define  BL sixel->bleft= true;
+#define  BR sixel->bright= true;
+
+
+
+
+
 typedef enum boolean {
   f   = 0,
   t   = 1
@@ -155,7 +166,7 @@ typedef enum sixelCode {
   fc       = 0xFC,
   fd       = 0xFD,
   fe       = 0xFE,
-  ff       = 0xFF,
+  ff       = 0xFF
 
 } sixelCode;
 

@@ -5,6 +5,7 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
 void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
 void SDL_DrawSixel(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
+void resetSixels(sixels *sixel);
 void setDrawColor(SDL_Simplewin *sw, color c);
 void setFlags(unsigned char code, flags *current);
 
@@ -94,6 +95,7 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
   {
     int  w, h;
     w = 0; h = 0;
+    sixels sixel;
 
     printf("Command: Print Codes:\n" );
       for (h = 0; h < HT; h++) {
@@ -108,43 +110,75 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
           printf("FC:%d \n",hex[h][w].flag.frontcolor);
           printf("Fontsz: %d \n",current->fontsize);
             If statement based on condition. 3 seperate DrawChar functions?
+            THIS BELOW KILLED THE RAINBOW
           */
-          if(hex[h][w].flag.mode == contiguous){
+
+          if((hex[h][w].flag.mode == contiguous
+            && hex[h][w].code >= a0 && hex[h][w].code<=bf)
+            || (hex[h][w].flag.mode == contiguous
+            && hex[h][w].code >= e0 && hex[h][w].code<=ff)
+
+
+
+
+
+
+
+
+          ){
             printf("Hex Code Contiguous: %d\n", hex[h][w].code );
 
-            /*
-            SDL_DrawSixel(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
-            makeSixels(sw, &hex[h][w],  sixel,  w*CELLWT, h*CELLHT, h, w);
-            */
-            sixels sixel;
             setSixels(hex[h][w].code,  &sixel);
             if(sixel.uleft == true){
               drawSmallSixel(sw, &hex[h][w], 0, 0, w*CELLWT, h*CELLHT);
-
             }
-
             if(sixel.uright == true){
               drawSmallSixel(sw, &hex[h][w], 8, 0, w*CELLWT, h*CELLHT);
-
             }
             if(sixel.mleft == true){
               drawSmallSixel(sw, &hex[h][w], 0, 6, w*CELLWT, h*CELLHT);
-
             }
             if(sixel.mright == true){
               drawSmallSixel(sw, &hex[h][w], 8, 6, w*CELLWT, h*CELLHT);
-
-
             }
             if(sixel.bleft == true){
               drawSmallSixel(sw, &hex[h][w], 0, 12, w*CELLWT, h*CELLHT);
-
             }
             if(sixel.bright == true){
               drawSmallSixel(sw, &hex[h][w], 8, 12, w*CELLWT, h*CELLHT);
-
             }
           }
+          else           if((hex[h][w].flag.mode == separate
+                        && hex[h][w].code >= a0 && hex[h][w].code<=bf)
+                        || (hex[h][w].flag.mode == separate
+                        && hex[h][w].code >= e0 && hex[h][w].code<=ff)
+
+/*  ||
+&& hex[h][w].code >> 0x9f
+*/
+                      ){
+                      printf("Hex Code Seperated: %d\n", hex[h][w].code );
+
+                      setSixels(hex[h][w].code,  &sixel);
+                      if(sixel.uleft == true){
+                        drawSmallSixel(sw, &hex[h][w], 0, 0, w*CELLWT, h*CELLHT);
+                      }
+                      if(sixel.uright == true){
+                        drawSmallSixel(sw, &hex[h][w], 8, 0, w*CELLWT, h*CELLHT);
+                      }
+                      if(sixel.mleft == true){
+                        drawSmallSixel(sw, &hex[h][w], 0, 6, w*CELLWT, h*CELLHT);
+                      }
+                      if(sixel.mright == true){
+                        drawSmallSixel(sw, &hex[h][w], 8, 6, w*CELLWT, h*CELLHT);
+                      }
+                      if(sixel.bleft == true){
+                        drawSmallSixel(sw, &hex[h][w], 0, 12, w*CELLWT, h*CELLHT);
+                      }
+                      if(sixel.bright == true){
+                        drawSmallSixel(sw, &hex[h][w], 8, 12, w*CELLWT, h*CELLHT);
+                      }
+                    }
 
           else if (hex[h-1][w].flag.fontsize == 2){
             current->fontsize = bottomfont;
@@ -161,8 +195,28 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
         }
 
         printf("\n");
+        resetSixels(&sixel);
+
   }
 }
+
+void resetSixels(sixels *sixel)
+    {
+      printf("reset sixels" );
+      sixel->uleft=false ;
+      sixel->uright = false;
+      sixel->mleft= false;
+      sixel->mright= false;
+      sixel->bright= false;
+      sixel->bleft= false;
+    }
+
+
+
+
+
+
+
 
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
