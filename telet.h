@@ -192,3 +192,4 @@ void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
 void makeSixels(SDL_Simplewin *sw, cell *hex, sixels sixel, int ox, int oy, int w, int h);
 void setSixels(unsigned char code, sixels *sixel);
 cell* cell_init(unsigned char data);
+void setDrawColor(SDL_Simplewin *sw, color c);

@@ -4,10 +4,10 @@
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
 void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
-void SDL_DrawSixel(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
 void resetSixels(sixels *sixel);
-void setDrawColor(SDL_Simplewin *sw, color c);
+
 void setFlags(unsigned char code, flags *current);
+void  setHold( cell *c);
 
 
 int main(int argc, char **argv)
@@ -50,16 +50,12 @@ void importCodes(char *filename, cell hex[25][40])
  if (fp== NULL) {
  printf("ERROR: unable to open file:\nCheck filename and path.\n");
 }
-
   printf("file open\n");
   while (( i = fread ( &temphex, sizeof(unsigned char) ,1000, fp)) > 0) {
         for (h = 0; h < HT; h++) {
           for (w = 0; w < WT; w++) {
-
-
               hex[h][w].code = (temphex[h][w]);
               printf("%x ", temphex[h][w]);
-
       }
       printf("\n" );
   }
@@ -74,50 +70,37 @@ void changeFlags(flags *flag)
     flag->fontsize = 1;
     flag->mode = alphanumeric;
     flag->hold = release;
-    /*
-    */
   }
 
   void setCellFlags(cell *c, flags *flag)
   {
     c->flag.frontcolor = flag->frontcolor;
-    /*
-    printf("Previous Flag Color after Conversion: %d\n",flag->frontcolor );
-    printf("Current Flag Color after Conversion: %d\n",flag->frontcolor );
-
-    */
     c->flag.backcolor = flag->backcolor;
     c->flag.mode = flag->mode;
     c->flag.hold = flag->hold;
+    c->flag.fontsize = flag->fontsize;
   }
 
 
 void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*fontdata)[18])
   {
     int  w, h;
-    w = 0; h = 0;
     sixels sixel;
+    w = 0; h = 0;
 
     printf("Command: Print Codes:\n" );
       for (h = 0; h < HT; h++) {
         changeFlags(current);
         for (w = 0; w < WT; w++) {
-          setCellFlags(&hex[h][w], current);
           setFlags(hex[h][w].code, current);
-
-          /*
-          printf("FC:%d \n",hex[h][w].flag.frontcolor);
-          printf("Fontsz: %d \n",current->fontsize);
-            If statement based on condition. 3 seperate DrawChar functions?
-            THIS BELOW KILLED THE RAINBOW
-          */
+          setCellFlags(&hex[h][w], current);
+          setHold( &hex[h][w]);
 
           if((hex[h][w].flag.mode == contiguous
             && hex[h][w].code >= a0 && hex[h][w].code<=bf)
             || (hex[h][w].flag.mode == contiguous
-            && hex[h][w].code >= e0 && hex[h][w].code<=ff)
+            && hex[h][w].code >= e0)
           ){
-            printf("Hex Code Contiguous: %d\n", hex[h][w].code );
 
             setSixels(hex[h][w].code,  &sixel);
             if(sixel.uleft == true){
@@ -138,17 +121,13 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
             if(sixel.bright == true){
               drawSmallSixel(sw, &hex[h][w], 8, 12, w*CELLWT, h*CELLHT);
             }
+            resetSixels(&sixel);
           }
-          else           if((hex[h][w].flag.mode == separate
+          else          if((hex[h][w].flag.mode == separate
                         && hex[h][w].code >= a0 && hex[h][w].code<=bf)
                         || (hex[h][w].flag.mode == separate
-                        && hex[h][w].code >= e0 && hex[h][w].code<=ff)
-
-/*  ||
-&& hex[h][w].code >> 0x9f
-*/
+                        && hex[h][w].code >= e0 )
                       ){
-                      printf("Hex Code Seperated: %d\n", hex[h][w].code );
 
                       setSixels(hex[h][w].code,  &sixel);
                       if(sixel.uleft == true){
@@ -177,7 +156,6 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
             current->fontsize = bottomfont;
             SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
-
           else if (current->fontsize == topfont) {
             hex[h][w].flag.fontsize = topfont;
             SDL_DrawTopChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
@@ -186,16 +164,33 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
             SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
         }
-
         printf("\n");
         resetSixels(&sixel);
-
   }
+}
+
+void  setHold( cell *c)
+{
+  static unsigned char mostrecent;
+  static graphicsMode  lastgraphm = alphanumeric;
+  static fontsz   lastfontsize  = normalfont;
+
+  if ( lastgraphm != c->flag.mode ||  lastfontsize != c->flag.fontsize) {
+    mostrecent = a0;
+  }
+  if (c->flag.hold == hold && c->code <= a0) {
+    c->code = mostrecent;
+     lastgraphm = hold;
+  }
+  if (c->code > a0 && c->flag.mode != alphanumeric) {
+    mostrecent = c->code;
+  }
+   lastgraphm = c->flag.mode;
+   lastfontsize  = c->flag.fontsize;
 }
 
 void resetSixels(sixels *sixel)
     {
-      printf("reset sixels" );
       sixel->uleft=false ;
       sixel->uright = false;
       sixel->mleft= false;
@@ -203,7 +198,6 @@ void resetSixels(sixels *sixel)
       sixel->bright= false;
       sixel->bleft= false;
     }
-
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
@@ -228,25 +222,6 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
              }
              /*messing with this changes font height and stuff */
           SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
-      }
-   }
-}
-
-void SDL_DrawSixel(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
-{
-   unsigned x, y;
-   SDL_Rect rectangle;
-
-
-   for(y = 0; y < 10; y++){
-      for(x = 0; x < 5; x++){
-          setDrawColor(sw, hex->flag.frontcolor);
-             rectangle.w = 1;
-             rectangle.h = 1;
-             rectangle.x = x+ox;
-             rectangle.y = y+oy;
-            SDL_RenderFillRect(sw->renderer, &rectangle);
-            SDL_RenderDrawRect(sw->renderer, &rectangle);
       }
    }
 }
@@ -283,7 +258,6 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
       }
    }
 }
-
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
@@ -316,8 +290,6 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
       }
    }
 }
-
-
 void setDrawColor(SDL_Simplewin *sw, color c){
 /*
      printf("Grade is = %d\n", c );
@@ -358,13 +330,7 @@ void setDrawColor(SDL_Simplewin *sw, color c){
      }
 }
 
-
-
-
-
-
-void setFlags(unsigned char code, flags *current)
-{
+void setFlags(unsigned char code, flags *current){
 
   /*
   printf("Printing Codes %d ",code);
@@ -375,7 +341,6 @@ void setFlags(unsigned char code, flags *current)
     current->frontcolor = 1;
     current->mode = alphanumeric;
     break;
-
 case bluef:
     current->frontcolor = 2;
     current->mode = alphanumeric;
@@ -414,8 +379,6 @@ case doubleheight:
     current->fontsize = 2;
     break;
 
-
-
 case bgblack:
     current->backcolor = 9;
     break;
@@ -423,10 +386,6 @@ case bgblack:
 case bgnew:
     current->backcolor = current->frontcolor;
     break;
-
-
-
-
 
 case redg:
     current->mode = contiguous;
@@ -463,7 +422,6 @@ case whiteg:
       current->frontcolor = w;
       break;
 
-
 case contg:
       current->mode = contiguous;
       break;
@@ -480,8 +438,4 @@ case sepg:
         break;
       default:
         break;
-
-
-
-
     }}

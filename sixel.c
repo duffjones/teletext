@@ -1,44 +1,10 @@
 #include "telet.h"
 
 
-/*
-void makeSixels(SDL_Simplewin *sw, cell *hex, sixels sixel, int ox, int oy, int w, int h){
-
-  SDL_DrawSixel(sw, &hex[h][w], 0, 0, w*CELLWT, h*CELLHT);
-  SDL_DrawSixel(sw, &hex[h][w], 5, 0, w*CELLWT, h*CELLHT);
-  SDL_DrawSixel(sw, &hex[h][w], 0, 5, w*CELLWT, h*CELLHT);
-if(sixel.uleft == true){
-
-}
-
-if(sixel.uright == true){
-
-}
-if(sixel.mleft == true){
-
-}
-if(sixel.mright == true){
-SDL_DrawSixel(sw, &hex[h][w], 5, 5, w*CELLWT, h*CELLHT);
-
-}
-if(sixel.bleft == true){
-SDL_DrawSixel(sw, &hex[h][w], 10, 0, w*CELLWT, h*CELLHT);
-
-}
-if(sixel.bright == true){
-SDL_DrawSixel(sw, &hex[h][w], 10, 5, w*CELLWT, h*CELLHT);
-
-}
-
-
-}
-*/
-
 void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
   {
-    unsigned x, y;
+    unsigned x, y, sizey, sizex;
     SDL_Rect rectangle;
-    int sizey, sizex;
     sizey = 3;
     sizex = 4;
     if(hex->flag.mode == separate){
@@ -175,7 +141,7 @@ void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
       break;
       case f3:TL; TR; BL; BR;
       break;
-      case f4:ML; BR; BL; 
+      case f4:ML; BR; BL;
       break;
       case f5:TL; ML; BL; BR;
       break;
