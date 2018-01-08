@@ -53,12 +53,18 @@ typedef enum graphicsMode {
   alphanumeric, contiguous, separate
 } graphicsMode;
 
+typedef enum holdMode {
+  release, hold
+} holdMode;
+
 
 typedef struct flags {
   color     frontcolor;
   color     backcolor;
   fontsz    fontsize;
   graphicsMode mode;
+  holdMode hold;
+
 
 
 } flags;
@@ -95,7 +101,10 @@ typedef enum colorCode {
 
 
   bgblack       = 0x9c,
-  bgnew         = 0x9d
+  bgnew         = 0x9d,
+
+  holdg    = 0x9e,
+  releaseg = 0x9f
 
 } colorCode;
 

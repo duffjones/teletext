@@ -73,6 +73,7 @@ void changeFlags(flags *flag)
     flag->backcolor = z;
     flag->fontsize = 1;
     flag->mode = alphanumeric;
+    flag->hold = release;
     /*
     */
   }
@@ -87,7 +88,7 @@ void changeFlags(flags *flag)
     */
     c->flag.backcolor = flag->backcolor;
     c->flag.mode = flag->mode;
-
+    c->flag.hold = flag->hold;
   }
 
 
@@ -99,9 +100,7 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
 
     printf("Command: Print Codes:\n" );
       for (h = 0; h < HT; h++) {
-
         changeFlags(current);
-
         for (w = 0; w < WT; w++) {
           setCellFlags(&hex[h][w], current);
           setFlags(hex[h][w].code, current);
@@ -117,14 +116,6 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
             && hex[h][w].code >= a0 && hex[h][w].code<=bf)
             || (hex[h][w].flag.mode == contiguous
             && hex[h][w].code >= e0 && hex[h][w].code<=ff)
-
-
-
-
-
-
-
-
           ){
             printf("Hex Code Contiguous: %d\n", hex[h][w].code );
 
@@ -178,6 +169,8 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
                       if(sixel.bright == true){
                         drawSmallSixel(sw, &hex[h][w], 8, 12, w*CELLWT, h*CELLHT);
                       }
+                      resetSixels(&sixel);
+
                     }
 
           else if (hex[h-1][w].flag.fontsize == 2){
@@ -428,6 +421,9 @@ case singleheight:
 case doubleheight:
     current->fontsize = 2;
     break;
+
+
+
 case bgblack:
     current->backcolor = 9;
     break;
@@ -435,6 +431,10 @@ case bgblack:
 case bgnew:
     current->backcolor = current->frontcolor;
     break;
+
+
+
+
 
 case redg:
     current->mode = contiguous;
@@ -479,4 +479,17 @@ case contg:
 case sepg:
       current->mode  = separate;
       break;
+
+      case holdg:
+        current->hold = hold;
+        break;
+      case releaseg:
+        current->hold = release;
+        break;
+      default:
+        break;
+
+
+
+
     }}
