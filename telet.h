@@ -3,14 +3,10 @@
 #include <string.h>
 #include <stdbool.h>
 #include "neillsdl2.h"
-#include "sixel.h"
-
 
 #define MILLISECONDDELAY 20
 #define BLANK 0xA0
-
-#define ON_ERROR(STR) fprintf(stderr, STR ); exit(EXIT_FAILURE)
-
+#define CELLCOUNT 1000
 
 #define  TL sixel->uleft=true ;
 #define  TR sixel->uright = true;
@@ -19,14 +15,9 @@
 #define  BL sixel->bleft= true;
 #define  BR sixel->bright= true;
 
-
-
-
-
 typedef enum boolean {
   f   = 0,
   t   = 1
-
 }boolean;
 
 typedef struct sixels {
@@ -38,11 +29,8 @@ typedef struct sixels {
   boolean bright;
 } sixels;
 
-
-
-
 typedef enum color {
-  w = 6, z = 9, r = 3, y = 1, b =2, c = 5, m = 4, g = 7
+  white = 6, black = 9, red = 3, yellow = 1, blue =2, cyan = 5, magenta = 4, green = 7
 } color;
 
 typedef enum fontsz {
@@ -64,9 +52,6 @@ typedef struct flags {
   fontsz    fontsize;
   graphicsMode mode;
   holdMode hold;
-
-
-
 } flags;
 
 
@@ -180,11 +165,7 @@ typedef enum sixelCode {
 } sixelCode;
 
 
-
-
-
-
-
+unsigned char checkChar(unsigned char chr);
 void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*fontdata)[18]);
 void importCodes(char *filename, cell hex[25][40]);
 void changeFlags(flags *flag);
@@ -193,3 +174,9 @@ void makeSixels(SDL_Simplewin *sw, cell *hex, sixels sixel, int ox, int oy, int 
 void setSixels(unsigned char code, sixels *sixel);
 cell* cell_init(unsigned char data);
 void setDrawColor(SDL_Simplewin *sw, color c);
+void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
+void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
+void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
+void resetSixels(sixels *sixel);
+void setFlags(unsigned char code, flags *current);
+void  setHold( cell *c);

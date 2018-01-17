@@ -1,5 +1,4 @@
-#include "telet.h"
-
+#include "sixel.h"
 
 void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
   {
@@ -24,6 +23,40 @@ void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
         }
      }
   }
+
+  void resetSixels(sixels *sixel)
+      {
+        sixel->uleft=false ;
+        sixel->uright = false;
+        sixel->mleft= false;
+        sixel->mright= false;
+        sixel->bright= false;
+        sixel->bleft= false;
+      }
+
+void DrawSixel(SDL_Simplewin *sw, cell *hex, int h, int w, sixels sixel){
+      setSixels(hex->code,  &sixel);
+      if(sixel.uleft == true){
+        drawSmallSixel(sw, hex, 0, 0, w*CELLWT, h*CELLHT);
+      }
+      if(sixel.uright == true){
+        drawSmallSixel(sw, hex, 8, 0, w*CELLWT, h*CELLHT);
+      }
+      if(sixel.mleft == true){
+        drawSmallSixel(sw, hex, 0, 6, w*CELLWT, h*CELLHT);
+      }
+      if(sixel.mright == true){
+        drawSmallSixel(sw, hex, 8, 6, w*CELLWT, h*CELLHT);
+      }
+      if(sixel.bleft == true){
+        drawSmallSixel(sw, hex, 0, 12, w*CELLWT, h*CELLHT);
+      }
+      if(sixel.bright == true){
+        drawSmallSixel(sw, hex, 8, 12, w*CELLWT, h*CELLHT);
+      }
+      resetSixels(&sixel);
+  }
+
 
   void setSixels(unsigned char code, sixels *sixel)
   {
@@ -166,61 +199,4 @@ void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
       case ff:TR; TL; MR; ML; BR; BL;
       break;
 
-
-/*
-
-      case f0:
-      BR; BL;
-      sixel-> uleft = false;
-      sixel->uright = false;
-      sixel->mleft= false ;
-      sixel->mright= false;
-      sixel->bleft= true;
-      sixel->bright= true;
-      */
-      /*
-      break;
-
-      case a3:
-
-      sixel-> uleft = true;
-      sixel->uright = true;
-      sixel->mleft= false ;
-      sixel->mright= false;
-      sixel->bleft= false;
-      sixel->bright= false;
-      break;
-
-      case b5:
-
-      sixel-> uleft = true;
-      sixel->uright = false;
-      sixel->mleft= true ;
-      sixel->mright= false;
-      sixel->bleft= true;
-      sixel->bright= false;
-      break;
-
-      case ea:
-
-      sixel-> uleft = false;
-      sixel->uright = true;
-      sixel->mleft= false ;
-      sixel->mright= true;
-      sixel->bleft= false;
-      sixel->bright= true;
-      break;
-
-
-
-
-      default:
-      sixel->uleft = true;
-      sixel->uright = true;
-      sixel->mleft= true;
-      sixel->mright= true;
-      sixel->bleft= true;
-      sixel->bright= true;
-      break;
-      */
       }}

@@ -1,13 +1,6 @@
-#include "telet.h"
+#include "testing.h"
 #include "stdio.h"
 
-void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
-void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
-void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
-void resetSixels(sixels *sixel);
-
-void setFlags(unsigned char code, flags *current);
-void  setHold( cell *c);
 
 
 int main(int argc, char **argv)
@@ -19,22 +12,22 @@ int main(int argc, char **argv)
 
   printf("STARTING TEST: \n" );
       if ( (argc != 2) )  {
-        printf("ERROR: Incorrect usage:\nOnly 1 argument is required.\n");
+        ON_ERROR("Requires 2 Arguments: ");
       }
 
 importCodes(argv[1], hex);
+testCodeDisplay(hex);
+
 Neill_SDL_ReadFont(font, "m7fixed.fnt");
 Neill_SDL_Init(&sw);
 printCodes(&sw, hex, &current, font);
 
-printf("print s\n" );
-
-do{
+   do{
       SDL_Delay(MILLISECONDDELAY);
       Neill_SDL_UpdateScreen(&sw);
       Neill_SDL_Events(&sw);
-  }
-  while(!sw.finished);
+   }
+   while(!sw.finished);
       atexit(SDL_Quit);
       return 0;
 }
@@ -42,37 +35,38 @@ do{
 void importCodes(char *filename, cell hex[25][40])
 {
   FILE *fp = fopen(filename, "rb");
-  int i, w, h;
-
   unsigned char temphex[HT][WT];
- w = 0; h = 0; i = 0;
+  int i, w, h, test;
+  w = 0, h = 0, i = 0; test = 0;
 
- if (fp== NULL) {
- printf("ERROR: unable to open file:\nCheck filename and path.\n");
-}
-  printf("file open\n");
-  while (( i = fread ( &temphex, sizeof(unsigned char) ,1000, fp)) > 0) {
-        for (h = 0; h < HT; h++) {
-          for (w = 0; w < WT; w++) {
-              hex[h][w].code = (temphex[h][w]);
-              printf("%x ", temphex[h][w]);
-      }
-      printf("\n" );
-  }
-  fclose ( fp);
-  }}
+  if (fp== NULL)
+   {
+      ON_ERROR("unable to open file:\nCheck filename and path.\n");
+   }
+
+  while (( i = fread ( &temphex, sizeof(unsigned char),CELLCOUNT, fp)) > 0) {
+     for (h = 0; h < HT; h++) {
+        for (w = 0; w < WT; w++) {
+          hex[h][w].code = (temphex[h][w]);
+          test++;
+        }
+     }
+  fclose (fp);
+  testCodes(test);
+}}
 
 
 void changeFlags(flags *flag)
   {
-    flag->frontcolor = w;
-    flag->backcolor = z;
-    flag->fontsize = 1;
+    flag->frontcolor = white;
+    flag->backcolor = black;
+    flag->fontsize = normalfont;
     flag->mode = alphanumeric;
     flag->hold = release;
   }
 
-  void setCellFlags(cell *c, flags *flag)
+
+void setCellFlags(cell *c, flags *flag)
   {
     c->flag.frontcolor = flag->frontcolor;
     c->flag.backcolor = flag->backcolor;
@@ -88,7 +82,6 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
     sixels sixel;
     w = 0; h = 0;
 
-    printf("Command: Print Codes:\n" );
       for (h = 0; h < HT; h++) {
         changeFlags(current);
         for (w = 0; w < WT; w++) {
@@ -96,61 +89,16 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
           setCellFlags(&hex[h][w], current);
           setHold( &hex[h][w]);
 
-          if((hex[h][w].flag.mode == contiguous
-            && hex[h][w].code >= a0 && hex[h][w].code<=bf)
-            || (hex[h][w].flag.mode == contiguous
-            && hex[h][w].code >= e0)
-          ){
-
-            setSixels(hex[h][w].code,  &sixel);
-            if(sixel.uleft == true){
-              drawSmallSixel(sw, &hex[h][w], 0, 0, w*CELLWT, h*CELLHT);
+          if((hex[h][w].flag.mode == contiguous && hex[h][w].code >= a0
+            && hex[h][w].code<=bf)|| (hex[h][w].flag.mode == contiguous
+            && hex[h][w].code >= e0)){
+            DrawSixel(sw, &hex[h][w], h, w, sixel);
             }
-            if(sixel.uright == true){
-              drawSmallSixel(sw, &hex[h][w], 8, 0, w*CELLWT, h*CELLHT);
-            }
-            if(sixel.mleft == true){
-              drawSmallSixel(sw, &hex[h][w], 0, 6, w*CELLWT, h*CELLHT);
-            }
-            if(sixel.mright == true){
-              drawSmallSixel(sw, &hex[h][w], 8, 6, w*CELLWT, h*CELLHT);
-            }
-            if(sixel.bleft == true){
-              drawSmallSixel(sw, &hex[h][w], 0, 12, w*CELLWT, h*CELLHT);
-            }
-            if(sixel.bright == true){
-              drawSmallSixel(sw, &hex[h][w], 8, 12, w*CELLWT, h*CELLHT);
-            }
-            resetSixels(&sixel);
-          }
-          else          if((hex[h][w].flag.mode == separate
-                        && hex[h][w].code >= a0 && hex[h][w].code<=bf)
-                        || (hex[h][w].flag.mode == separate
-                        && hex[h][w].code >= e0 )
-                      ){
-
-                      setSixels(hex[h][w].code,  &sixel);
-                      if(sixel.uleft == true){
-                        drawSmallSixel(sw, &hex[h][w], 0, 0, w*CELLWT, h*CELLHT);
-                      }
-                      if(sixel.uright == true){
-                        drawSmallSixel(sw, &hex[h][w], 8, 0, w*CELLWT, h*CELLHT);
-                      }
-                      if(sixel.mleft == true){
-                        drawSmallSixel(sw, &hex[h][w], 0, 6, w*CELLWT, h*CELLHT);
-                      }
-                      if(sixel.mright == true){
-                        drawSmallSixel(sw, &hex[h][w], 8, 6, w*CELLWT, h*CELLHT);
-                      }
-                      if(sixel.bleft == true){
-                        drawSmallSixel(sw, &hex[h][w], 0, 12, w*CELLWT, h*CELLHT);
-                      }
-                      if(sixel.bright == true){
-                        drawSmallSixel(sw, &hex[h][w], 8, 12, w*CELLWT, h*CELLHT);
-                      }
-                      resetSixels(&sixel);
-
-                    }
+          else if((hex[h][w].flag.mode == separate && hex[h][w].code >= a0
+             && hex[h][w].code<=bf)|| (hex[h][w].flag.mode == separate
+             && hex[h][w].code >= e0 )){
+                DrawSixel(sw, &hex[h][w], h, w, sixel);
+             }
 
           else if (hex[h-1][w].flag.fontsize == 2){
             current->fontsize = bottomfont;
@@ -164,7 +112,6 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
             SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
         }
-        printf("\n");
         resetSixels(&sixel);
   }
 }
@@ -189,30 +136,16 @@ void  setHold( cell *c)
    lastfontsize  = c->flag.fontsize;
 }
 
-void resetSixels(sixels *sixel)
-    {
-      sixel->uleft=false ;
-      sixel->uright = false;
-      sixel->mleft= false;
-      sixel->mright= false;
-      sixel->bright= false;
-      sixel->bleft= false;
-    }
+
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
    unsigned char letter;
 
-   if(chr > BLANK){
-     letter = chr - 128;
-   }
-   else {
-     letter = BLANK - 128;
-   }
+letter = checkChar(chr);
 
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
-        /*cutting y in half makes just top bit*/
          if(fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
           setDrawColor(sw, hex->flag.frontcolor);
 
@@ -220,7 +153,6 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
          else{
           setDrawColor(sw, hex->flag.backcolor);
              }
-             /*messing with this changes font height and stuff */
           SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
       }
    }
@@ -231,24 +163,13 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
    unsigned x, y;
    unsigned char letter;
 
-   if(chr > BLANK){
-     letter = chr - 128;
-   }
-   else {
-     letter = BLANK - 128;
-   }
+   letter = checkChar(chr);
 
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
-        /*cutting y in half makes just top bit*/
          if(chr - 128 > 0 && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
-           /*
-           printf("Draw color set\n" );
-           */
           setDrawColor(sw, hex->flag.frontcolor);
-          /*
-          printf("DC %d\n",hex->flag.frontcolor );
-          */
+
          }
          else{
           setDrawColor(sw, hex->flag.backcolor);
@@ -258,69 +179,70 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
       }
    }
 }
+
+unsigned char checkChar(unsigned char chr){
+  unsigned char letter;
+
+  if(chr > BLANK){
+    letter = chr - 128;
+  }
+  else {
+    letter = BLANK - 128;
+  }
+
+  return letter;
+}
+
+
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
    unsigned char letter;
 
-   if(chr > BLANK){
-     letter = chr - 128;
-   }
-   else {
-     letter = BLANK - 128;
-   }
+   letter = checkChar(chr);
 
    for(y = FNTHEIGHT/2; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
-        /*cutting y in half makes just top bit*/
          if(chr - 128 > 0 && fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
-           /*
-           printf("Draw color set\n" );
-           */
           setDrawColor(sw, hex->flag.frontcolor);
-          /*
-          printf("DC %d\n",hex->flag.frontcolor );
-          */
          }
          else{
           setDrawColor(sw, hex->flag.backcolor);
              }
-             /*messing with this changes font height and stuff */
           SDL_RenderDrawPoint(sw->renderer, x + ox, ((y*2)-FNTHEIGHT)+oy - 9);
       }
    }
 }
+
 void setDrawColor(SDL_Simplewin *sw, color c){
-/*
-     printf("Grade is = %d\n", c );
-*/
+/* Draw Color is Selected by the argument received from current color flag*/
      switch(c) {
-       /*yellow*/
-        case 1 :
+
+        case yellow :
            Neill_SDL_SetDrawColour(sw, 255, 255, 0 );
            break;
 
-        case 2 :
+        case blue :
            Neill_SDL_SetDrawColour(sw, 0, 0, 255);
            break;
 
-        case 3 :
+        case red :
            Neill_SDL_SetDrawColour(sw, 255, 0, 0);
            break;
 
-        case 4 :
-           Neill_SDL_SetDrawColour(sw, 255, 0, 125);
+        case magenta :
+           Neill_SDL_SetDrawColour(sw, 255, 0, 255);
            break;
 
-        case 5 :
+        case cyan :
           Neill_SDL_SetDrawColour(sw, 0, 255, 255);
           break;
 
-        case 7 :
+        case green :
           Neill_SDL_SetDrawColour(sw, 0, 255, 0);
           break;
 
-        case 9 :
+        case black :
           Neill_SDL_SetDrawColour(sw, 0, 0, 0);
           break;
 
@@ -331,95 +253,97 @@ void setDrawColor(SDL_Simplewin *sw, color c){
 }
 
 void setFlags(unsigned char code, flags *current){
+switch ((colorCode) code) {
 
-  /*
-  printf("Printing Codes %d ",code);
-  */
-  switch ((colorCode) code) {
-
-    case yellowf:
-    current->frontcolor = 1;
+case yellowf:
+    current->frontcolor = yellow;
     current->mode = alphanumeric;
     break;
+
 case bluef:
-    current->frontcolor = 2;
+    current->frontcolor = blue;
     current->mode = alphanumeric;
     break;
 
-    case redf:
-    current->frontcolor = 3;
+case redf:
+    current->frontcolor = red;
     current->mode = alphanumeric;
     break;
 
 case magentaf:
-    current->frontcolor = 4;
+    current->frontcolor = magenta;
     current->mode = alphanumeric;
     break;
 
 case cyanf:
-    current->frontcolor = 5;
+    current->frontcolor = cyan;
     current->mode = alphanumeric;
     break;
 
 case whitef:
-    current->frontcolor = 6;
+    current->frontcolor = white;
     current->mode = alphanumeric;
     break;
 
 case greenf:
-    current->frontcolor = 7;
+    current->frontcolor = green;
     current->mode = alphanumeric;
     break;
 
+/* SELECT FONT HEIGHT*/
+
 case singleheight:
-    current->fontsize = 1;
+    current->fontsize = normalfont;
     break;
 
 case doubleheight:
-    current->fontsize = 2;
+    current->fontsize = topfont;
     break;
 
+/* SELECT BACKGROUND COLOR*/
 case bgblack:
-    current->backcolor = 9;
+    current->backcolor = black;
     break;
 
 case bgnew:
     current->backcolor = current->frontcolor;
     break;
 
+/*SELECT GRAPHICS MODE AND COLOR FOR GRAPHICS*/
+
 case redg:
     current->mode = contiguous;
-    current->frontcolor = r;
+    current->frontcolor = red;
     break;
 
 case greeng:
     current->mode = contiguous;
-    current->frontcolor = g;
+    current->frontcolor = green;
     break;
 
 case yellowg:
       current->mode = contiguous;
-      current->frontcolor = y;
+      current->frontcolor = yellow;
       break;
 
 case blueg:
       current->mode = contiguous;
-      current->frontcolor = b;
+      current->frontcolor = blue;
       break;
 
 case magentag:
       current->mode = contiguous;
-      current->frontcolor = m;
+      current->frontcolor = magenta;
       break;
 
 case cyang:
       current->mode = contiguous;
-      current->frontcolor = c;
+      current->frontcolor = cyan;
       break;
 
 case whiteg:
       current->mode = contiguous;
-      current->frontcolor = w;
+      current->frontcolor = white;
       break;
 
 case contg:
@@ -430,12 +354,16 @@ case sepg:
       current->mode  = separate;
       break;
 
-      case holdg:
+/* HOLD AND RELEASE*/
+
+case holdg:
         current->hold = hold;
         break;
-      case releaseg:
-        current->hold = release;
-        break;
-      default:
-        break;
+
+case releaseg:
+      current->hold = release;
+      break;
+
+default:
+      break;
     }}
