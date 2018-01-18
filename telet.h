@@ -8,18 +8,14 @@
 #define BLANK 0xA0
 #define CELLCOUNT 1000
 #define DIFF 128
+#define MAXC 255
 
-
-#define  TL sixel->uleft=true ;
+#define  TL sixel->uleft= true;
 #define  TR sixel->uright = true;
 #define  ML sixel->mleft= true ;
 #define  MR sixel->mright= true;
 #define  BL sixel->bleft= true;
 #define  BR sixel->bright= true;
-
-
-
-
 
 
 typedef enum boolean {
@@ -69,6 +65,11 @@ typedef struct cell {
 
 
 typedef enum colorCode {
+
+  hexlow = 0x20,
+  hexhigh = 0x7f,
+
+
   redf       = 0x81,
   greenf     = 0x82,
   yellowf    = 0x83,

@@ -23,7 +23,29 @@ void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
         }
      }
   }
+  void drawSmallSixelBlank(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
+    {
+      unsigned x, y, sizey, sizex;
+      SDL_Rect rectangle;
+      sizey = 3;
+      sizex = 4;
+      if(hex->flag.mode == separate){
+        sizey = 2;
+        sizex = 3;
+      }
 
+      for(y = 0; y < sizey*2; y++){
+         for(x = 0; x < sizex *2; x++){
+             setDrawColor(sw, hex->flag.backcolor);
+                rectangle.w = 1;
+                rectangle.h = 1;
+                rectangle.x = (x+i)+ox;
+                rectangle.y = (y+j)+oy;
+               SDL_RenderFillRect(sw->renderer, &rectangle);
+               SDL_RenderDrawRect(sw->renderer, &rectangle);
+          }
+       }
+    }
   void resetSixels(sixels *sixel)
       {
         sixel->uleft=false ;
@@ -36,24 +58,33 @@ void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
 
 void DrawSixel(SDL_Simplewin *sw, cell *hex, int h, int w, sixels sixel){
       setSixels(hex->code,  &sixel);
+
+
       if(sixel.uleft == true){
         drawSmallSixel(sw, hex, 0, 0, w*CELLWT, h*CELLHT);
+
       }
+      else drawSmallSixelBlank(sw, hex, 0, 0, w*CELLWT, h*CELLHT);
       if(sixel.uright == true){
         drawSmallSixel(sw, hex, 8, 0, w*CELLWT, h*CELLHT);
       }
+      else drawSmallSixelBlank(sw, hex, 8, 0, w*CELLWT, h*CELLHT);
       if(sixel.mleft == true){
         drawSmallSixel(sw, hex, 0, 6, w*CELLWT, h*CELLHT);
       }
+      else drawSmallSixelBlank(sw, hex, 0, 6, w*CELLWT, h*CELLHT);
       if(sixel.mright == true){
         drawSmallSixel(sw, hex, 8, 6, w*CELLWT, h*CELLHT);
       }
+      else drawSmallSixelBlank(sw, hex, 8, 6, w*CELLWT, h*CELLHT);
       if(sixel.bleft == true){
         drawSmallSixel(sw, hex, 0, 12, w*CELLWT, h*CELLHT);
       }
+      else drawSmallSixelBlank(sw, hex, 0, 12, w*CELLWT, h*CELLHT);
       if(sixel.bright == true){
         drawSmallSixel(sw, hex, 8, 12, w*CELLWT, h*CELLHT);
       }
+      else drawSmallSixelBlank(sw, hex, 8, 12, w*CELLWT, h*CELLHT);
       resetSixels(&sixel);
   }
 

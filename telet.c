@@ -32,7 +32,7 @@ int main(int argc, char **argv)
       return 0;
 }
 
-void importCodes(char *filename, cell hex[25][40])
+void importCodes(char *filename, cell hex[HT][WT])
 {
   FILE *fp = fopen(filename, "rb");
   unsigned char temphex[HT][WT];
@@ -84,14 +84,17 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
       for (h = 0; h < HT; h++) {
         changeFlags(current);
         for (w = 0; w < WT; w++) {
-          printf("MADE IT HERE\n" );
+
           setFlags(hex[h][w].code, current);
           setCellFlags(&hex[h][w], current);
           setHold(&hex[h][w]);
 
           if(hex[h][w].flag.mode == contiguous &&
-            ((hex[h][w].code >= a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0))
+            ((hex[h][w].code > a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0))
             {
+
+               setDrawColor(sw, hex[h][w].flag.backcolor);
+
             DrawSixel(sw, &hex[h][w], h, w, sixel);
             }
           else if(hex[h][w].flag.mode == separate &&
@@ -122,6 +125,8 @@ void  setHold( cell *c)
   static unsigned char mostrecent;
   static graphicsMode  lastgraphm = alphanumeric;
   static fontsz   lastfontsize  = normalfont;
+
+
 
   if ( lastgraphm != c->flag.mode ||  lastfontsize != c->flag.fontsize) {
     mostrecent = a0;
@@ -166,23 +171,30 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
 
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
-         if(chr - DIFF > 0 && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
+         if((letter > 0) && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
           setDrawColor(sw, hex->flag.frontcolor);
          }
+
          else{
           setDrawColor(sw, hex->flag.backcolor);
              }
              /*messing with this changes font height and stuff */
-          SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
+          SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy);
       }
    }
 }
 
 unsigned char checkChar(unsigned char chr){
   unsigned char letter;
-  if(chr > BLANK){
+
+  if(chr  >= hexlow && chr <= hexhigh){
+    letter = chr;
+  }
+
+  else if(chr > BLANK && chr < ff){
     letter = chr - DIFF;
   }
+
   else {
     letter = BLANK - DIFF;
   }
@@ -198,7 +210,7 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
 
    for(y = FNTHEIGHT ; y < FNTHEIGHT *2; y++){
       for(x = 0; x < FNTWIDTH; x++){
-         if(chr - DIFF > 0 && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
+         if(letter > 0 && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
           setDrawColor(sw, hex->flag.frontcolor);
          }
          else{
@@ -216,27 +228,27 @@ void setDrawColor(SDL_Simplewin *sw, color c){
      switch(c) {
 
         case yellow :
-           Neill_SDL_SetDrawColour(sw, 255, 255, 0 );
+           Neill_SDL_SetDrawColour(sw, MAXC, MAXC, 0 );
            break;
 
         case blue :
-           Neill_SDL_SetDrawColour(sw, 0, 0, 255);
+           Neill_SDL_SetDrawColour(sw, 0, 0, MAXC);
            break;
 
         case red :
-           Neill_SDL_SetDrawColour(sw, 255, 0, 0);
+           Neill_SDL_SetDrawColour(sw, MAXC, 0, 0);
            break;
 
         case magenta :
-           Neill_SDL_SetDrawColour(sw, 255, 0, 255);
+           Neill_SDL_SetDrawColour(sw, MAXC, 0, MAXC);
            break;
 
         case cyan :
-          Neill_SDL_SetDrawColour(sw, 0, 255, 255);
+          Neill_SDL_SetDrawColour(sw, 0, MAXC, MAXC);
           break;
 
         case green :
-          Neill_SDL_SetDrawColour(sw, 0, 255, 0);
+          Neill_SDL_SetDrawColour(sw, 0, MAXC, 0);
           break;
 
         case black :
@@ -244,7 +256,7 @@ void setDrawColor(SDL_Simplewin *sw, color c){
           break;
 
         default :
-           Neill_SDL_SetDrawColour(sw, 255, 255, 255);
+           Neill_SDL_SetDrawColour(sw, MAXC, MAXC, MAXC);
 
      }
 }
@@ -290,10 +302,12 @@ case greenf:
 /* SELECT FONT HEIGHT*/
 case singleheight:
     current->fontsize = normalfont;
+    current->mode = alphanumeric;
     break;
 
 case doubleheight:
     current->fontsize = topfont;
+    current->mode = alphanumeric;
     break;
 
 /* SELECT BACKGROUND COLOR*/
@@ -302,6 +316,7 @@ case bgblack:
     break;
 
 case bgnew:
+
     current->backcolor = current->frontcolor;
     break;
 
