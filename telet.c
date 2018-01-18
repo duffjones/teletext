@@ -10,6 +10,8 @@ int main(int argc, char **argv)
   fntrow font[FNTCHARS][FNTHEIGHT];
   flags current;
 
+  printf("BEGINNING TESTS!\n" );
+  /*crash happens here without print statement?*/
   testArgC(argc);
   importCodes(argv[1], hex);
   testCodeDisplay(hex);
@@ -171,7 +173,7 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
           setDrawColor(sw, hex->flag.backcolor);
              }
              /*messing with this changes font height and stuff */
-          SDL_RenderDrawPoint(sw->renderer, x + ox, (y-FNTHEIGHT/2)+oy);
+          SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
       }
    }
 }
@@ -194,18 +196,20 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
 
    letter = checkChar(chr);
 
-   for(y = FNTHEIGHT/2; y < FNTHEIGHT; y++){
+   for(y = FNTHEIGHT ; y < FNTHEIGHT *2; y++){
       for(x = 0; x < FNTWIDTH; x++){
-         if(chr - DIFF > 0 && fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
+         if(chr - DIFF > 0 && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
           setDrawColor(sw, hex->flag.frontcolor);
          }
          else{
             setDrawColor(sw, hex->flag.backcolor);
             }
-          SDL_RenderDrawPoint(sw->renderer, x + ox, ((y*2)-FNTHEIGHT)+oy - 9);
+          SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy - (FNTHEIGHT ));
       }
    }
 }
+
+
 
 void setDrawColor(SDL_Simplewin *sw, color c){
 /* Draw Color is Selected by the argument received from current color flag*/
