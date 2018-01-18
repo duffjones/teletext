@@ -11,16 +11,17 @@ int main(int argc, char **argv)
   flags current;
 
   printf("BEGINNING TESTS!\n" );
-  /*crash happens here without print statement?*/
-  testArgC(argc);
-  importCodes(argv[1], hex);
+  /*crash happens here without print statement?\
   testCodeDisplay(hex);
+  */
+  testMain();
+  testArgC(argc);
 
+  importCodes(argv[1], hex);
   Neill_SDL_ReadFont(font, "m7fixed.fnt");
   Neill_SDL_Init(&sw);
 
   printCodes(&sw, hex, &current, font);
-
    do{
       SDL_Delay(MILLISECONDDELAY);
       Neill_SDL_UpdateScreen(&sw);
@@ -39,10 +40,7 @@ void importCodes(char *filename, cell hex[HT][WT])
   int i, w, h;
   w = 0, h = 0, i = 0;
 
-  if (fp == NULL)
-   {
-      ON_ERROR("unable to open file:\nCheck filename and path.\n");
-   }
+testFile(fp);
 
   while (( i = fread ( &temphex, sizeof(unsigned char),CELLCOUNT, fp)) > 0) {
      for (h = 0; h < HT; h++) {
@@ -50,11 +48,13 @@ void importCodes(char *filename, cell hex[HT][WT])
           hex[h][w].code = (temphex[h][w]);
         }
      }
-  testCodes(i);
+  /*
+  if (testCodes(i) == 0) {
+    ON_ERROR("Wrong number of HEX codes");
+  }
+  */
   fclose (fp);
-
 }}
-
 
 void changeFlags(flags *flag)
   {
@@ -65,6 +65,7 @@ void changeFlags(flags *flag)
     flag->hold = release;
   }
 
+  /* CURRENT POSITION TESTING TESTING TESTING TESTING */
 void setCellFlags(cell *c, flags *flag)
   {
     c->flag.frontcolor = flag->frontcolor;
@@ -73,7 +74,6 @@ void setCellFlags(cell *c, flags *flag)
     c->flag.hold = flag->hold;
     c->flag.fontsize = flag->fontsize;
   }
-
 
 void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*fontdata)[18])
   {
@@ -157,7 +157,7 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
          else{
           setDrawColor(sw, hex->flag.backcolor);
              }
-          SDL_RenderDrawPoint(sw->renderer, x + ox, (y)+oy);
+          SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy);
       }
    }
 }
@@ -184,22 +184,7 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
    }
 }
 
-unsigned char checkChar(unsigned char chr){
-  unsigned char letter;
 
-  if(chr  >= hexlow && chr <= hexhigh){
-    letter = chr;
-  }
-
-  else if(chr > BLANK && chr < ff){
-    letter = chr - DIFF;
-  }
-
-  else {
-    letter = BLANK - DIFF;
-  }
-  return letter;
-}
 
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
@@ -216,12 +201,27 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
          else{
             setDrawColor(sw, hex->flag.backcolor);
             }
-          SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy - (FNTHEIGHT ));
+          SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy -FNTHEIGHT);
       }
    }
 }
 
+unsigned char checkChar(unsigned char chr){
+  unsigned char letter;
 
+  if(chr  >= hexlow && chr <= hexhigh){
+    letter = chr;
+  }
+
+  else if(chr > BLANK && chr < ff){
+    letter = chr - DIFF;
+  }
+
+  else {
+    letter = BLANK - DIFF;
+  }
+  return letter;
+}
 
 void setDrawColor(SDL_Simplewin *sw, color c){
 /* Draw Color is Selected by the argument received from current color flag*/
