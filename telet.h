@@ -188,3 +188,4 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
 void resetSixels(sixels *sixel);
 void setFlags(unsigned char code, flags *current);
 void  setHold( cell *c);
+void setCellFlags(cell *c, flags *flag);

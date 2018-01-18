@@ -65,7 +65,6 @@ void changeFlags(flags *flag)
     flag->hold = release;
   }
 
-  /* CURRENT POSITION TESTING TESTING TESTING TESTING */
 void setCellFlags(cell *c, flags *flag)
   {
     c->flag.frontcolor = flag->frontcolor;
@@ -88,6 +87,7 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
           setFlags(hex[h][w].code, current);
           setCellFlags(&hex[h][w], current);
           setHold(&hex[h][w]);
+          /* CURRENT POSITION TESTING TESTING TESTING TESTING */
 
           if(hex[h][w].flag.mode == contiguous &&
             ((hex[h][w].code > a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0))
@@ -183,8 +183,6 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
       }
    }
 }
-
-
 
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
