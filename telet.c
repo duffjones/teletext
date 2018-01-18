@@ -10,23 +10,21 @@ int main(int argc, char **argv)
   fntrow font[FNTCHARS][FNTHEIGHT];
   flags current;
 
-  printf("STARTING TEST: \n" );
-      if ( (argc != 2) )  {
-        ON_ERROR("Requires 2 Arguments: ");
-      }
+  testArgC(argc);
+  importCodes(argv[1], hex);
+  testCodeDisplay(hex);
 
-importCodes(argv[1], hex);
-testCodeDisplay(hex);
+  Neill_SDL_ReadFont(font, "m7fixed.fnt");
+  Neill_SDL_Init(&sw);
 
-Neill_SDL_ReadFont(font, "m7fixed.fnt");
-Neill_SDL_Init(&sw);
-printCodes(&sw, hex, &current, font);
+  printCodes(&sw, hex, &current, font);
 
    do{
       SDL_Delay(MILLISECONDDELAY);
       Neill_SDL_UpdateScreen(&sw);
       Neill_SDL_Events(&sw);
-   }
+     }
+
    while(!sw.finished);
       atexit(SDL_Quit);
       return 0;
@@ -36,10 +34,10 @@ void importCodes(char *filename, cell hex[25][40])
 {
   FILE *fp = fopen(filename, "rb");
   unsigned char temphex[HT][WT];
-  int i, w, h, test;
-  w = 0, h = 0, i = 0; test = 0;
+  int i, w, h;
+  w = 0, h = 0, i = 0;
 
-  if (fp== NULL)
+  if (fp == NULL)
    {
       ON_ERROR("unable to open file:\nCheck filename and path.\n");
    }
@@ -48,11 +46,11 @@ void importCodes(char *filename, cell hex[25][40])
      for (h = 0; h < HT; h++) {
         for (w = 0; w < WT; w++) {
           hex[h][w].code = (temphex[h][w]);
-          test++;
         }
      }
+  testCodes(i);
   fclose (fp);
-  testCodes(test);
+
 }}
 
 
@@ -64,7 +62,6 @@ void changeFlags(flags *flag)
     flag->mode = alphanumeric;
     flag->hold = release;
   }
-
 
 void setCellFlags(cell *c, flags *flag)
   {
@@ -85,26 +82,28 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
       for (h = 0; h < HT; h++) {
         changeFlags(current);
         for (w = 0; w < WT; w++) {
+          printf("MADE IT HERE\n" );
           setFlags(hex[h][w].code, current);
           setCellFlags(&hex[h][w], current);
-          setHold( &hex[h][w]);
+          setHold(&hex[h][w]);
 
-          if((hex[h][w].flag.mode == contiguous && hex[h][w].code >= a0
-            && hex[h][w].code<=bf)|| (hex[h][w].flag.mode == contiguous
-            && hex[h][w].code >= e0)){
+          if(hex[h][w].flag.mode == contiguous &&
+            ((hex[h][w].code >= a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0))
+            {
             DrawSixel(sw, &hex[h][w], h, w, sixel);
             }
-          else if((hex[h][w].flag.mode == separate && hex[h][w].code >= a0
-             && hex[h][w].code<=bf)|| (hex[h][w].flag.mode == separate
-             && hex[h][w].code >= e0 )){
-                DrawSixel(sw, &hex[h][w], h, w, sixel);
-             }
-
-          else if (hex[h-1][w].flag.fontsize == 2){
+          else if(hex[h][w].flag.mode == separate &&
+            ((hex[h][w].code >= a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0))
+            {
+            DrawSixel(sw, &hex[h][w], h, w, sixel);
+            }
+          else if (hex[h-1][w].flag.fontsize == 2)
+          {
             current->fontsize = bottomfont;
             SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
-          else if (current->fontsize == topfont) {
+          else if (current->fontsize == topfont)
+          {
             hex[h][w].flag.fontsize = topfont;
             SDL_DrawTopChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
@@ -141,14 +140,12 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
 {
    unsigned x, y;
    unsigned char letter;
-
-letter = checkChar(chr);
+   letter = checkChar(chr);
 
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
          if(fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
           setDrawColor(sw, hex->flag.frontcolor);
-
          }
          else{
           setDrawColor(sw, hex->flag.backcolor);
@@ -167,9 +164,8 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
 
    for(y = 0; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
-         if(chr - 128 > 0 && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
+         if(chr - DIFF > 0 && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
           setDrawColor(sw, hex->flag.frontcolor);
-
          }
          else{
           setDrawColor(sw, hex->flag.backcolor);
@@ -182,17 +178,14 @@ void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNT
 
 unsigned char checkChar(unsigned char chr){
   unsigned char letter;
-
   if(chr > BLANK){
-    letter = chr - 128;
+    letter = chr - DIFF;
   }
   else {
-    letter = BLANK - 128;
+    letter = BLANK - DIFF;
   }
-
   return letter;
 }
-
 
 void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
@@ -203,12 +196,12 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
 
    for(y = FNTHEIGHT/2; y < FNTHEIGHT; y++){
       for(x = 0; x < FNTWIDTH; x++){
-         if(chr - 128 > 0 && fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
+         if(chr - DIFF > 0 && fontdata[letter-FNT1STCHAR][y] >> (FNTWIDTH - 1 - x) & 1){
           setDrawColor(sw, hex->flag.frontcolor);
          }
          else{
-          setDrawColor(sw, hex->flag.backcolor);
-             }
+            setDrawColor(sw, hex->flag.backcolor);
+            }
           SDL_RenderDrawPoint(sw->renderer, x + ox, ((y*2)-FNTHEIGHT)+oy - 9);
       }
    }
@@ -254,7 +247,7 @@ void setDrawColor(SDL_Simplewin *sw, color c){
 
 void setFlags(unsigned char code, flags *current){
 switch ((colorCode) code) {
-
+/* SELECT FONT COLOR*/
 case yellowf:
     current->frontcolor = yellow;
     current->mode = alphanumeric;
@@ -291,7 +284,6 @@ case greenf:
     break;
 
 /* SELECT FONT HEIGHT*/
-
 case singleheight:
     current->fontsize = normalfont;
     break;
@@ -310,7 +302,6 @@ case bgnew:
     break;
 
 /*SELECT GRAPHICS MODE AND COLOR FOR GRAPHICS*/
-
 case redg:
     current->mode = contiguous;
     current->frontcolor = red;
@@ -355,7 +346,6 @@ case sepg:
       break;
 
 /* HOLD AND RELEASE*/
-
 case holdg:
         current->hold = hold;
         break;

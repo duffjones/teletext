@@ -7,6 +7,8 @@
 #define MILLISECONDDELAY 20
 #define BLANK 0xA0
 #define CELLCOUNT 1000
+#define DIFF 128
+
 
 #define  TL sixel->uleft=true ;
 #define  TR sixel->uright = true;
@@ -14,6 +16,11 @@
 #define  MR sixel->mright= true;
 #define  BL sixel->bleft= true;
 #define  BR sixel->bright= true;
+
+
+
+
+
 
 typedef enum boolean {
   f   = 0,
