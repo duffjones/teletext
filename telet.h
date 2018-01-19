@@ -189,3 +189,4 @@ void resetSixels(sixels *sixel);
 void setFlags(unsigned char code, flags *current);
 void  setHold( cell *c);
 void setCellFlags(cell *c, flags *flag);
+void SDL_DrawDoubleChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);

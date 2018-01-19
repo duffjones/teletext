@@ -1,8 +1,6 @@
 #include "testing.h"
 #include "stdio.h"
 
-
-
 int main(int argc, char **argv)
 {
   cell hex[HT][WT];
@@ -48,11 +46,6 @@ testFile(fp);
           hex[h][w].code = (temphex[h][w]);
         }
      }
-  /*
-  if (testCodes(i) == 0) {
-    ON_ERROR("Wrong number of HEX codes");
-  }
-  */
   fclose (fp);
 }}
 
@@ -87,14 +80,11 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
           setFlags(hex[h][w].code, current);
           setCellFlags(&hex[h][w], current);
           setHold(&hex[h][w]);
-          /* CURRENT POSITION TESTING TESTING TESTING TESTING */
 
           if(hex[h][w].flag.mode == contiguous &&
             ((hex[h][w].code > a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0))
             {
-
-               setDrawColor(sw, hex[h][w].flag.backcolor);
-
+            setDrawColor(sw, hex[h][w].flag.backcolor);
             DrawSixel(sw, &hex[h][w], h, w, sixel);
             }
           else if(hex[h][w].flag.mode == separate &&
@@ -102,15 +92,16 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
             {
             DrawSixel(sw, &hex[h][w], h, w, sixel);
             }
-          else if (hex[h-1][w].flag.fontsize == 2)
+          else if (hex[h-1][w].flag.fontsize == topfont)
           {
             current->fontsize = bottomfont;
-            SDL_DrawBottomChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
+            hex[h][w].flag.fontsize = bottomfont;
+            SDL_DrawDoubleChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
           else if (current->fontsize == topfont)
           {
             hex[h][w].flag.fontsize = topfont;
-            SDL_DrawTopChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
+            SDL_DrawDoubleChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
           else {
             SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
@@ -126,8 +117,6 @@ void  setHold( cell *c)
   static graphicsMode  lastgraphm = alphanumeric;
   static fontsz   lastfontsize  = normalfont;
 
-
-
   if ( lastgraphm != c->flag.mode ||  lastfontsize != c->flag.fontsize) {
     mostrecent = a0;
   }
@@ -141,7 +130,6 @@ void  setHold( cell *c)
    lastgraphm = c->flag.mode;
    lastfontsize  = c->flag.fontsize;
 }
-
 
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
@@ -162,36 +150,28 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
    }
 }
 
-void SDL_DrawTopChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
+void SDL_DrawDoubleChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
    unsigned x, y;
    unsigned char letter;
+   int fontheight;
+   int yheight;
+/*Checks char is in range to print*/
+letter = checkChar(chr);
 
-   letter = checkChar(chr);
-
-   for(y = 0; y < FNTHEIGHT; y++){
-      for(x = 0; x < FNTWIDTH; x++){
-         if((letter > 0) && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
-          setDrawColor(sw, hex->flag.frontcolor);
-         }
-
-         else{
-          setDrawColor(sw, hex->flag.backcolor);
-             }
-             /*messing with this changes font height and stuff */
-          SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy);
-      }
-   }
+/*If statements change print settings for top and bottom */
+if(hex->flag.fontsize == bottomfont){
+  fontheight = FNTHEIGHT;
+  yheight = (FNTHEIGHT * 2);
 }
 
-void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
-{
-   unsigned x, y;
-   unsigned char letter;
+if(hex->flag.fontsize == topfont){
+   fontheight = 0;
+   yheight = FNTHEIGHT;
+}
 
-   letter = checkChar(chr);
-
-   for(y = FNTHEIGHT ; y < FNTHEIGHT *2; y++){
+/*Render the char using SDL/NeilSDL function structure */
+   for(y = fontheight; y < yheight; y++){
       for(x = 0; x < FNTWIDTH; x++){
          if(letter > 0 && fontdata[letter-FNT1STCHAR][y/2] >> (FNTWIDTH - 1 - x) & 1){
           setDrawColor(sw, hex->flag.frontcolor);
@@ -199,10 +179,16 @@ void SDL_DrawBottomChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][
          else{
             setDrawColor(sw, hex->flag.backcolor);
             }
-          SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy -FNTHEIGHT);
+            if (hex->flag.fontsize == bottomfont){
+            SDL_RenderDrawPoint(sw->renderer, x + ox, (y+oy)-FNTHEIGHT);
+            }
+        if(hex->flag.fontsize == topfont) {
+          SDL_RenderDrawPoint(sw->renderer, x + ox, y+oy);
+        }
       }
    }
 }
+
 
 unsigned char checkChar(unsigned char chr){
   unsigned char letter;
@@ -255,12 +241,12 @@ void setDrawColor(SDL_Simplewin *sw, color c){
 
         default :
            Neill_SDL_SetDrawColour(sw, MAXC, MAXC, MAXC);
-
      }
 }
 
 void setFlags(unsigned char code, flags *current){
 switch ((colorCode) code) {
+
 /* SELECT FONT COLOR*/
 case yellowf:
     current->frontcolor = yellow;
@@ -297,6 +283,7 @@ case greenf:
     current->mode = alphanumeric;
     break;
 
+
 /* SELECT FONT HEIGHT*/
 case singleheight:
     current->fontsize = normalfont;
@@ -308,6 +295,7 @@ case doubleheight:
     current->mode = alphanumeric;
     break;
 
+
 /* SELECT BACKGROUND COLOR*/
 case bgblack:
     current->backcolor = black;
@@ -317,6 +305,7 @@ case bgnew:
 
     current->backcolor = current->frontcolor;
     break;
+
 
 /*SELECT GRAPHICS MODE AND COLOR FOR GRAPHICS*/
 case redg:
@@ -361,6 +350,7 @@ case contg:
 case sepg:
       current->mode  = separate;
       break;
+
 
 /* HOLD AND RELEASE*/
 case holdg:

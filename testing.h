@@ -36,3 +36,10 @@ boolean setFlags_greenf_test();
 
 boolean setFlags_colorg_test();
 boolean checkChar_test(void);
+
+boolean setFlags_singleheight_test();
+boolean setFlags_doubleheight_test();
+boolean setFlags_holdg_test();
+boolean setFlags_releaseg_test();
+boolean setFlags_contg_test();
+boolean setFlags_sepg_test();

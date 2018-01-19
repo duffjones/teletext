@@ -46,13 +46,17 @@ void testMain(){
    printf("GRAPHICS COLOR%25s\n",testResult(setFlags_colorg_test()));
 
    printf("\nTesting handling of incompatible codes\n");
-    printf("\nCHECK CHAR FUNCTION%25s\n",testResult(checkChar_test()));
+   printf("\nCHECK CHAR FUNCTION%25s\n",testResult(checkChar_test()));
+
+   printf("SINGLE HEIGHT......%25s\n",testResult(setFlags_singleheight_test()));
+   printf("DOUBLE HEIGHT......%25s\n",testResult(setFlags_doubleheight_test()));
+   printf("HOLD GRAPHICS......%25s\n",testResult(setFlags_holdg_test()));
+   printf("RELEASE GRAPHICS...%25s\n",testResult(setFlags_releaseg_test()));
+   printf("CONTIGUOUS GRAPHICS%25s\n",testResult(setFlags_contg_test()));
+   printf("SEPARATE GRAPHICS..%25s\n",testResult(setFlags_sepg_test()));
 
 
 }
-
-
-
 
 char* testResult(bool b){
    char* string;
@@ -128,22 +132,24 @@ unsigned char checkedchar;
    checkedchar = checkChar(testchar);
 
    if(checkedchar != BLANK - DIFF ){
-     return 0;
-   }
+       return 0;
+     }
+
   printf("0x05 Passed\n" );
   testchar = 0x35;
   checkedchar = checkChar(testchar);
 
   if(checkedchar != testchar ){
-    return 0;
-  }
+      return 0;
+    }
+
    printf("0x35 Passed\n" );
    testchar = a5;
    checkedchar = checkChar(testchar);
 
    if(checkedchar != testchar - DIFF ){
-        return 0;
-   }
+      return 0;
+     }
    printf("0xA5 Passed\n" );
   return(1);
 }
@@ -178,7 +184,6 @@ boolean setCell_test(void)
 
 /*SET FLAGS TESTS*/
 /*Testing function that sets draw color, and respective flags*/
-
 boolean setFlags_yellowf_test(){
 flags c;
 setFlags(yellowf, &c);
@@ -237,6 +242,8 @@ boolean setFlags_greenf_test(){
     && c.mode == alphanumeric);
 }
 
+/*GRAPHICS COLOR TESTS*/
+/*Quick test that all graphics are loading into flags*/
 boolean setFlags_colorg_test(){
   flags c;
 
@@ -277,37 +284,57 @@ boolean setFlags_colorg_test(){
   printf("White Passed\n" );
 
     return 1;
-
-
-
 }
 
 
+/*SET FLAGS TESTS*/
+/*Height and Hold settings*/
+boolean setFlags_singleheight_test(){
+flags c;
+setFlags(singleheight, &c);
+return (c.fontsize == normalfont);
+}
 
+boolean setFlags_doubleheight_test(){
+flags c;
+setFlags(doubleheight, &c);
+return (c.fontsize == topfont);
+}
 
+boolean setFlags_holdg_test(){
+flags c;
+setFlags(holdg, &c);
+return (c.hold == hold);
+}
 
+boolean setFlags_releaseg_test(){
+flags c;
+setFlags(releaseg, &c);
+return (c.hold == release);
+}
 
+boolean setFlags_contg_test(){
+flags c;
+setFlags(contg, &c);
+return (c.mode == contiguous);
+}
 
-
-
+boolean setFlags_sepg_test(){
+flags c;
+setFlags(sepg, &c);
+return (c.mode == separate);
+}
 
 /*
 NEED TO MAKE FOR:
 
-setDrawColor(sw, hex[h][w].flag.backcolor);
+FRIDAY
+include drawcolor/draw testing in text or via test hexcode file
 
-DrawSixel
+creating hexfile from array
+redundant drawchar functions
 
-SDL_DrawTopChar
-
-SDL_DrawBottomChar
-
-SDL_DrawChar
-
-checkChar
-
-setHold() + flags
-hex[h][w].code > a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0
+setHold()
 */
 
 
@@ -315,7 +342,6 @@ hex[h][w].code > a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0
 
 
 /*Practical Testing for main() in TELET.C */
-
 boolean testCodes(int test){
   if ( test < 1000){
     printf("You have entered %d codes, should be 1000\n",test );
