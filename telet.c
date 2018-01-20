@@ -1,35 +1,6 @@
 #include "testing.h"
 #include "stdio.h"
 
-int main(int argc, char **argv)
-{
-  cell hex[HT][WT];
-  SDL_Simplewin sw;
-  fntrow font[FNTCHARS][FNTHEIGHT];
-  flags current;
-
-  printf("BEGINNING TESTS!\n" );
-  /*crash happens here without print statement?\
-  testCodeDisplay(hex);
-  */
-  testMain();
-  testArgC(argc);
-
-  importCodes(argv[1], hex);
-  Neill_SDL_ReadFont(font, "m7fixed.fnt");
-  Neill_SDL_Init(&sw);
-
-  printCodes(&sw, hex, &current, font);
-   do{
-      SDL_Delay(MILLISECONDDELAY);
-      Neill_SDL_UpdateScreen(&sw);
-      Neill_SDL_Events(&sw);
-     }
-
-   while(!sw.finished);
-      atexit(SDL_Quit);
-      return 0;
-}
 
 void importCodes(char *filename, cell hex[HT][WT])
 {
@@ -49,23 +20,6 @@ testFile(fp);
   fclose (fp);
 }}
 
-void changeFlags(flags *flag)
-  {
-    flag->frontcolor = white;
-    flag->backcolor = black;
-    flag->fontsize = normalfont;
-    flag->mode = alphanumeric;
-    flag->hold = release;
-  }
-
-void setCellFlags(cell *c, flags *flag)
-  {
-    c->flag.frontcolor = flag->frontcolor;
-    c->flag.backcolor = flag->backcolor;
-    c->flag.mode = flag->mode;
-    c->flag.hold = flag->hold;
-    c->flag.fontsize = flag->fontsize;
-  }
 
 void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*fontdata)[18])
   {
@@ -83,26 +37,26 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
 
           if(hex[h][w].flag.mode == contiguous &&
             ((hex[h][w].code > a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0))
-            {
-            setDrawColor(sw, hex[h][w].flag.backcolor);
-            DrawSixel(sw, &hex[h][w], h, w, sixel);
-            }
+             {
+             setDrawColor(sw, hex[h][w].flag.backcolor);
+             DrawSixel(sw, &hex[h][w], h, w, sixel);
+             }
           else if(hex[h][w].flag.mode == separate &&
             ((hex[h][w].code >= a0 && hex[h][w].code<=bf)|| hex[h][w].code >= e0))
-            {
-            DrawSixel(sw, &hex[h][w], h, w, sixel);
-            }
+             {
+             DrawSixel(sw, &hex[h][w], h, w, sixel);
+             }
           else if (hex[h-1][w].flag.fontsize == topfont)
-          {
+             {
             current->fontsize = bottomfont;
             hex[h][w].flag.fontsize = bottomfont;
             SDL_DrawDoubleChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
-          }
+             }
           else if (current->fontsize == topfont)
-          {
+             {
             hex[h][w].flag.fontsize = topfont;
             SDL_DrawDoubleChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
-          }
+             }
           else {
             SDL_DrawChar(sw, &hex[h][w], fontdata, hex[h][w].code, w*CELLWT, h*CELLHT);
           }
@@ -111,24 +65,79 @@ void printCodes(SDL_Simplewin *sw, cell hex[HT][WT], flags *current,  fntrow (*f
   }
 }
 
+void changeFlags(flags *flag)
+{
+  flag->frontcolor = white;
+  flag->backcolor = black;
+  flag->fontsize = normalfont;
+  flag->mode = alphanumeric;
+  flag->hold = release;
+}
+
+void setCellFlags(cell *c, flags *flag)
+{
+  c->flag.frontcolor = flag->frontcolor;
+  c->flag.backcolor = flag->backcolor;
+  c->flag.mode = flag->mode;
+  c->flag.hold = flag->hold;
+  c->flag.fontsize = flag->fontsize;
+}
+
 void  setHold( cell *c)
 {
   static unsigned char mostrecent;
   static graphicsMode  lastgraphm = alphanumeric;
   static fontsz   lastfontsize  = normalfont;
 
-  if ( lastgraphm != c->flag.mode ||  lastfontsize != c->flag.fontsize) {
+  if (lastgraphm != c->flag.mode ||  lastfontsize != c->flag.fontsize) {
     mostrecent = a0;
   }
   if (c->flag.hold == hold && c->code <= a0) {
     c->code = mostrecent;
-     lastgraphm = hold;
+    lastgraphm = hold;
   }
   if (c->code > a0 && c->flag.mode != alphanumeric) {
     mostrecent = c->code;
   }
    lastgraphm = c->flag.mode;
    lastfontsize  = c->flag.fontsize;
+}
+
+void setDrawColor(SDL_Simplewin *sw, color c){
+  /* Draw Color is Selected by the argument received from current color flag*/
+  switch(c) {
+
+    case yellow :
+    Neill_SDL_SetDrawColour(sw, MAXC, MAXC, 0 );
+    break;
+
+    case blue :
+    Neill_SDL_SetDrawColour(sw, 0, 0, MAXC);
+    break;
+
+    case red :
+    Neill_SDL_SetDrawColour(sw, MAXC, 0, 0);
+    break;
+
+    case magenta :
+    Neill_SDL_SetDrawColour(sw, MAXC, 0, MAXC);
+    break;
+
+    case cyan :
+    Neill_SDL_SetDrawColour(sw, 0, MAXC, MAXC);
+    break;
+
+    case green :
+    Neill_SDL_SetDrawColour(sw, 0, MAXC, 0);
+    break;
+
+    case black :
+    Neill_SDL_SetDrawColour(sw, 0, 0, 0);
+    break;
+
+    default :
+    Neill_SDL_SetDrawColour(sw, MAXC, MAXC, MAXC);
+  }
 }
 
 void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
@@ -152,10 +161,9 @@ void SDL_DrawChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEI
 
 void SDL_DrawDoubleChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
-   unsigned x, y;
+   unsigned x, y, fontheight, yheight;
    unsigned char letter;
-   int fontheight;
-   int yheight;
+
 /*Checks char is in range to print*/
 letter = checkChar(chr);
 
@@ -207,42 +215,6 @@ unsigned char checkChar(unsigned char chr){
   return letter;
 }
 
-void setDrawColor(SDL_Simplewin *sw, color c){
-/* Draw Color is Selected by the argument received from current color flag*/
-     switch(c) {
-
-        case yellow :
-           Neill_SDL_SetDrawColour(sw, MAXC, MAXC, 0 );
-           break;
-
-        case blue :
-           Neill_SDL_SetDrawColour(sw, 0, 0, MAXC);
-           break;
-
-        case red :
-           Neill_SDL_SetDrawColour(sw, MAXC, 0, 0);
-           break;
-
-        case magenta :
-           Neill_SDL_SetDrawColour(sw, MAXC, 0, MAXC);
-           break;
-
-        case cyan :
-          Neill_SDL_SetDrawColour(sw, 0, MAXC, MAXC);
-          break;
-
-        case green :
-          Neill_SDL_SetDrawColour(sw, 0, MAXC, 0);
-          break;
-
-        case black :
-          Neill_SDL_SetDrawColour(sw, 0, 0, 0);
-          break;
-
-        default :
-           Neill_SDL_SetDrawColour(sw, MAXC, MAXC, MAXC);
-     }
-}
 
 void setFlags(unsigned char code, flags *current){
 switch ((colorCode) code) {

@@ -9,6 +9,7 @@
 #define CELLCOUNT 1000
 #define DIFF 128
 #define MAXC 255
+#define MAXARG 3
 
 #define  TL sixel->uleft= true;
 #define  TR sixel->uright = true;
@@ -190,3 +191,4 @@ void setFlags(unsigned char code, flags *current);
 void  setHold( cell *c);
 void setCellFlags(cell *c, flags *flag);
 void SDL_DrawDoubleChar(SDL_Simplewin *sw, cell *hex, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
+void testFunction(int argc, char *command, cell hex[HT][WT]);

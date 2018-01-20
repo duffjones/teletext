@@ -1,0 +1,165 @@
+
+Commit History
+--------------
+Please note this file is informal, and meant as a record of my work. For a more detailed and organized description of testing, please see test.txt or run your desired teletext file with the ARGV[3] "test". 
+
+
+commit 7931248ea36d46abb5a481d790b086677801f51d
+Date:   Fri Jan 19 13:39:15 2018 +0000
+
+   Testing files rearranged. testing.txt edits
+
+commit fb39f97ef6dc944692c24a4bceebc373ca3177cd
+Date:   Thu Jan 18 22:23:08 2018 +0000
+
+    Progress testing setflags and colors
+
+commit 5216e2e88939120ffa33fd58a0020cd6162f598e
+Date:   Thu Jan 18 18:42:14 2018 +0000
+
+    Testing File progress. Extra sixel testing file to dial in the few codes that had been miswritten. Considering going back and using binary comparison and shift model to calculate, instead. Only if there is time. 
+
+commit 468b9ba4abf024fc9cb5500c05f4dc144c3f18ea
+Date:   Thu Jan 18 16:01:59 2018 +0000
+
+    100% working 50%
+
+commit 803f5dda380b71b6ace2f0cc20adec5f75de373e
+Date:   Thu Jan 18 14:11:15 2018 +0000
+
+    Fixed double text glitch removing repeating functions and magic numbers
+
+commit bcdbf43cf4da0b8a62f7d4587f1f484f821479f6
+Date:   Thu Jan 18 00:14:23 2018 +0000
+
+    Bed time fixing redundant and repeating functions. Changed three separate draw char functions into 2. Working on reducing cases and switches. 
+
+commit 95e29cd4e48d6c166e320e8723a36a3b1872060c
+Date:   Wed Jan 17 17:56:55 2018 +0000
+
+    Platform for seperate testing file being setup. Looking at old testbst model for examples. I dont like how assert forces a crash, so I need to make an alternative that keeps program running unless there is a SERIOUS issue -- keeps track. 
+
+commit e716952d89b24122fa6ec6bff2064adf011783b1
+Date:   Mon Jan 8 15:38:11 2018 +0000
+
+    Working test.m7 file. Working sep, font, hold, etc. Where is your God now? 50% done. Break for architecture viva study. 
+
+commit 08ab97c95bb20550b944663191b92a06c61774ff
+Date:   Mon Jan 8 13:53:00 2018 +0000
+
+    going to MVB. Working on hold function.
+
+commit 2adf1db6c3281dfd4fafe14e0bc08bc4890730aa
+Date:   Mon Jan 8 13:32:47 2018 +0000
+
+    Attempting holding graphics. Maybe issue with sixels. Separated working.
+
+commit 65c38d767096e9210027491126a77338df7002bc
+Date:   Mon Jan 8 13:11:18 2018 +0000
+
+    improved sixels. killed the rainbow. Think it has something to do with hold setting. Sixel backgrounds were coming out wrong color so I made sure to set deactivated small sixels to the background color, instead of not rendering them at all. Should have fixed. Some sixels are off though as translation isn't perfect. Need to make some sort of file to compare. 
+
+commit 440a6e531f69a088c667a36ab448fe8af6251a64
+Date:   Sun Jan 7 23:23:26 2018 +0000
+
+    Working sixel plan. hacky inefficient. God, Why have you abandoned me? Seriously thinking of just casing them all out in a list of 40. I know there is a clever way to do this involving math, but id rather just get them working so I can move on. NOTE COME BACK. 
+
+commit da18c7ed968522de664a68508d4b0755bd67651d
+Date:   Sun Jan 7 21:06:53 2018 +0000
+
+    Sixel break for bed. Difference between contig and separated is simple, just put if condition on graphics mode and reduce small sixel triangle size by one if separated hits. 
+
+commit 9093363f058d811780f63b90c26d6d7bd3bccbf5
+Date:   Sun Jan 7 20:21:35 2018 +0000
+
+    Preparing for contig, separated and graphics. Sixels brainstorming.
+
+commit 0f9d5391e901b7ec51e1d1ec4df1587d3618ea54
+Date:   Sun Jan 7 18:59:34 2018 +0000
+
+    Working background colors and no artifacting. Do you think this is a game? Artifacting was solved by adding a function that converts any codes that are outside the range of the hexsheet to either a blank space - a0, or a code inside the range. 
+
+commit 6d2068c7f20590ee176bd4aaf253d3af322b8a2d
+Date:   Sun Jan 7 18:32:58 2018 +0000
+
+    Working background colors but still weird artifacting where there are control codes
+
+commit 2e54b5c5d16d333e81cea5f35b8c87b61b24c3a0
+Date:   Sun Jan 7 15:45:17 2018 +0000
+
+    Double Height working, but there is pixel error on bottom half of lines. Looks like a sweet retro 80s effect which is good. Maybe a feature not a bug. 
+
+commit 0caa50a7bbc2cb6b798d1125ad43e9dbcb487016
+Date:   Sun Jan 7 14:04:41 2018 +0000
+
+    Working double height. Top and bottom. Moving onto resolution and sizing. Got bottom by checking the size flag of the row above the current row. If it was a topfont row, it would set the current one to bottom. Rendering bottom half of text was tougher. Making double size involved bottom 7 coord, but getting bottom half involved changing ycoordinate of 2d array that prints actual char. Took forever. 
+
+commit 1fd293727a11a5658eb5aace802922d9b52c36e2
+Date:   Sun Jan 7 13:25:52 2018 +0000
+
+    Functioning uppercase double, working on implementing bottom bits. Front was done by just putting a qualifying if statement for the topfont flag set in my code case/switch statements that links to a copy of sdl draw char. Then I just changed the value of the y coordinate at the bottom, and timesed it by two. Im messing around with other vales. Not sure how to get bottom, as the same value doesnt effect it at all. Lots of trial and error. Need to start thinking about a testing platform. 
+
+commit 95f0bf4579229d6dad701ad89e5589ab0a337e40
+Date:   Sat Jan 6 17:01:01 2018 +0000
+
+    Going home. Working colors. Ideas about double height. Background was easy, and just requires setting the background color in the flag struct to the foreground color in the same struct. SDL Draw Char already has a default to background color, and I just changed that to the current backcolor. 
+
+commit 6b6dfbdc8dc74467ce9f4f27e29cd7ebbd0f5a83
+Date:   Sat Jan 6 16:04:31 2018 +0000
+
+    Working colors for foreground. Needs to be struct that contains current global into that then passes that info to all proceeding cells on a line. Color working good, but still have artifacting before words, and purple is way off. Seems like pink. Starting background colors.
+
+commit f8b76ce3b0ebbae220eb3d120332338eb85826e0
+Date:   Sat Jan 6 15:04:57 2018 +0000
+
+    Scared to make big change backup. Going to separate into different .c files based on tasks. Starting a potential test.c. Have spent the morning working on color. Colors need to be set globally, and remain set -- currently only setting color for tile that has the code. 
+
+commit 203828a38bcb2f93941bd5add177abc825c9fae6
+Date:   Fri Jan 5 19:29:37 2018 +0000
+
+    Structures organized, working on parsing color. Structure now contains an element for each flag that needs to be activated. Color needs to be set through SDL with combination of 255 x 3
+
+commit 8282e7961b6b16a7cb917e1bb337537323f5c477
+Date:   Fri Jan 5 16:39:56 2018 +0000
+
+    Friday night: Managed to put codes into 2d array of structs. Have to declare 2d array as same type as the structs that it contains. Reading codes in was not possible, except using fread for me. Not sure about other ways to approach but it seems to be working. Printing still works. 
+
+commit ceba335fc86026e86c99ad845fc59f416a3a1fdd
+Date:   Fri Jan 5 14:53:47 2018 +0000
+
+    Worked on everything and accomplished nothing at school and have lost faith in God.
+
+commit febde4944e29f5c1b91cbdbc1497407919d67371
+Date:   Fri Jan 5 12:25:20 2018 +0000
+
+    Friday morning update.
+
+commit c5d3ff983e79c65f227ebcaf3efe391ea2c5162d
+Date:   Thu Jan 4 17:38:28 2018 +0000
+
+    Conversion to ASCII now in PrintCodes() function. Display works for symbols, letters and numbers now. Formatting actually looks okay.Figured out in lab that you just need to subtract 128 from integer value of codes to convert to ascii. I feel dumb. 
+
+commit f5aaac0f74121d91f7cde0b78d6de00c352081fa
+Date:   Thu Jan 4 11:20:47 2018 +0000
+
+    Starting Thursday
+
+commit d818e7df108537a3da276ea36a0526f8e4a9150d
+Date:   Wed Jan 3 15:45:01 2018 +0000
+
+    printed hex codes in sdl with new function printCodes() Managed to print a 2D array on SDL that contains the hexcodes. Worked on sizing the screen to fit the propper number of cells, but got this wrong. Started brainstorming about how to change codes from hex into ascii. 
+
+commit b9841bd3a68cdbb54f3ecc03bed78b02a1e084bf
+Date:   Wed Jan 3 13:47:27 2018 +0000
+
+    Working SDL window with strings and font loading.
+
+	Got it by pillaging the blocks.c file from our assignment on conways soldiers. Copy/pasted neilsdl2h functions into my code, and used them. Used his drawstring function to write random words to screen. Used his load font function to bring in the provided font. 
+
+commit 37d4d5f8467a584476812aeb85b067205a9a3be9
+Date:   Tue Jan 2 12:58:55 2018 +0000
+
+    First version of 2d array hex code
+
+	Got the codes imported from the test.m7 file and printed them out to terminal. started interpreting their meaning given the pdf chart. Started planning.
+

@@ -55,6 +55,7 @@ void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy)
         sixel->bright= false;
         sixel->bleft= false;
       }
+  
 
 void DrawSixel(SDL_Simplewin *sw, cell *hex, int h, int w, sixels sixel){
       setSixels(hex->code,  &sixel);

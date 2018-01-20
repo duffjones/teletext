@@ -1,0 +1,80 @@
+TESTING: 
+
+
+
+Can be initiated by terminal: "./test filename.m7"
+
+TESTING FILES:
+-------------
+TEST.M7 - standard generalized test code provided. Tests everything briefly. 
+SIXELCHART.M7 - chart of all possible sixels for comparison with assignment. 
+PANDA.M7 - pixel panda. Testing sixels, and graphics settings. 
+LFC.M7 - testing the patience of ManU fans everywhere. 
+
+VOCABULARY
+----------
+CELL - A single cell of the hex array that contains a single 2 digit hex code, and the struct FLAGS that contains the cells current state of color, bgcolor, size, etc. 
+
+FLAG - Struct containing "flags" that remember a cells states: fontsize, foreground color, background color, graphics mode, and hold mode. 
+
+CELL MATRIX - A 2D array of 1000 CELLS that represents the complete code for our Teletext page. 
+
+
+TESTING FUNCTIONS
+-----------------
+Testing is broken up into several parts. 
+
+
+BASIC FILE MANAGEMENT
+---------------------
+I have created a series of testing functions in testing.c that check: 
+-- ARGC: Checks for wrong number of args, and handling. Should throw an error with less than 2 or 	more than 3.   
+-- FILEOPEN:Checks that the file is opening correctly 
+-- FILEREAD:Checks codes are being read properly. Checks that there are not fewer than 1000 codes. 
+
+
+FLAG INITIALIZING
+-----------------
+Checks that current flags are properly resetting to defaults with each new line. 
+
+
+SET FLAG TESTS
+--------------
+These tests check that the system of reading hex codes, assigning them readable typedefs, and sending
+them into their relevant case statements. Successful testing should check the code has been read, and ultimately stored in the propper cell struct, ready to be interpretted by SDL. 
+
+FRONT COLOR
+-----------
+-Yellow, red, blue, green, magenta, cyan, black, white. 
+-Tests front color codes, once read, properly activate the fgcolor flag and sets graphics mode to alphanumeric. 
+
+TESTING FLAG CODES
+------------------
+Tests that the codes stored in "current" flags are properly passed to independant cell flags.
+This is the feature that allows us to store global states, and manage more than one code at once in a system where only one state can be changed at once. 
+
+TESTING CONTROL CODES
+---------------------
+Same as above. Tests codes are properly read and stored, passed into appropriate flags. 
+-Double Height, Single Height, Hold Graphics, Release Graphics, Continuous Graphics, Separate Graphics. 
+
+TESTING GRAPHICS COLORS
+-----------------------
+Functions in testing.c check that codes are properly stored in structs. All graphics color settings are tested visually in test.m7 and other test files. Compared to .gifs to make sure tone is close to original. 
+All colors standard versions of (255, 255, 255) with all values set as either 0 or 255 (no mixing).
+
+INCOMPATIBLE CODES
+------------------
+Testing that the system rejects, or converts, code that is not within the range presented on the teletext worksheet. If you receive the code 0x11 for example, it should be thrown out, and there is a test function that tests several variations of in and out of range code. 
+
+
+SIXELS
+------
+Sixels cans be tested with the hex file: "testfiles/sixelchart.m7"
+
+SIXELS (IN DETAIL)
+------------------
+Inside the program the loading of graphics modes (seperate and contiguous) is tested several ways in testing.c. The SetFlag function is tested, as is its holding abilities. Each color is tested, changed, and then restested. 
+
+The testfile SIXELCHART.m7 has been provided in /testfiles and has a recreation of the teletext assignment 
+pdf. This allows for a quick visual reference to make sure all patterns have been set correctly. 

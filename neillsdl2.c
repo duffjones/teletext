@@ -65,8 +65,11 @@ void Neill_SDL_Events(SDL_Simplewin *sw)
    {
        switch (event.type){
           case SDL_QUIT:
+          /*
+          THIS IS WHERE EXIT IS DETERMINED
           case SDL_MOUSEBUTTONDOWN:
           case SDL_KEYDOWN:
+          */
              sw->finished = 1;
        }
     }
