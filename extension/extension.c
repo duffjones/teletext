@@ -27,7 +27,7 @@ void printHex(cell hex[25][40], flags* current){
   w = 0;h = 0;
 
 
-  fprintf(file, "<table style=\"color: white; font-size: 14pt; width: 5%%;\" bgcolor=\"#000000\">\n");
+  fprintf(file, "<table style=\"color: white; font-size: 14pt; width: 5%%;cellspacing=\"0\" cellpadding=\"0\";\" bgcolor=\"#000000\">\n");
   fprintf(file, "<tbody>");
 
           for (h = 0; h < HT; h++) {
@@ -83,24 +83,39 @@ fprintf(file, "  <td>\n <svg width=\"16\" height=\"18\">\n");
       if(sixel.uleft == true){
         fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"0\" y=\"0\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.frontcolor) );
       }
+      else{
+        fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"0\" y=\"0\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.backcolor) );
+      }
       if(sixel.uright == true){
                 fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"8\" y=\"0\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.frontcolor) );
       }
-
+      else{
+        fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"8\" y=\"0\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.backcolor) );
+      }
       if(sixel.mleft == true){
         fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"0\" y=\"6\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.frontcolor) );
       }
-
+      else{
+        fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"0\" y=\"6\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.backcolor) );
+      }
       if(sixel.mright == true){
         fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"8\" y=\"6\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.frontcolor) );
       }
-
+      else{
+        fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"8\" y=\"6\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.backcolor) );
+      }
       if(sixel.bleft == true){
         fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"0\" y=\"12\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.frontcolor) );
+      }
+      else{
+        fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"0\" y=\"12\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.backcolor) );
       }
 
       if(sixel.bright == true){
         fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"8\" y=\"12\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.frontcolor) );
+      }
+      else{
+        fprintf(file, "   <rect width=\"8\" height=\"6\" x=\"8\" y=\"12\" style=\"fill:%s;\"/>\n",colorEnum(hex->flag.backcolor) );
       }
   fprintf(file, "</svg></td>\n");
       resetSixels(&sixel);

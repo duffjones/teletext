@@ -1,4 +1,4 @@
-<table style="color: white; font-size: 14pt; width: 5%;" bgcolor="#000000">
+<table style="color: white; font-size: 14pt; width: 5%;cellspacing="0" cellpadding="0";" bgcolor="#000000">
 <tbody><tr>
    <td style="background-color: black;">  </td>
    <td style="background-color: black;">  </td>
@@ -760,46 +760,82 @@
    <td style="background-color: black;">  </td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
@@ -903,8 +939,11 @@
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
    <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">s</td>
@@ -915,8 +954,11 @@
    <td style="background-color: black;">  </td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
 </svg></td>
    <td style="background-color: black;">  </td>
@@ -956,46 +998,82 @@
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
    <td style="background-color: black;">  </td>
    <td style="background-color: black;">  </td>
@@ -1183,8 +1261,11 @@
    <td style="background-color: black;">  </td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
@@ -1193,6 +1274,7 @@
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
@@ -1200,18 +1282,25 @@
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
@@ -1219,118 +1308,174 @@
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
    <td style="background-color: black;">  </td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
    <td style="background-color: black;">  </td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
    <td style="background-color: black;">  </td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
@@ -1339,17 +1484,25 @@
    <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
 </svg></td>
    <td style="background-color: black;">  </td>
@@ -1363,32 +1516,48 @@
    <td style="background-color: black;">  </td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
@@ -1426,37 +1595,56 @@
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
    <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
 </svg></td>
   <td>
  <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:black;"/>
    <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
    <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:black;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:black;"/>
 </svg></td>
    <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">5</td>
