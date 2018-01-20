@@ -1,14 +1,14 @@
-<table style="color: white; font-size: 10pt; width: 5%;" bgcolor="#000000">
+<table style="color: white; font-size: 14pt; width: 5%;" bgcolor="#000000">
 <tbody><tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">E</td>
    <td style="color: white; background-color: black;">n</td>
    <td style="color: white; background-color: black;">g</td>
@@ -20,151 +20,151 @@
    <td style="color: white; background-color: black;">i</td>
    <td style="color: white; background-color: black;">n</td>
    <td style="color: white; background-color: black;">g</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">T</td>
    <td style="color: white; background-color: black;">e</td>
    <td style="color: white; background-color: black;">s</td>
    <td style="color: white; background-color: black;">t</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">P</td>
    <td style="color: white; background-color: black;">a</td>
    <td style="color: white; background-color: black;">g</td>
    <td style="color: white; background-color: black;">e</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">1</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">2</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">D</td>
    <td style="color: white; background-color: black;">o</td>
    <td style="color: white; background-color: black;">u</td>
    <td style="color: white; background-color: black;">b</td>
    <td style="color: white; background-color: black;">l</td>
    <td style="color: white; background-color: black;">e</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">H</td>
    <td style="color: white; background-color: black;">e</td>
    <td style="color: white; background-color: black;">i</td>
    <td style="color: white; background-color: black;">g</td>
    <td style="color: white; background-color: black;">h</td>
    <td style="color: white; background-color: black;">t</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">3</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">D</td>
    <td style="color: white; background-color: black;">o</td>
    <td style="color: white; background-color: black;">u</td>
    <td style="color: white; background-color: black;">b</td>
    <td style="color: white; background-color: black;">l</td>
    <td style="color: white; background-color: black;">e</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">H</td>
    <td style="color: white; background-color: black;">e</td>
    <td style="color: white; background-color: black;">i</td>
    <td style="color: white; background-color: black;">g</td>
    <td style="color: white; background-color: black;">h</td>
    <td style="color: white; background-color: black;">t</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">4</td>
 </tr>
 <tr>
@@ -174,53 +174,53 @@
    <td style="color: white; background-color: black;">I</td>
    <td style="color: white; background-color: black;">I</td>
    <td style="color: white; background-color: black;">:</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">5</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: red; background-color: black;">R</td>
    <td style="color: red; background-color: black;">e</td>
    <td style="color: red; background-color: black;">d</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: red; background-color: black;">a</td>
    <td style="color: red; background-color: black;">b</td>
    <td style="color: red; background-color: black;">c</td>
@@ -247,22 +247,22 @@
    <td style="color: red; background-color: black;">x</td>
    <td style="color: red; background-color: black;">y</td>
    <td style="color: red; background-color: black;">z</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">6</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: green; background-color: black;">G</td>
    <td style="color: green; background-color: black;">r</td>
    <td style="color: green; background-color: black;">e</td>
    <td style="color: green; background-color: black;">e</td>
    <td style="color: green; background-color: black;">n</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: green; background-color: black;">A</td>
    <td style="color: green; background-color: black;">B</td>
    <td style="color: green; background-color: black;">C</td>
@@ -289,22 +289,22 @@
    <td style="color: green; background-color: black;">X</td>
    <td style="color: green; background-color: black;">Y</td>
    <td style="color: green; background-color: black;">Z</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">7</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: yellow; background-color: black;">Y</td>
    <td style="color: yellow; background-color: black;">e</td>
    <td style="color: yellow; background-color: black;">l</td>
    <td style="color: yellow; background-color: black;">l</td>
    <td style="color: yellow; background-color: black;">o</td>
    <td style="color: yellow; background-color: black;">w</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: yellow; background-color: black;">0</td>
    <td style="color: yellow; background-color: black;">1</td>
    <td style="color: yellow; background-color: black;">2</td>
@@ -315,30 +315,30 @@
    <td style="color: yellow; background-color: black;">7</td>
    <td style="color: yellow; background-color: black;">8</td>
    <td style="color: yellow; background-color: black;">9</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">8</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: magenta; background-color: black;">M</td>
    <td style="color: magenta; background-color: black;">a</td>
    <td style="color: magenta; background-color: black;">g</td>
@@ -346,7 +346,7 @@
    <td style="color: magenta; background-color: black;">n</td>
    <td style="color: magenta; background-color: black;">t</td>
    <td style="color: magenta; background-color: black;">a</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: magenta; background-color: black;">!</td>
    <td style="color: magenta; background-color: black;">"</td>
    <td style="color: magenta; background-color: black;">#</td>
@@ -369,12 +369,12 @@
    <td style="color: magenta; background-color: black;"><</td>
    <td style="color: magenta; background-color: black;">></td>
    <td style="color: magenta; background-color: black;">?</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">9</td>
 </tr>
 <tr>
@@ -388,41 +388,41 @@
    <td style="color: white; background-color: black;">i</td>
    <td style="color: white; background-color: black;">i</td>
    <td style="color: white; background-color: black;">:</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">0</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: blue; background-color: black;">F</td>
    <td style="color: blue; background-color: black;">r</td>
    <td style="color: blue; background-color: black;">a</td>
@@ -436,7 +436,7 @@
    <td style="color: blue; background-color: black;">{</td>
    <td style="color: blue; background-color: black;">\</td>
    <td style="color: blue; background-color: black;">}</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: blue; background-color: black;">A</td>
    <td style="color: blue; background-color: black;">r</td>
    <td style="color: blue; background-color: black;">r</td>
@@ -447,30 +447,30 @@
    <td style="color: blue; background-color: black;">[</td>
    <td style="color: blue; background-color: black;">]</td>
    <td style="color: blue; background-color: black;">^</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: blue; background-color: black;">D</td>
    <td style="color: blue; background-color: black;">i</td>
    <td style="color: blue; background-color: black;">v</td>
    <td style="color: blue; background-color: black;">=</td>
    <td style="color: blue; background-color: black;">~</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">1</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: cyan; background-color: black;">B</td>
    <td style="color: cyan; background-color: black;">a</td>
    <td style="color: cyan; background-color: black;">r</td>
    <td style="color: cyan; background-color: black;">=</td>
    <td style="color: cyan; background-color: black;">|</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: cyan; background-color: black;">P</td>
    <td style="color: cyan; background-color: black;">o</td>
    <td style="color: cyan; background-color: black;">u</td>
@@ -478,7 +478,7 @@
    <td style="color: cyan; background-color: black;">d</td>
    <td style="color: cyan; background-color: black;">=</td>
    <td style="color: cyan; background-color: black;">_</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: cyan; background-color: black;">H</td>
    <td style="color: cyan; background-color: black;">y</td>
    <td style="color: cyan; background-color: black;">p</td>
@@ -487,80 +487,80 @@
    <td style="color: cyan; background-color: black;">n</td>
    <td style="color: cyan; background-color: black;">=</td>
    <td style="color: cyan; background-color: black;">`</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: cyan; background-color: black;">B</td>
    <td style="color: cyan; background-color: black;">l</td>
    <td style="color: cyan; background-color: black;">o</td>
    <td style="color: cyan; background-color: black;">c</td>
    <td style="color: cyan; background-color: black;">k</td>
    <td style="color: cyan; background-color: black;">=</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">2</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">3</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: cyan;">  </td>
+   <td style="background-color: cyan;">  </td>
+   <td style="background-color: cyan;">  </td>
+   <td style="background-color: cyan;">  </td>
+   <td style="background-color: cyan;">  </td>
    <td style="color: red; background-color: cyan;">S</td>
    <td style="color: red; background-color: cyan;">i</td>
    <td style="color: red; background-color: cyan;">m</td>
    <td style="color: red; background-color: cyan;">p</td>
    <td style="color: red; background-color: cyan;">l</td>
    <td style="color: red; background-color: cyan;">e</td>
-   <td>  </td>
+   <td style="background-color: cyan;">  </td>
    <td style="color: red; background-color: cyan;">B</td>
    <td style="color: red; background-color: cyan;">a</td>
    <td style="color: red; background-color: cyan;">c</td>
@@ -571,248 +571,358 @@
    <td style="color: red; background-color: cyan;">u</td>
    <td style="color: red; background-color: cyan;">n</td>
    <td style="color: red; background-color: cyan;">d</td>
-   <td>  </td>
+   <td style="background-color: cyan;">  </td>
    <td style="color: red; background-color: cyan;">C</td>
    <td style="color: red; background-color: cyan;">o</td>
    <td style="color: red; background-color: cyan;">l</td>
    <td style="color: red; background-color: cyan;">o</td>
    <td style="color: red; background-color: cyan;">u</td>
    <td style="color: red; background-color: cyan;">r</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: cyan;">  </td>
+   <td style="background-color: cyan;">  </td>
+   <td style="background-color: cyan;">  </td>
+   <td style="background-color: cyan;">  </td>
+   <td style="background-color: cyan;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">4</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">5</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: cyan; background-color: black;">C</td>
    <td style="color: cyan; background-color: black;">y</td>
    <td style="color: cyan; background-color: black;">a</td>
    <td style="color: cyan; background-color: black;">n</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: red; background-color: black;">M</td>
    <td style="color: red; background-color: black;">i</td>
    <td style="color: red; background-color: black;">x</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: blue;">  </td>
+   <td style="background-color: blue;">  </td>
    <td style="color: cyan; background-color: blue;">B</td>
    <td style="color: cyan; background-color: blue;">a</td>
    <td style="color: cyan; background-color: blue;">c</td>
    <td style="color: cyan; background-color: blue;">k</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: yellow;">  </td>
+   <td style="background-color: yellow;">  </td>
    <td style="color: green; background-color: yellow;">S</td>
    <td style="color: green; background-color: yellow;">t</td>
    <td style="color: green; background-color: yellow;">r</td>
    <td style="color: green; background-color: yellow;">i</td>
    <td style="color: green; background-color: yellow;">p</td>
    <td style="color: green; background-color: yellow;">e</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">A</td>
    <td style="color: white; background-color: black;">B</td>
    <td style="color: white; background-color: black;">C</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">E</td>
    <td style="color: white; background-color: black;">F</td>
    <td style="color: white; background-color: black;">G</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">6</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: cyan; background-color: black;">C</td>
    <td style="color: cyan; background-color: black;">y</td>
    <td style="color: cyan; background-color: black;">a</td>
    <td style="color: cyan; background-color: black;">n</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: green; background-color: black;">M</td>
    <td style="color: green; background-color: black;">i</td>
    <td style="color: green; background-color: black;">x</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: blue;">  </td>
+   <td style="background-color: blue;">  </td>
    <td style="color: cyan; background-color: blue;">B</td>
    <td style="color: cyan; background-color: blue;">a</td>
    <td style="color: cyan; background-color: blue;">c</td>
    <td style="color: cyan; background-color: blue;">k</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: green;">  </td>
+   <td style="background-color: green;">  </td>
    <td style="color: yellow; background-color: green;">S</td>
    <td style="color: yellow; background-color: green;">t</td>
    <td style="color: yellow; background-color: green;">r</td>
    <td style="color: yellow; background-color: green;">i</td>
    <td style="color: yellow; background-color: green;">p</td>
    <td style="color: yellow; background-color: green;">e</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">A</td>
    <td style="color: white; background-color: black;">B</td>
    <td style="color: white; background-color: black;">C</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">E</td>
    <td style="color: white; background-color: black;">F</td>
    <td style="color: white; background-color: black;">*</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">7</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">8</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td>  </td>
-   <td>  </td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td style="color: white; background-color: black;">p</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:red;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:red;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:red;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:red;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:red;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:red;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:yellow;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:yellow;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:yellow;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:yellow;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:yellow;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:yellow;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:blue;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:blue;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:blue;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:blue;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:blue;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:blue;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:cyan;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:cyan;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:cyan;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:cyan;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:cyan;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:cyan;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">9</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td style="color: white; background-color: black;">5</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">s</td>
    <td style="color: white; background-color: black;">o</td>
    <td style="color: white; background-color: black;">l</td>
    <td style="color: white; background-color: black;">i</td>
    <td style="color: white; background-color: black;">d</td>
-   <td>  </td>
-   <td style="color: white; background-color: black;">j</td>
-   <td>  </td>
-   <td>  </td>
-   <td style="color: white; background-color: black;">5</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">S</td>
    <td style="color: white; background-color: black;">e</td>
    <td style="color: white; background-color: black;">p</td>
@@ -822,11 +932,11 @@
    <td style="color: white; background-color: black;">t</td>
    <td style="color: white; background-color: black;">e</td>
    <td style="color: white; background-color: black;">d</td>
-   <td>  </td>
-   <td style="color: white; background-color: black;">j</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">R</td>
    <td style="color: white; background-color: black;">a</td>
    <td style="color: white; background-color: black;">i</td>
@@ -834,101 +944,201 @@
    <td style="color: white; background-color: black;">b</td>
    <td style="color: white; background-color: black;">o</td>
    <td style="color: white; background-color: black;">w</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">0</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td>  </td>
-   <td>  </td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td style="color: white; background-color: black;">#</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td><svg width="10" height="12"><rect width="10" height="12" style="fill:white;" /> </svg> </td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:white;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:white;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:white;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:red;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:red;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:red;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:red;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:red;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:red;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:yellow;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:yellow;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:yellow;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:yellow;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:yellow;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:yellow;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:blue;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:blue;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:blue;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:blue;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:blue;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:blue;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:cyan;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:cyan;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:cyan;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:cyan;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:cyan;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:cyan;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">1</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">2</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: green; background-color: black;">l</td>
    <td style="color: green; background-color: black;">o</td>
    <td style="color: green; background-color: black;">w</td>
@@ -938,10 +1148,10 @@
    <td style="color: green; background-color: black;">a</td>
    <td style="color: green; background-color: black;">s</td>
    <td style="color: green; background-color: black;">e</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: green; background-color: black;">i</td>
    <td style="color: green; background-color: black;">n</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: green; background-color: black;">a</td>
    <td style="color: green; background-color: black;">l</td>
    <td style="color: green; background-color: black;">p</td>
@@ -954,68 +1164,241 @@
    <td style="color: green; background-color: black;">r</td>
    <td style="color: green; background-color: black;">i</td>
    <td style="color: green; background-color: black;">c</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: green; background-color: black;">m</td>
    <td style="color: green; background-color: black;">o</td>
    <td style="color: green; background-color: black;">d</td>
    <td style="color: green; background-color: black;">e</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">3</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td style="color: green; background-color: black;">l</td>
-   <td style="color: green; background-color: black;">o</td>
-   <td style="color: green; background-color: black;">w</td>
-   <td style="color: green; background-color: black;">e</td>
-   <td style="color: green; background-color: black;">r</td>
-   <td style="color: green; background-color: black;">c</td>
-   <td style="color: green; background-color: black;">a</td>
-   <td style="color: green; background-color: black;">s</td>
-   <td style="color: green; background-color: black;">e</td>
-   <td>  </td>
-   <td style="color: green; background-color: black;">i</td>
-   <td style="color: green; background-color: black;">n</td>
-   <td>  </td>
-   <td style="color: green; background-color: black;">a</td>
-   <td style="color: green; background-color: black;">l</td>
-   <td style="color: green; background-color: black;">p</td>
-   <td style="color: green; background-color: black;">h</td>
-   <td style="color: green; background-color: black;">a</td>
-   <td style="color: green; background-color: black;">n</td>
-   <td style="color: green; background-color: black;">u</td>
-   <td style="color: green; background-color: black;">m</td>
-   <td style="color: green; background-color: black;">e</td>
-   <td style="color: green; background-color: black;">r</td>
-   <td style="color: green; background-color: black;">i</td>
-   <td style="color: green; background-color: black;">c</td>
-   <td>  </td>
-   <td style="color: green; background-color: black;">m</td>
-   <td style="color: green; background-color: black;">o</td>
-   <td style="color: green; background-color: black;">d</td>
-   <td style="color: green; background-color: black;">e</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:green;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:green;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:green;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">4</td>
 </tr>
 <tr>
-   <td>  </td>
-   <td>  </td>
-   <td style="color: magenta; background-color: black;">,</td>
-   <td style="color: magenta; background-color: black;">s</td>
-   <td style="color: magenta; background-color: black;">,</td>
-   <td style="color: magenta; background-color: black;">s</td>
-   <td style="color: magenta; background-color: black;">,</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
+   <td style="background-color: black;">  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
+</svg></td>
    <td style="color: magenta; background-color: black;">@</td>
    <td style="color: magenta; background-color: black;">[</td>
    <td style="color: magenta; background-color: black;">\</td>
@@ -1024,7 +1407,7 @@
    <td style="color: magenta; background-color: black;">A</td>
    <td style="color: magenta; background-color: black;">S</td>
    <td style="color: magenta; background-color: black;">T</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: magenta; background-color: black;">T</td>
    <td style="color: magenta; background-color: black;">H</td>
    <td style="color: magenta; background-color: black;">R</td>
@@ -1032,7 +1415,7 @@
    <td style="color: magenta; background-color: black;">U</td>
    <td style="color: magenta; background-color: black;">G</td>
    <td style="color: magenta; background-color: black;">H</td>
-   <td>  </td>
+   <td style="background-color: black;">  </td>
    <td style="color: magenta; background-color: black;">T</td>
    <td style="color: magenta; background-color: black;">E</td>
    <td style="color: magenta; background-color: black;">X</td>
@@ -1040,13 +1423,42 @@
    <td style="color: magenta; background-color: black;">]</td>
    <td style="color: magenta; background-color: black;">^</td>
    <td style="color: magenta; background-color: black;">_</td>
-   <td style="color: magenta; background-color: black;">5</td>
-   <td style="color: magenta; background-color: black;">,</td>
-   <td style="color: magenta; background-color: black;">s</td>
-   <td style="color: magenta; background-color: black;">,</td>
-   <td style="color: magenta; background-color: black;">s</td>
-   <td style="color: magenta; background-color: black;">,</td>
-   <td>  </td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="0" style="fill:magenta;"/>
+   <rect width="8" height="6" x="0" y="12" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="12" style="fill:magenta;"/>
+</svg></td>
+  <td>
+ <svg width="16" height="18">
+   <rect width="8" height="6" x="0" y="6" style="fill:magenta;"/>
+   <rect width="8" height="6" x="8" y="6" style="fill:magenta;"/>
+</svg></td>
+   <td style="background-color: black;">  </td>
    <td style="color: white; background-color: black;">5</td>
 </tr>
 </tbody></table>
