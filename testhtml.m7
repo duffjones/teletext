@@ -9,29 +9,27 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>E</td>
-   <td>n</td>
-   <td>g</td>
-   <td>i</td>
-   <td>n</td>
-   <td>e</td>
-   <td>e</td>
-   <td>r</td>
-   <td>i</td>
-   <td>n</td>
-   <td>g</td>
+   <td style="color: white; background-color: black;">E</td>
+   <td style="color: white; background-color: black;">n</td>
+   <td style="color: white; background-color: black;">g</td>
+   <td style="color: white; background-color: black;">i</td>
+   <td style="color: white; background-color: black;">n</td>
+   <td style="color: white; background-color: black;">e</td>
+   <td style="color: white; background-color: black;">e</td>
+   <td style="color: white; background-color: black;">r</td>
+   <td style="color: white; background-color: black;">i</td>
+   <td style="color: white; background-color: black;">n</td>
+   <td style="color: white; background-color: black;">g</td>
    <td>  </td>
-   <td>T</td>
-   <td>e</td>
-   <td>s</td>
-   <td>t</td>
+   <td style="color: white; background-color: black;">T</td>
+   <td style="color: white; background-color: black;">e</td>
+   <td style="color: white; background-color: black;">s</td>
+   <td style="color: white; background-color: black;">t</td>
    <td>  </td>
-   <td>P</td>
-   <td>a</td>
-   <td>g</td>
-   <td>e</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="color: white; background-color: black;">P</td>
+   <td style="color: white; background-color: black;">a</td>
+   <td style="color: white; background-color: black;">g</td>
+   <td style="color: white; background-color: black;">e</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
@@ -39,7 +37,9 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>1</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">1</td>
 </tr>
 <tr>
    <td>  </td>
@@ -81,7 +81,7 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>2</td>
+   <td style="color: white; background-color: black;">2</td>
 </tr>
 <tr>
    <td>  </td>
@@ -97,21 +97,19 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>D</td>
-   <td>o</td>
-   <td>u</td>
-   <td>b</td>
-   <td>l</td>
-   <td>e</td>
+   <td style="color: white; background-color: black;">D</td>
+   <td style="color: white; background-color: black;">o</td>
+   <td style="color: white; background-color: black;">u</td>
+   <td style="color: white; background-color: black;">b</td>
+   <td style="color: white; background-color: black;">l</td>
+   <td style="color: white; background-color: black;">e</td>
    <td>  </td>
-   <td>H</td>
-   <td>e</td>
-   <td>i</td>
-   <td>g</td>
-   <td>h</td>
-   <td>t</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="color: white; background-color: black;">H</td>
+   <td style="color: white; background-color: black;">e</td>
+   <td style="color: white; background-color: black;">i</td>
+   <td style="color: white; background-color: black;">g</td>
+   <td style="color: white; background-color: black;">h</td>
+   <td style="color: white; background-color: black;">t</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
@@ -123,7 +121,9 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>3</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">3</td>
 </tr>
 <tr>
    <td>  </td>
@@ -139,21 +139,19 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>D</td>
-   <td>o</td>
-   <td>u</td>
-   <td>b</td>
-   <td>l</td>
-   <td>e</td>
+   <td style="color: white; background-color: black;">D</td>
+   <td style="color: white; background-color: black;">o</td>
+   <td style="color: white; background-color: black;">u</td>
+   <td style="color: white; background-color: black;">b</td>
+   <td style="color: white; background-color: black;">l</td>
+   <td style="color: white; background-color: black;">e</td>
    <td>  </td>
-   <td>H</td>
-   <td>e</td>
-   <td>i</td>
-   <td>g</td>
-   <td>h</td>
-   <td>t</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="color: white; background-color: black;">H</td>
+   <td style="color: white; background-color: black;">e</td>
+   <td style="color: white; background-color: black;">i</td>
+   <td style="color: white; background-color: black;">g</td>
+   <td style="color: white; background-color: black;">h</td>
+   <td style="color: white; background-color: black;">t</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
@@ -165,15 +163,17 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>4</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">4</td>
 </tr>
 <tr>
-   <td>A</td>
-   <td>S</td>
-   <td>C</td>
-   <td>I</td>
-   <td>I</td>
-   <td>:</td>
+   <td style="color: white; background-color: black;">A</td>
+   <td style="color: white; background-color: black;">S</td>
+   <td style="color: white; background-color: black;">C</td>
+   <td style="color: white; background-color: black;">I</td>
+   <td style="color: white; background-color: black;">I</td>
+   <td style="color: white; background-color: black;">:</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
@@ -207,187 +207,114 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>5</td>
-</tr>
-<tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>R</td>
-   <td>e</td>
-   <td>d</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>a</td>
-   <td>b</td>
-   <td>c</td>
-   <td>d</td>
-   <td>e</td>
-   <td>f</td>
-   <td>g</td>
-   <td>h</td>
-   <td>i</td>
-   <td>j</td>
-   <td>k</td>
-   <td>l</td>
-   <td>m</td>
-   <td>n</td>
-   <td>o</td>
-   <td>p</td>
-   <td>q</td>
-   <td>r</td>
-   <td>s</td>
-   <td>t</td>
-   <td>u</td>
-   <td>v</td>
-   <td>w</td>
-   <td>x</td>
-   <td>y</td>
-   <td>z</td>
-   <td>  </td>
-   <td>  </td>
-   <td>6</td>
+   <td style="color: white; background-color: black;">5</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>G</td>
-   <td>r</td>
-   <td>e</td>
-   <td>e</td>
-   <td>n</td>
+   <td style="color: red; background-color: black;">R</td>
+   <td style="color: red; background-color: black;">e</td>
+   <td style="color: red; background-color: black;">d</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>A</td>
-   <td>B</td>
-   <td>C</td>
-   <td>D</td>
-   <td>E</td>
-   <td>F</td>
-   <td>G</td>
-   <td>H</td>
-   <td>I</td>
-   <td>J</td>
-   <td>K</td>
-   <td>L</td>
-   <td>M</td>
-   <td>N</td>
-   <td>O</td>
-   <td>P</td>
-   <td>Q</td>
-   <td>R</td>
-   <td>S</td>
-   <td>T</td>
-   <td>U</td>
-   <td>V</td>
-   <td>W</td>
-   <td>X</td>
-   <td>Y</td>
-   <td>Z</td>
    <td>  </td>
    <td>  </td>
-   <td>7</td>
+   <td style="color: red; background-color: black;">a</td>
+   <td style="color: red; background-color: black;">b</td>
+   <td style="color: red; background-color: black;">c</td>
+   <td style="color: red; background-color: black;">d</td>
+   <td style="color: red; background-color: black;">e</td>
+   <td style="color: red; background-color: black;">f</td>
+   <td style="color: red; background-color: black;">g</td>
+   <td style="color: red; background-color: black;">h</td>
+   <td style="color: red; background-color: black;">i</td>
+   <td style="color: red; background-color: black;">j</td>
+   <td style="color: red; background-color: black;">k</td>
+   <td style="color: red; background-color: black;">l</td>
+   <td style="color: red; background-color: black;">m</td>
+   <td style="color: red; background-color: black;">n</td>
+   <td style="color: red; background-color: black;">o</td>
+   <td style="color: red; background-color: black;">p</td>
+   <td style="color: red; background-color: black;">q</td>
+   <td style="color: red; background-color: black;">r</td>
+   <td style="color: red; background-color: black;">s</td>
+   <td style="color: red; background-color: black;">t</td>
+   <td style="color: red; background-color: black;">u</td>
+   <td style="color: red; background-color: black;">v</td>
+   <td style="color: red; background-color: black;">w</td>
+   <td style="color: red; background-color: black;">x</td>
+   <td style="color: red; background-color: black;">y</td>
+   <td style="color: red; background-color: black;">z</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">6</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>Y</td>
-   <td>e</td>
-   <td>l</td>
-   <td>l</td>
-   <td>o</td>
-   <td>w</td>
-   <td>  </td>
-   <td>  </td>
-   <td>0</td>
-   <td>1</td>
-   <td>2</td>
-   <td>3</td>
-   <td>4</td>
-   <td>5</td>
-   <td>6</td>
-   <td>7</td>
-   <td>8</td>
-   <td>9</td>
+   <td style="color: green; background-color: black;">G</td>
+   <td style="color: green; background-color: black;">r</td>
+   <td style="color: green; background-color: black;">e</td>
+   <td style="color: green; background-color: black;">e</td>
+   <td style="color: green; background-color: black;">n</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
+   <td style="color: green; background-color: black;">A</td>
+   <td style="color: green; background-color: black;">B</td>
+   <td style="color: green; background-color: black;">C</td>
+   <td style="color: green; background-color: black;">D</td>
+   <td style="color: green; background-color: black;">E</td>
+   <td style="color: green; background-color: black;">F</td>
+   <td style="color: green; background-color: black;">G</td>
+   <td style="color: green; background-color: black;">H</td>
+   <td style="color: green; background-color: black;">I</td>
+   <td style="color: green; background-color: black;">J</td>
+   <td style="color: green; background-color: black;">K</td>
+   <td style="color: green; background-color: black;">L</td>
+   <td style="color: green; background-color: black;">M</td>
+   <td style="color: green; background-color: black;">N</td>
+   <td style="color: green; background-color: black;">O</td>
+   <td style="color: green; background-color: black;">P</td>
+   <td style="color: green; background-color: black;">Q</td>
+   <td style="color: green; background-color: black;">R</td>
+   <td style="color: green; background-color: black;">S</td>
+   <td style="color: green; background-color: black;">T</td>
+   <td style="color: green; background-color: black;">U</td>
+   <td style="color: green; background-color: black;">V</td>
+   <td style="color: green; background-color: black;">W</td>
+   <td style="color: green; background-color: black;">X</td>
+   <td style="color: green; background-color: black;">Y</td>
+   <td style="color: green; background-color: black;">Z</td>
    <td>  </td>
    <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>8</td>
+   <td style="color: white; background-color: black;">7</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>M</td>
-   <td>a</td>
-   <td>g</td>
-   <td>e</td>
-   <td>n</td>
-   <td>t</td>
-   <td>a</td>
-   <td>  </td>
-   <td>!</td>
-   <td>"</td>
-   <td>#</td>
-   <td>$</td>
-   <td>%</td>
-   <td>&</td>
-   <td>*</td>
-   <td>(</td>
-   <td>)</td>
-   <td>;</td>
-   <td>'</td>
-   <td>,</td>
-   <td>.</td>
-   <td>/</td>
-   <td>+</td>
-   <td>-</td>
-   <td>=</td>
-   <td>:</td>
-   <td>@</td>
-   <td><</td>
-   <td>></td>
-   <td>?</td>
+   <td style="color: yellow; background-color: black;">Y</td>
+   <td style="color: yellow; background-color: black;">e</td>
+   <td style="color: yellow; background-color: black;">l</td>
+   <td style="color: yellow; background-color: black;">l</td>
+   <td style="color: yellow; background-color: black;">o</td>
+   <td style="color: yellow; background-color: black;">w</td>
    <td>  </td>
    <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>9</td>
-</tr>
-<tr>
-   <td>N</td>
-   <td>o</td>
-   <td>n</td>
-   <td>-</td>
-   <td>A</td>
-   <td>s</td>
-   <td>c</td>
-   <td>i</td>
-   <td>i</td>
-   <td>:</td>
+   <td style="color: yellow; background-color: black;">0</td>
+   <td style="color: yellow; background-color: black;">1</td>
+   <td style="color: yellow; background-color: black;">2</td>
+   <td style="color: yellow; background-color: black;">3</td>
+   <td style="color: yellow; background-color: black;">4</td>
+   <td style="color: yellow; background-color: black;">5</td>
+   <td style="color: yellow; background-color: black;">6</td>
+   <td style="color: yellow; background-color: black;">7</td>
+   <td style="color: yellow; background-color: black;">8</td>
+   <td style="color: yellow; background-color: black;">9</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
@@ -406,107 +333,167 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>0</td>
+   <td style="color: white; background-color: black;">8</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>F</td>
-   <td>r</td>
-   <td>a</td>
-   <td>c</td>
-   <td>t</td>
-   <td>i</td>
-   <td>o</td>
-   <td>n</td>
-   <td>s</td>
-   <td>=</td>
-   <td>{</td>
-   <td>\</td>
-   <td>}</td>
+   <td style="color: magenta; background-color: black;">M</td>
+   <td style="color: magenta; background-color: black;">a</td>
+   <td style="color: magenta; background-color: black;">g</td>
+   <td style="color: magenta; background-color: black;">e</td>
+   <td style="color: magenta; background-color: black;">n</td>
+   <td style="color: magenta; background-color: black;">t</td>
+   <td style="color: magenta; background-color: black;">a</td>
    <td>  </td>
-   <td>A</td>
-   <td>r</td>
-   <td>r</td>
-   <td>o</td>
-   <td>w</td>
-   <td>s</td>
-   <td>=</td>
-   <td>[</td>
-   <td>]</td>
-   <td>^</td>
-   <td>  </td>
-   <td>D</td>
-   <td>i</td>
-   <td>v</td>
-   <td>=</td>
-   <td>~</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="color: magenta; background-color: black;">!</td>
+   <td style="color: magenta; background-color: black;">"</td>
+   <td style="color: magenta; background-color: black;">#</td>
+   <td style="color: magenta; background-color: black;">$</td>
+   <td style="color: magenta; background-color: black;">%</td>
+   <td style="color: magenta; background-color: black;">&</td>
+   <td style="color: magenta; background-color: black;">*</td>
+   <td style="color: magenta; background-color: black;">(</td>
+   <td style="color: magenta; background-color: black;">)</td>
+   <td style="color: magenta; background-color: black;">;</td>
+   <td style="color: magenta; background-color: black;">'</td>
+   <td style="color: magenta; background-color: black;">,</td>
+   <td style="color: magenta; background-color: black;">.</td>
+   <td style="color: magenta; background-color: black;">/</td>
+   <td style="color: magenta; background-color: black;">+</td>
+   <td style="color: magenta; background-color: black;">-</td>
+   <td style="color: magenta; background-color: black;">=</td>
+   <td style="color: magenta; background-color: black;">:</td>
+   <td style="color: magenta; background-color: black;">@</td>
+   <td style="color: magenta; background-color: black;"><</td>
+   <td style="color: magenta; background-color: black;">></td>
+   <td style="color: magenta; background-color: black;">?</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>1</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">9</td>
+</tr>
+<tr>
+   <td style="color: white; background-color: black;">N</td>
+   <td style="color: white; background-color: black;">o</td>
+   <td style="color: white; background-color: black;">n</td>
+   <td style="color: white; background-color: black;">-</td>
+   <td style="color: white; background-color: black;">A</td>
+   <td style="color: white; background-color: black;">s</td>
+   <td style="color: white; background-color: black;">c</td>
+   <td style="color: white; background-color: black;">i</td>
+   <td style="color: white; background-color: black;">i</td>
+   <td style="color: white; background-color: black;">:</td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">0</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>B</td>
-   <td>a</td>
-   <td>r</td>
-   <td>=</td>
-   <td>|</td>
+   <td style="color: blue; background-color: black;">F</td>
+   <td style="color: blue; background-color: black;">r</td>
+   <td style="color: blue; background-color: black;">a</td>
+   <td style="color: blue; background-color: black;">c</td>
+   <td style="color: blue; background-color: black;">t</td>
+   <td style="color: blue; background-color: black;">i</td>
+   <td style="color: blue; background-color: black;">o</td>
+   <td style="color: blue; background-color: black;">n</td>
+   <td style="color: blue; background-color: black;">s</td>
+   <td style="color: blue; background-color: black;">=</td>
+   <td style="color: blue; background-color: black;">{</td>
+   <td style="color: blue; background-color: black;">\</td>
+   <td style="color: blue; background-color: black;">}</td>
    <td>  </td>
-   <td>P</td>
-   <td>o</td>
-   <td>u</td>
-   <td>n</td>
-   <td>d</td>
-   <td>=</td>
-   <td>_</td>
+   <td style="color: blue; background-color: black;">A</td>
+   <td style="color: blue; background-color: black;">r</td>
+   <td style="color: blue; background-color: black;">r</td>
+   <td style="color: blue; background-color: black;">o</td>
+   <td style="color: blue; background-color: black;">w</td>
+   <td style="color: blue; background-color: black;">s</td>
+   <td style="color: blue; background-color: black;">=</td>
+   <td style="color: blue; background-color: black;">[</td>
+   <td style="color: blue; background-color: black;">]</td>
+   <td style="color: blue; background-color: black;">^</td>
    <td>  </td>
-   <td>H</td>
-   <td>y</td>
-   <td>p</td>
-   <td>h</td>
-   <td>e</td>
-   <td>n</td>
-   <td>=</td>
-   <td>`</td>
-   <td>  </td>
-   <td>B</td>
-   <td>l</td>
-   <td>o</td>
-   <td>c</td>
-   <td>k</td>
-   <td>=</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
+   <td style="color: blue; background-color: black;">D</td>
+   <td style="color: blue; background-color: black;">i</td>
+   <td style="color: blue; background-color: black;">v</td>
+   <td style="color: blue; background-color: black;">=</td>
+   <td style="color: blue; background-color: black;">~</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>2</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">1</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
    <td>  </td>
+   <td style="color: cyan; background-color: black;">B</td>
+   <td style="color: cyan; background-color: black;">a</td>
+   <td style="color: cyan; background-color: black;">r</td>
+   <td style="color: cyan; background-color: black;">=</td>
+   <td style="color: cyan; background-color: black;">|</td>
+   <td>  </td>
+   <td style="color: cyan; background-color: black;">P</td>
+   <td style="color: cyan; background-color: black;">o</td>
+   <td style="color: cyan; background-color: black;">u</td>
+   <td style="color: cyan; background-color: black;">n</td>
+   <td style="color: cyan; background-color: black;">d</td>
+   <td style="color: cyan; background-color: black;">=</td>
+   <td style="color: cyan; background-color: black;">_</td>
+   <td>  </td>
+   <td style="color: cyan; background-color: black;">H</td>
+   <td style="color: cyan; background-color: black;">y</td>
+   <td style="color: cyan; background-color: black;">p</td>
+   <td style="color: cyan; background-color: black;">h</td>
+   <td style="color: cyan; background-color: black;">e</td>
+   <td style="color: cyan; background-color: black;">n</td>
+   <td style="color: cyan; background-color: black;">=</td>
+   <td style="color: cyan; background-color: black;">`</td>
+   <td>  </td>
+   <td style="color: cyan; background-color: black;">B</td>
+   <td style="color: cyan; background-color: black;">l</td>
+   <td style="color: cyan; background-color: black;">o</td>
+   <td style="color: cyan; background-color: black;">c</td>
+   <td style="color: cyan; background-color: black;">k</td>
+   <td style="color: cyan; background-color: black;">=</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
@@ -514,78 +501,7 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>3</td>
-</tr>
-<tr>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>S</td>
-   <td>i</td>
-   <td>m</td>
-   <td>p</td>
-   <td>l</td>
-   <td>e</td>
-   <td>  </td>
-   <td>B</td>
-   <td>a</td>
-   <td>c</td>
-   <td>k</td>
-   <td>g</td>
-   <td>r</td>
-   <td>o</td>
-   <td>u</td>
-   <td>n</td>
-   <td>d</td>
-   <td>  </td>
-   <td>C</td>
-   <td>o</td>
-   <td>l</td>
-   <td>o</td>
-   <td>u</td>
-   <td>r</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>4</td>
+   <td style="color: white; background-color: black;">2</td>
 </tr>
 <tr>
    <td>  </td>
@@ -627,91 +543,49 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>5</td>
+   <td style="color: white; background-color: black;">3</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
-   <td>C</td>
-   <td>y</td>
-   <td>a</td>
-   <td>n</td>
-   <td>  </td>
-   <td>M</td>
-   <td>i</td>
-   <td>x</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>B</td>
-   <td>a</td>
-   <td>c</td>
-   <td>k</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>S</td>
-   <td>t</td>
-   <td>r</td>
-   <td>i</td>
-   <td>p</td>
-   <td>e</td>
    <td>  </td>
    <td>  </td>
+   <td style="color: red; background-color: cyan;">S</td>
+   <td style="color: red; background-color: cyan;">i</td>
+   <td style="color: red; background-color: cyan;">m</td>
+   <td style="color: red; background-color: cyan;">p</td>
+   <td style="color: red; background-color: cyan;">l</td>
+   <td style="color: red; background-color: cyan;">e</td>
    <td>  </td>
-   <td>A</td>
-   <td>B</td>
-   <td>C</td>
+   <td style="color: red; background-color: cyan;">B</td>
+   <td style="color: red; background-color: cyan;">a</td>
+   <td style="color: red; background-color: cyan;">c</td>
+   <td style="color: red; background-color: cyan;">k</td>
+   <td style="color: red; background-color: cyan;">g</td>
+   <td style="color: red; background-color: cyan;">r</td>
+   <td style="color: red; background-color: cyan;">o</td>
+   <td style="color: red; background-color: cyan;">u</td>
+   <td style="color: red; background-color: cyan;">n</td>
+   <td style="color: red; background-color: cyan;">d</td>
    <td>  </td>
-   <td>E</td>
-   <td>F</td>
-   <td>G</td>
-   <td>  </td>
-   <td>  </td>
-   <td>6</td>
-</tr>
-<tr>
-   <td>  </td>
-   <td>  </td>
-   <td>C</td>
-   <td>y</td>
-   <td>a</td>
-   <td>n</td>
-   <td>  </td>
-   <td>M</td>
-   <td>i</td>
-   <td>x</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>B</td>
-   <td>a</td>
-   <td>c</td>
-   <td>k</td>
+   <td style="color: red; background-color: cyan;">C</td>
+   <td style="color: red; background-color: cyan;">o</td>
+   <td style="color: red; background-color: cyan;">l</td>
+   <td style="color: red; background-color: cyan;">o</td>
+   <td style="color: red; background-color: cyan;">u</td>
+   <td style="color: red; background-color: cyan;">r</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>S</td>
-   <td>t</td>
-   <td>r</td>
-   <td>i</td>
-   <td>p</td>
-   <td>e</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>A</td>
-   <td>B</td>
-   <td>C</td>
-   <td>  </td>
-   <td>E</td>
-   <td>F</td>
-   <td>*</td>
-   <td>  </td>
-   <td>  </td>
-   <td>7</td>
+   <td style="color: white; background-color: black;">4</td>
 </tr>
 <tr>
    <td>  </td>
@@ -753,133 +627,91 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>8</td>
+   <td style="color: white; background-color: black;">5</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
+   <td style="color: cyan; background-color: black;">C</td>
+   <td style="color: cyan; background-color: black;">y</td>
+   <td style="color: cyan; background-color: black;">a</td>
+   <td style="color: cyan; background-color: black;">n</td>
+   <td>  </td>
+   <td style="color: red; background-color: black;">M</td>
+   <td style="color: red; background-color: black;">i</td>
+   <td style="color: red; background-color: black;">x</td>
    <td>  </td>
    <td>  </td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
-   <td>p</td>
+   <td>  </td>
+   <td style="color: cyan; background-color: blue;">B</td>
+   <td style="color: cyan; background-color: blue;">a</td>
+   <td style="color: cyan; background-color: blue;">c</td>
+   <td style="color: cyan; background-color: blue;">k</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
+   <td style="color: green; background-color: yellow;">S</td>
+   <td style="color: green; background-color: yellow;">t</td>
+   <td style="color: green; background-color: yellow;">r</td>
+   <td style="color: green; background-color: yellow;">i</td>
+   <td style="color: green; background-color: yellow;">p</td>
+   <td style="color: green; background-color: yellow;">e</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
+   <td style="color: white; background-color: black;">A</td>
+   <td style="color: white; background-color: black;">B</td>
+   <td style="color: white; background-color: black;">C</td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">E</td>
+   <td style="color: white; background-color: black;">F</td>
+   <td style="color: white; background-color: black;">G</td>
    <td>  </td>
    <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>9</td>
+   <td style="color: white; background-color: black;">6</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
-   <td>5</td>
+   <td style="color: cyan; background-color: black;">C</td>
+   <td style="color: cyan; background-color: black;">y</td>
+   <td style="color: cyan; background-color: black;">a</td>
+   <td style="color: cyan; background-color: black;">n</td>
    <td>  </td>
-   <td>s</td>
-   <td>o</td>
-   <td>l</td>
-   <td>i</td>
-   <td>d</td>
-   <td>  </td>
-   <td>j</td>
-   <td>  </td>
-   <td>  </td>
-   <td>5</td>
-   <td>  </td>
-   <td>S</td>
-   <td>e</td>
-   <td>p</td>
-   <td>a</td>
-   <td>r</td>
-   <td>a</td>
-   <td>t</td>
-   <td>e</td>
-   <td>d</td>
-   <td>  </td>
-   <td>j</td>
+   <td style="color: green; background-color: black;">M</td>
+   <td style="color: green; background-color: black;">i</td>
+   <td style="color: green; background-color: black;">x</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>R</td>
-   <td>a</td>
-   <td>i</td>
-   <td>n</td>
-   <td>b</td>
-   <td>o</td>
-   <td>w</td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>0</td>
-</tr>
-<tr>
-   <td>  </td>
-   <td>  </td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>  </td>
-   <td>  </td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
-   <td>#</td>
+   <td style="color: cyan; background-color: blue;">B</td>
+   <td style="color: cyan; background-color: blue;">a</td>
+   <td style="color: cyan; background-color: blue;">c</td>
+   <td style="color: cyan; background-color: blue;">k</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
+   <td style="color: yellow; background-color: green;">S</td>
+   <td style="color: yellow; background-color: green;">t</td>
+   <td style="color: yellow; background-color: green;">r</td>
+   <td style="color: yellow; background-color: green;">i</td>
+   <td style="color: yellow; background-color: green;">p</td>
+   <td style="color: yellow; background-color: green;">e</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
+   <td style="color: white; background-color: black;">A</td>
+   <td style="color: white; background-color: black;">B</td>
+   <td style="color: white; background-color: black;">C</td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">E</td>
+   <td style="color: white; background-color: black;">F</td>
+   <td style="color: white; background-color: black;">*</td>
    <td>  </td>
    <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>  </td>
-   <td>1</td>
+   <td style="color: white; background-color: black;">7</td>
 </tr>
 <tr>
    <td>  </td>
@@ -921,7 +753,133 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>2</td>
+   <td style="color: white; background-color: black;">8</td>
+</tr>
+<tr>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">9</td>
+</tr>
+<tr>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">5</td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">s</td>
+   <td style="color: white; background-color: black;">o</td>
+   <td style="color: white; background-color: black;">l</td>
+   <td style="color: white; background-color: black;">i</td>
+   <td style="color: white; background-color: black;">d</td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">j</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">5</td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">S</td>
+   <td style="color: white; background-color: black;">e</td>
+   <td style="color: white; background-color: black;">p</td>
+   <td style="color: white; background-color: black;">a</td>
+   <td style="color: white; background-color: black;">r</td>
+   <td style="color: white; background-color: black;">a</td>
+   <td style="color: white; background-color: black;">t</td>
+   <td style="color: white; background-color: black;">e</td>
+   <td style="color: white; background-color: black;">d</td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">j</td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">R</td>
+   <td style="color: white; background-color: black;">a</td>
+   <td style="color: white; background-color: black;">i</td>
+   <td style="color: white; background-color: black;">n</td>
+   <td style="color: white; background-color: black;">b</td>
+   <td style="color: white; background-color: black;">o</td>
+   <td style="color: white; background-color: black;">w</td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">0</td>
+</tr>
+<tr>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td style="color: white; background-color: black;">#</td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">1</td>
 </tr>
 <tr>
    <td>  </td>
@@ -929,41 +887,41 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>l</td>
-   <td>o</td>
-   <td>w</td>
-   <td>e</td>
-   <td>r</td>
-   <td>c</td>
-   <td>a</td>
-   <td>s</td>
-   <td>e</td>
-   <td>  </td>
-   <td>i</td>
-   <td>n</td>
-   <td>  </td>
-   <td>a</td>
-   <td>l</td>
-   <td>p</td>
-   <td>h</td>
-   <td>a</td>
-   <td>n</td>
-   <td>u</td>
-   <td>m</td>
-   <td>e</td>
-   <td>r</td>
-   <td>i</td>
-   <td>c</td>
-   <td>  </td>
-   <td>m</td>
-   <td>o</td>
-   <td>d</td>
-   <td>e</td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>3</td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">2</td>
 </tr>
 <tr>
    <td>  </td>
@@ -971,82 +929,124 @@
    <td>  </td>
    <td>  </td>
    <td>  </td>
-   <td>l</td>
-   <td>o</td>
-   <td>w</td>
-   <td>e</td>
-   <td>r</td>
-   <td>c</td>
-   <td>a</td>
-   <td>s</td>
-   <td>e</td>
+   <td style="color: green; background-color: black;">l</td>
+   <td style="color: green; background-color: black;">o</td>
+   <td style="color: green; background-color: black;">w</td>
+   <td style="color: green; background-color: black;">e</td>
+   <td style="color: green; background-color: black;">r</td>
+   <td style="color: green; background-color: black;">c</td>
+   <td style="color: green; background-color: black;">a</td>
+   <td style="color: green; background-color: black;">s</td>
+   <td style="color: green; background-color: black;">e</td>
    <td>  </td>
-   <td>i</td>
-   <td>n</td>
+   <td style="color: green; background-color: black;">i</td>
+   <td style="color: green; background-color: black;">n</td>
    <td>  </td>
-   <td>a</td>
-   <td>l</td>
-   <td>p</td>
-   <td>h</td>
-   <td>a</td>
-   <td>n</td>
-   <td>u</td>
-   <td>m</td>
-   <td>e</td>
-   <td>r</td>
-   <td>i</td>
-   <td>c</td>
+   <td style="color: green; background-color: black;">a</td>
+   <td style="color: green; background-color: black;">l</td>
+   <td style="color: green; background-color: black;">p</td>
+   <td style="color: green; background-color: black;">h</td>
+   <td style="color: green; background-color: black;">a</td>
+   <td style="color: green; background-color: black;">n</td>
+   <td style="color: green; background-color: black;">u</td>
+   <td style="color: green; background-color: black;">m</td>
+   <td style="color: green; background-color: black;">e</td>
+   <td style="color: green; background-color: black;">r</td>
+   <td style="color: green; background-color: black;">i</td>
+   <td style="color: green; background-color: black;">c</td>
    <td>  </td>
-   <td>m</td>
-   <td>o</td>
-   <td>d</td>
-   <td>e</td>
-   <td>  </td>
-   <td>  </td>
+   <td style="color: green; background-color: black;">m</td>
+   <td style="color: green; background-color: black;">o</td>
+   <td style="color: green; background-color: black;">d</td>
+   <td style="color: green; background-color: black;">e</td>
    <td>  </td>
    <td>  </td>
-   <td>4</td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">3</td>
 </tr>
 <tr>
    <td>  </td>
    <td>  </td>
-   <td>,</td>
-   <td>s</td>
-   <td>,</td>
-   <td>s</td>
-   <td>,</td>
    <td>  </td>
-   <td>@</td>
-   <td>[</td>
-   <td>\</td>
-   <td>B</td>
-   <td>L</td>
-   <td>A</td>
-   <td>S</td>
-   <td>T</td>
    <td>  </td>
-   <td>T</td>
-   <td>H</td>
-   <td>R</td>
-   <td>O</td>
-   <td>U</td>
-   <td>G</td>
-   <td>H</td>
    <td>  </td>
-   <td>T</td>
-   <td>E</td>
-   <td>X</td>
-   <td>T</td>
-   <td>]</td>
-   <td>^</td>
-   <td>_</td>
-   <td>5</td>
-   <td>,</td>
-   <td>s</td>
-   <td>,</td>
-   <td>s</td>
-   <td>,</td>
+   <td style="color: green; background-color: black;">l</td>
+   <td style="color: green; background-color: black;">o</td>
+   <td style="color: green; background-color: black;">w</td>
+   <td style="color: green; background-color: black;">e</td>
+   <td style="color: green; background-color: black;">r</td>
+   <td style="color: green; background-color: black;">c</td>
+   <td style="color: green; background-color: black;">a</td>
+   <td style="color: green; background-color: black;">s</td>
+   <td style="color: green; background-color: black;">e</td>
    <td>  </td>
-   <td>5</td>
+   <td style="color: green; background-color: black;">i</td>
+   <td style="color: green; background-color: black;">n</td>
+   <td>  </td>
+   <td style="color: green; background-color: black;">a</td>
+   <td style="color: green; background-color: black;">l</td>
+   <td style="color: green; background-color: black;">p</td>
+   <td style="color: green; background-color: black;">h</td>
+   <td style="color: green; background-color: black;">a</td>
+   <td style="color: green; background-color: black;">n</td>
+   <td style="color: green; background-color: black;">u</td>
+   <td style="color: green; background-color: black;">m</td>
+   <td style="color: green; background-color: black;">e</td>
+   <td style="color: green; background-color: black;">r</td>
+   <td style="color: green; background-color: black;">i</td>
+   <td style="color: green; background-color: black;">c</td>
+   <td>  </td>
+   <td style="color: green; background-color: black;">m</td>
+   <td style="color: green; background-color: black;">o</td>
+   <td style="color: green; background-color: black;">d</td>
+   <td style="color: green; background-color: black;">e</td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">4</td>
+</tr>
+<tr>
+   <td>  </td>
+   <td>  </td>
+   <td style="color: magenta; background-color: black;">,</td>
+   <td style="color: magenta; background-color: black;">s</td>
+   <td style="color: magenta; background-color: black;">,</td>
+   <td style="color: magenta; background-color: black;">s</td>
+   <td style="color: magenta; background-color: black;">,</td>
+   <td>  </td>
+   <td style="color: magenta; background-color: black;">@</td>
+   <td style="color: magenta; background-color: black;">[</td>
+   <td style="color: magenta; background-color: black;">\</td>
+   <td style="color: magenta; background-color: black;">B</td>
+   <td style="color: magenta; background-color: black;">L</td>
+   <td style="color: magenta; background-color: black;">A</td>
+   <td style="color: magenta; background-color: black;">S</td>
+   <td style="color: magenta; background-color: black;">T</td>
+   <td>  </td>
+   <td style="color: magenta; background-color: black;">T</td>
+   <td style="color: magenta; background-color: black;">H</td>
+   <td style="color: magenta; background-color: black;">R</td>
+   <td style="color: magenta; background-color: black;">O</td>
+   <td style="color: magenta; background-color: black;">U</td>
+   <td style="color: magenta; background-color: black;">G</td>
+   <td style="color: magenta; background-color: black;">H</td>
+   <td>  </td>
+   <td style="color: magenta; background-color: black;">T</td>
+   <td style="color: magenta; background-color: black;">E</td>
+   <td style="color: magenta; background-color: black;">X</td>
+   <td style="color: magenta; background-color: black;">T</td>
+   <td style="color: magenta; background-color: black;">]</td>
+   <td style="color: magenta; background-color: black;">^</td>
+   <td style="color: magenta; background-color: black;">_</td>
+   <td style="color: magenta; background-color: black;">5</td>
+   <td style="color: magenta; background-color: black;">,</td>
+   <td style="color: magenta; background-color: black;">s</td>
+   <td style="color: magenta; background-color: black;">,</td>
+   <td style="color: magenta; background-color: black;">s</td>
+   <td style="color: magenta; background-color: black;">,</td>
+   <td>  </td>
+   <td style="color: white; background-color: black;">5</td>
 </tr>
 </tbody></table>

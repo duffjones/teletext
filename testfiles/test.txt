@@ -6,10 +6,12 @@ Can be initiated by terminal: "./test filename.m7"
 
 TESTING FILES:
 -------------
-TEST.M7 - standard generalized test code provided. Tests everything briefly. 
+TEST.M7 - standard generalized test code provided. Tests everything briefly.
+TEST2.M7 - Adjustment to test.m7 that tests holding on random sixels, and provides coordinates to test file reading into 2d array for test function: TestRandomCodes();  
 SIXELCHART.M7 - chart of all possible sixels for comparison with assignment. 
 PANDA.M7 - pixel panda. Testing sixels, and graphics settings. 
-LFC.M7 - testing the patience of ManU fans everywhere. 
+LFC.M7 - testing the patience of ManU fans everywhere.
+GIT-HISTORY.txt - Journal of comits through development process outlining progress, and problems.  
 
 VOCABULARY
 ----------
