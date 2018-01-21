@@ -21,9 +21,9 @@ FLAG - Struct containing "flags" that remember a cells states: fontsize, foregro
 
 CELL MATRIX - A 2D array of 1000 CELLS that represents the complete code for our Teletext page. 
 
-
-TESTING FUNCTIONS
------------------
+-------------------
+-TESTING FUNCTIONS-
+-------------------
 Testing is broken up into several parts. 
 
 
@@ -80,3 +80,82 @@ Inside the program the loading of graphics modes (seperate and contiguous) is te
 
 The testfile SIXELCHART.m7 has been provided in /testfiles and has a recreation of the teletext assignment 
 pdf. This allows for a quick visual reference to make sure all patterns have been set correctly. 
+
+
+
+
+
+
+-----------------------------------------------------
+                    - BUGS-
+-----------------------------------------------------
+
+TELETEXT
+--------
+
+
+
+
+
+
+
+
+VALGRIND + MEMORY LEAKS
+-----------------------
+When rendering an SDL window Valgrind produces:
+
+LEAK SUMMARY:
+definitely lost: 120 bytes in 1 blocks
+indirectly lost: 1,368 bytes in 6 blocks
+possibly lost: 382,931 bytes in 2,168 blocks
+still reachable: 6,048,361 bytes in 3,328 blocks
+suppressed: 0 bytes in 0 blocks
+
+I've tried to track down the source of these leaks, and have determined the majority of them are in SDL, and outside the scope of my code. I believe this because A) this program produces no leaks in its extension mode, when printing codes to terminal, or in any other situation where SDL is NOT rendered. B) even the simplest program to initialize and close a blank SDL window will create similar leaks. 
+
+
+EXTENSION
+---------
+
+-Double Height is done fundamentally different than in SDL. Since it is difficult to split text, instead I am rendering the bottom at double height, and not printing the top at all. I have managed to mimick the split background using a gradient that refers to the cell above the cell being drawn -- however this doesn't apply to drawing font. As a result FONT IS NOT SPLIT. 
+	-Additionally, the top line that is ignored may have glitches. Ie single chars not showing up. 
+	-Splits between double and single height, as seen in the ABC/EF* section of test.m7, do not 		render.  
+	-Chars will overflow fixed cell size, causing slight overlap. 
+
+-SIXELS were done in the same was as teletext. I use the HTML/CSS <SVG> and <RECT> tags. This works relatively well, however there is a black blank space under each sixel since HTML reserves this space for text "hangdown" ie the tail of y, g. This might also cause problems on older versions of html, however everywhere I've managed to test has been OK. 
+
+-SPACING between cells is dynamic, and uneven without CSS. For best output this MUST be assembled with the attached CSS file. 
+
+-NON-Ascii characters not all working correctly. 
+
+-By the nature of HTML, some lines in my extension.c are very, very long. I havent seen a way to avoid this, but it falls outside the house style guidelines. 
+
+EXTENSION - FIXED
+-----------------
+Black lines between cells - Fixed with CSS border settings. 
+Font overrunning cells - fixed with fontsize and overflow settings in html. 
+Background color running over - fixed by changing if statement in call of SetFlag function. 
+Extra color block above double height - fixed by removing a0 from list of printed chars when fontsize = double. 
+Huge gaps between sixels - fixed with CSS <td><tf> and <table> settings. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

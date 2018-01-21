@@ -1,10 +1,14 @@
+/*neillsdl2 HAS BEEN INCLUDED WITHOUT CHANGES IN THIS PROGRAM.*/
+/* I wasn't sure if it would be more appropriate to take the functions I needed, and rework them */
+/*Since their structure would inevitable be the same as below, I figured it would be better to leave */
+/*them in their original forms, and cite them here:   */
+
 #include <SDL.h>
 #include <math.h>
 
-
+/*Added by me */
 #define WWIDTH (CELLWT * WT)
 #define WHEIGHT (CELLHT * HT)
-
 #define HT 25
 #define WT 40
 #define CELLHT 18
@@ -35,9 +39,6 @@ typedef struct SDL_Simplewin SDL_Simplewin;
 void Neill_SDL_Init(SDL_Simplewin *sw);
 void Neill_SDL_Events(SDL_Simplewin *sw);
 void Neill_SDL_SetDrawColour(SDL_Simplewin *sw, Uint8 r, Uint8 g, Uint8 b);
-void Neill_SDL_RenderFillCircle(SDL_Renderer *rend, int cx, int cy, int r);
-void Neill_SDL_RenderDrawCircle(SDL_Renderer *rend, int cx, int cy, int r);
 void Neill_SDL_DrawChar(SDL_Simplewin *sw, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy);
-void Neill_SDL_DrawString(SDL_Simplewin *sw, fntrow fontdata[FNTCHARS][FNTHEIGHT], char *str, int ox, int oy);
 void Neill_SDL_ReadFont(fntrow fontdata[FNTCHARS][FNTHEIGHT], char *fname);
 void Neill_SDL_UpdateScreen(SDL_Simplewin *sw);

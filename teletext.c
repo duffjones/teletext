@@ -1,10 +1,8 @@
-#include "telet.h"
+#include "testing.h"
 
 #if EXTON
 #define main notMain
 #endif
-
-
 
 int main(int argc, char **argv)
 {
@@ -13,11 +11,9 @@ int main(int argc, char **argv)
   fntrow font[FNTCHARS][FNTHEIGHT];
   flags current;
 
-  printf("BEGINNING PROGRAM!\n" );
-  /*crash happens here without print statement?\
-  testCodeDisplay(hex);
-  */
-
+  printf("PROGRAM STARTED!\n" );
+  printf("To see testing, type 'test' after filename.\n" );
+  printf("Example:  ./teletext test.m7 test\n" );
 
   importCodes(argv[1], hex); /* Imports 1000 codes from ARGV1 into array of cell structs */
   testFunction(argc, argv[2], hex); /* Initializes testing from ARGV */

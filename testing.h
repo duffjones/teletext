@@ -1,4 +1,4 @@
-#include "sixel.h"
+#include "telet.h"
 
 #define ON_ERROR(STR) perror("ERROR: " STR);exit(EXIT_FAILURE)
 #define PRINT_RESULT(STR, FUNC) printf("%-30s%20s\n",STR, FUNC)
@@ -30,7 +30,6 @@ boolean checkChar_test(void);
 
 boolean testCodes(int test);
 boolean testRandomCodes();
-boolean testFile(FILE *fp);
 boolean codes_test_num(int codenumber);
 
 boolean setFlags_yellowf_test();

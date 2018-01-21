@@ -1,3 +1,8 @@
+/*neillsdl2 HAS BEEN INCLUDED WITHOUT CHANGES IN THIS PROGRAM.*/
+/* I wasn't sure if it would be more appropriate to take the functions I needed, and rework them */
+/*Since their structure would inevitable be the same as below, I figured it would be better to leave */
+/*them in their original form, and cite them here:   */
+
 #include "neillsdl2.h"
 
 /* Set up a simple (WIDTH, HEIGHT) window.
@@ -65,16 +70,15 @@ void Neill_SDL_Events(SDL_Simplewin *sw)
    {
        switch (event.type){
           case SDL_QUIT:
-          /*
-          THIS IS WHERE EXIT IS DETERMINED
           case SDL_MOUSEBUTTONDOWN:
           case SDL_KEYDOWN:
+          /*
+          THIS IS WHERE EXIT IS DETERMINED
           */
              sw->finished = 1;
        }
     }
 }
-
 
 /* Trivial wrapper to avoid complexities of renderer & alpha channels */
 void Neill_SDL_SetDrawColour(SDL_Simplewin *sw, Uint8 r, Uint8 g, Uint8 b)
@@ -84,42 +88,7 @@ void Neill_SDL_SetDrawColour(SDL_Simplewin *sw, Uint8 r, Uint8 g, Uint8 b)
 
 /* Filled Circle centred at (cx,cy) of radius r, see :
    http://content.gpwiki.org/index.php/SDL:Tutorials:Drawing_and_Filling_Circles */
-void Neill_SDL_RenderFillCircle(SDL_Renderer *rend, int cx, int cy, int r)
-{
-   double dy;
-   for (dy = 1; dy <= r; dy += 1.0) {
-        double dx = floor(sqrt((2.0 * r * dy) - (dy * dy)));
-        SDL_RenderDrawLine(rend, cx-dx, cy+r-dy, cx+dx, cy+r-dy);
-        SDL_RenderDrawLine(rend, cx-dx, cy-r+dy, cx+dx, cy-r+dy);
-   }
-}
 
-/* Circle centred at (cx,cy) of radius r, see :
-   http://content.gpwiki.org/index.php/SDL:Tutorials:Drawing_and_Filling_Circles */
-void Neill_SDL_RenderDrawCircle(SDL_Renderer *rend, int cx, int cy, int r)
-{
-   double dx, dy;
-   dx = floor(sqrt((2.0 * r ) ));
-   SDL_RenderDrawLine(rend, cx-dx, cy+r, cx+dx, cy+r);
-   SDL_RenderDrawLine(rend, cx-dx, cy-r, cx+dx, cy-r);
-   for (dy = 1; dy <= r; dy += 1.0) {
-        dx = floor(sqrt((2.0 * r * dy) - (dy * dy)));
-        SDL_RenderDrawPoint(rend, cx+dx, cy+r-dy);
-        SDL_RenderDrawPoint(rend, cx+dx, cy-r+dy);
-        SDL_RenderDrawPoint(rend, cx-dx, cy+r-dy);
-        SDL_RenderDrawPoint(rend, cx-dx, cy-r+dy);
-   }
-}
-
-void Neill_SDL_DrawString(SDL_Simplewin *sw, fntrow fontdata[FNTCHARS][FNTHEIGHT], char *str, int ox, int oy)
-{
-   int i=0;
-   unsigned char chr;
-   do{
-      chr = str[i++];
-      Neill_SDL_DrawChar(sw, fontdata, chr, ox+i*FNTWIDTH, oy);
-   }while(str[i]);
-}
 
 void Neill_SDL_DrawChar(SDL_Simplewin *sw, fntrow fontdata[FNTCHARS][FNTHEIGHT], unsigned char chr, int ox, int oy)
 {
