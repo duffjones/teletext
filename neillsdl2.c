@@ -1,7 +1,7 @@
 /*neillsdl2 HAS BEEN INCLUDED WITHOUT CHANGES IN THIS PROGRAM.*/
 /* I wasn't sure if it would be more appropriate to take the functions I needed, and rework them */
 /*Since their structure would inevitable be the same as below, I figured it would be better to leave */
-/*them in their original form, and cite them here:   */
+/*them in their original form, and cite them here: Course Unit --> Week 10 --> Conways Soldiers  */
 
 #include "neillsdl2.h"
 

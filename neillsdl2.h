@@ -7,6 +7,7 @@
 #include <math.h>
 
 /*Added by me */
+/*Nothing Changed in Functions Below */
 #define WWIDTH (CELLWT * WT)
 #define WHEIGHT (CELLHT * HT)
 #define HT 25

@@ -5,11 +5,6 @@
 #define NEW_LINE printf("\n" );
 #define DIVIDE  printf("---------------------------------------------------\n\n" );
 
-typedef enum tester {
-  fail   = 0,
-  pass   = 1
-}tester;
-
 
 
 void testMain();

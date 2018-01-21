@@ -1,8 +1,8 @@
 #include "testing.h"
-
 #if EXTON
-#define main notMain
+#define main disableMain
 #endif
+
 
 int main(int argc, char **argv)
 {

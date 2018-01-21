@@ -32,9 +32,9 @@
 
 
 typedef enum fontsz {
-    normalfont = 1,
-    topfont = 2,
-    bottomfont = 3
+    normalfont,
+    topfont,
+    bottomfont
 }
 fontsz;
 

@@ -19,6 +19,7 @@ void importCodes(char * filename, cell hex[HT][WT]) {
    fclose(fp);
 }
 
+/*Most Important Function: Prints/renders codes to SDL depending on their flags/types */
 void printCodes(SDL_Simplewin * sw, cell hex[HT][WT], flags * current, fntrow( * fontdata)[18]) {
    int w, h;
    sixels sixel;
@@ -26,20 +27,23 @@ void printCodes(SDL_Simplewin * sw, cell hex[HT][WT], flags * current, fntrow( *
    h = 0;
 
    for (h = 0; h < HT; h++) {
+      /*Resets flags to default at start of new row*/
       changeFlags(current);
       for (w = 0; w < WT; w++) {
-
+         /*decodes hex, and sets cell and current flags appropriately*/
          setFlags(hex[h][w].code, current);
          setCellFlags( & hex[h][w], current);
          setHold( & hex[h][w]);
-
+         /*is the cell a graphic?*/
          if (hex[h][w].flag.mode == contiguous &&
             ((hex[h][w].code > a0 && hex[h][w].code <= bf) || hex[h][w].code >= e0)) {
             setDrawColor(sw, hex[h][w].flag.backcolor);
             DrawSixel(sw, & hex[h][w], h, w, sixel);
+         /*is the cell separated graphics?*/
          } else if (hex[h][w].flag.mode == separate &&
             ((hex[h][w].code >= a0 && hex[h][w].code <= bf) || hex[h][w].code >= e0)) {
             DrawSixel(sw, & hex[h][w], h, w, sixel);
+         /*is the cell separated graphics?*/
          } else if (hex[h - 1][w].flag.fontsize == topfont) {
             current -> fontsize = bottomfont;
             hex[h][w].flag.fontsize = bottomfont;
@@ -47,6 +51,7 @@ void printCodes(SDL_Simplewin * sw, cell hex[HT][WT], flags * current, fntrow( *
          } else if (current -> fontsize == topfont) {
             hex[h][w].flag.fontsize = topfont;
             SDL_DrawDoubleChar(sw, & hex[h][w], fontdata, hex[h][w].code, w * CELLWT, h * CELLHT);
+         /*Default case: render cell as a Char*/
          } else {
             SDL_DrawChar(sw, & hex[h][w], fontdata, hex[h][w].code, w * CELLWT, h * CELLHT);
          }
@@ -54,6 +59,7 @@ void printCodes(SDL_Simplewin * sw, cell hex[HT][WT], flags * current, fntrow( *
       resetSixels( & sixel);
    }
 }
+
 
 void changeFlags(flags * flag) {
    flag -> frontcolor = white;
@@ -66,23 +72,27 @@ void changeFlags(flags * flag) {
 void setCellFlags(cell * c, flags * flag) {
    c -> flag.frontcolor = flag -> frontcolor;
    c -> flag.backcolor = flag -> backcolor;
+   c -> flag.fontsize = flag -> fontsize;
    c -> flag.mode = flag -> mode;
    c -> flag.hold = flag -> hold;
-   c -> flag.fontsize = flag -> fontsize;
 }
 
+/*Checks for hold condition and tracks recent cell states*/
 void setHold(cell * c) {
    static unsigned char mostrecent;
    static graphicsMode lastgraphm = alphanumeric;
    static fontsz lastfontsize = normalfont;
 
+   /* Sets most recent cell info in new case */
    if (lastgraphm != c -> flag.mode || lastfontsize != c -> flag.fontsize) {
       mostrecent = a0;
    }
+   /* Sets most recent cell info to code, remembers hold(for next call) */
    if (c -> flag.hold == hold && c -> code <= a0) {
       c -> code = mostrecent;
       lastgraphm = hold;
    }
+   /*remembers code within writable range (for next call)*/
    if (c -> code > a0 && c -> flag.mode != alphanumeric) {
       mostrecent = c -> code;
    }
@@ -152,7 +162,7 @@ void SDL_DrawDoubleChar(SDL_Simplewin * sw, cell * hex, fntrow fontdata[FNTCHARS
    /*Checks char is in range to print*/
    letter = checkChar(chr);
 
-   /*If statements change print settings for top and bottom */
+   /*If statements change char draw settings for top and bottom */
    if (hex -> flag.fontsize == bottomfont) {
       fontheight = FNTHEIGHT;
       yheight = (FNTHEIGHT * 2);
@@ -181,6 +191,7 @@ void SDL_DrawDoubleChar(SDL_Simplewin * sw, cell * hex, fntrow fontdata[FNTCHARS
    }
 }
 
+/*checks a Char code is in suitable range for SDL, and converts it if outside appropriate range */
 unsigned char checkChar(unsigned char chr) {
    unsigned char letter;
 
@@ -194,12 +205,14 @@ unsigned char checkChar(unsigned char chr) {
    return letter;
 }
 
+/*Draws one of six sixels that makes up a cell.*/
 void drawSmallSixel(SDL_Simplewin *sw, cell *hex, int i, int j,  int ox, int oy, boolean blank)
 {
     unsigned x, y, sizey, sizex;
     SDL_Rect rectangle;
     sizey = CONY;
     sizex = CONX;
+    /*Checks for separate graphics mode and changes rect size */
     if(hex->flag.mode == separate) {
         sizey = SEPY;
         sizex = SEPX;
@@ -233,7 +246,7 @@ void resetSixels(sixels *sixel)
     sixel->bleft = false;
 }
 
-
+/* Draws a complete sixel from 6 small sixels, activated by a boolean determined by sixel case/switch*/
 void DrawSixel(SDL_Simplewin *sw, cell *hex, int h, int w, sixels sixel) {
     setSixels(hex->code,  &sixel);
 
@@ -247,6 +260,7 @@ void DrawSixel(SDL_Simplewin *sw, cell *hex, int h, int w, sixels sixel) {
     resetSixels(&sixel);
 }
 
+/* Handles all incoming hex codes, and changes appropriate current or cell flags*/
 void setFlags(unsigned char code, flags * current) {
    switch ((controlCode) code) {
 
@@ -502,6 +516,6 @@ void setSixels(unsigned char code, sixels *sixel)
     break;
     case ff:TR; TL; MR; ML; BR; BL;
     break;
-    default: return; 
+    default: return;
 
     }}

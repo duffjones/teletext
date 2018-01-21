@@ -368,12 +368,6 @@ boolean setFlags_sepg_test() {
     return (c.mode == separate);
 }
 
-/*
-NEED TO MAKE FOR:
-FRIDAY
-creating hexfile from array
-redundant sixel function removal with ints
-*/
 
 boolean testRandomCodes() {
 
@@ -402,7 +396,7 @@ void testCodeDisplay(cell hex[25][40]) {
     printf("ALPHANUMERIC CODES: \n" );
     for (h = 0; h < HT; h++) {
         for (w = 0; w < WT; w++) {
-            if(hex[h][w].code <= a0 || hex[h][w].code >= 0xff) {
+            if(hex[h][w].code <= a0 || hex[h][w].code >= ff) {
                 printf("%x", hex[h][w].code);
             }
             else {
@@ -411,4 +405,5 @@ void testCodeDisplay(cell hex[25][40]) {
         }
         printf("\n" );
     }
+      printf("\n" );
 }
